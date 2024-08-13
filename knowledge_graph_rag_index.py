@@ -10,6 +10,7 @@ from unstructured.chunking.basic import chunk_elements
 from unstructured.cleaners.core import clean_non_ascii_chars, clean_extra_whitespace
 from loguru import logger
 from typing import List
+import os
 
 
 def chuncking_executor(filename:str, chunk_size=800, overlap=100) -> List[str]:
@@ -51,10 +52,14 @@ def indexing_executor(llm: LLMBase, chunk:str):
 
 if __name__ == "__main__":
     filename = "./examples/documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
+    AZURE_OPENAI_DEPLOYMENT = os.environ["gpt-35-turbo-16k"]
+    AZURE_OPENAI_KEY = os.environ["AZURE_OPENAI_KEY"]
+    AZURE_OPENAI_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
+
     aoai_llm = AzureOpenAILLM(
-        model_id="",
-        access_token= "",
-        endpoint=""
+        model_id=AZURE_OPENAI_DEPLOYMENT,
+        access_token= AZURE_OPENAI_KEY,
+        endpoint=AZURE_OPENAI_ENDPOINT
     )
     chunks = chuncking_executor(filename)
     indexing_executor(aoai_llm, chunks[-1])
