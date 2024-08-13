@@ -52,7 +52,7 @@ def indexing_executor(llm: LLMBase, chunk:str):
 
 if __name__ == "__main__":
     filename = "./examples/documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
-    AZURE_OPENAI_DEPLOYMENT = os.environ["gpt-35-turbo-16k"]
+    AZURE_OPENAI_DEPLOYMENT = os.environ["AZURE_OPENAI_DEPLOYMENT"]
     AZURE_OPENAI_KEY = os.environ["AZURE_OPENAI_KEY"]
     AZURE_OPENAI_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
 
