@@ -1,5 +1,9 @@
 openai
-matplotlib
-networkx
 requests
 unstructured
+
+# visual echart
+pyecharts
+# visual network-x
+matplotlib
+networkx

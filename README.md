@@ -1,2 +1,2 @@
-# OpenGraphRAG
-Open Source Graph RAG for Engineering Design based on Microsoft GraphRAG
+# RAGLab
+Open Source RAG for Engineering Design based on Microsoft GraphRAG, vector RAG and hybrid RAG.

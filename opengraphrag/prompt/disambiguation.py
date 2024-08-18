@@ -154,5 +154,36 @@ Discriptions: {discriptions}
 RESPONSE:
 """
 
-SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT = """
+SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT = """Your task is to process a knowledge graph in which relationships represent relationships between source and target entities. You need to merge multiple descriptions provided by users about the same relationship and create a summary for it.
+
+-Steps-
+1. Review the multiple descriptions of the source and target entities of the relationship and summarise the description of the relationship.
+2. Ensure your summary encompasses all essential descriptions without excluding any critical details.
+3. Keep the summary concise.
+=====================================================================
+EXAMPLE SECTION: The following section includes example output. These examples **must be excluded from your answer**.
+
+EXAMPLE 1
+Source entity: HARRY
+Target entity: HERMIONE
+Discriptions: ["Hermione’s dedication to Harry is evident when she stays with him after Ron leaves. Their shared hardships during the Horcrux hunt further solidify their bond.", "After Dumbledore’s death, Hermione is a pillar of support for Harry"]
+RESPONSE:
+Hermione and Harry share a deep friendship and unwavering support. She stays with him after Ron leaves, and their bond strengthens through shared hardships during the Horcrux hunt. After Dumbledore’s death, Hermione is a crucial support for Harry.
+END OF EXAMPLE 1
+
+EXAMPLE 2
+Source entity: RON
+Target entity: HAGRID
+Discriptions: ["Ron admires Hagrid’s knowledge of magical creatures and his loyalty to Dumbledore.", "Ron stands by Hagrid during the Battle of Hogwarts, showing his loyalty and bravery."]
+RESPONSE:
+Ron admires Hagrid’s expertise with magical creatures and his unwavering loyalty to Dumbledore. During the Battle of Hogwarts, Ron demonstrates his own loyalty and bravery by standing by Hagrid.
+END OF EXAMPLE 2
+======================================================================
+
+======================================================================
+REAL DATA: The following section is the real data. You should use only this real data to prepare your answer. Generate merged entity list only.
+Source entity: {source_entity}
+Target entity: {target_entity}
+Discriptions: {descriptions}
+RESPONSE:
 """

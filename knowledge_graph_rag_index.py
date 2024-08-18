@@ -7,12 +7,11 @@ from unstructured.cleaners.core import clean_non_ascii_chars, clean_extra_whites
 from loguru import logger
 from typing import List, Tuple
 from opengraphrag.data_contracts.graph import Entity, Relationship
-from opengraphrag.prompt_functions.disambiguation import disambiguate_entity_type, merge_summary_entity
+from opengraphrag.prompt_functions.disambiguation import disambiguate_entity_type, merge_summary_entity, merge_summary_relationship
 from opengraphrag.utils.chunk_executer import flatten_dict_list, get_entity_types_mapping, merge_entity_types
 from opengraphrag.utils.dataclass_utils import dict_matches_dataclass
 import os
-
-from opengraphrag.visual.network_x import visualize_knowledge_graph
+from opengraphrag.visual import visualize_knowledge_graph_echart, visualize_knowledge_graph_network_x
 
 
 def chuncking_executor(filename:str, chunk_size=1000, overlap=100) -> List[str]:
@@ -67,6 +66,13 @@ def disambiguation_entity(llm: LLMBase, entities: List[Entity]) -> List[Entity]:
     return flatten_dict_list(entity_type_dict)
 
 
+def disambiguation_relationship(llm: LLMBase, relationships: List[Relationship]) -> List[Relationship]:
+    logger.info("Merging relationships...")
+    relationships = merge_summary_relationship(llm, relationships)
+    logger.info(f"Merging relationships: {relationships}")
+    return relationships
+
+
 if __name__ == "__main__":
     filename = "./examples/documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
     AZURE_OPENAI_DEPLOYMENT = os.environ["AZURE_OPENAI_DEPLOYMENT"]
@@ -80,9 +86,12 @@ if __name__ == "__main__":
     )
     chunks = chuncking_executor(filename)
     relations, entities = [], []
-    for chunk in chunks[0:3]:
+    for chunk in chunks[0:7]:
         current_relations, current_entities = chunk_graph_executor(aoai_llm, chunk)
         relations.extend(current_relations)
         entities.extend(current_entities)
+
     entities = disambiguation_entity(aoai_llm, entities)
-    visualize_knowledge_graph(entities, relations)
+    relations = disambiguation_relationship(aoai_llm, relations)
+    # visualize_knowledge_graph_network_x(entities, relations)
+    visualize_knowledge_graph_echart(entities, relations)
