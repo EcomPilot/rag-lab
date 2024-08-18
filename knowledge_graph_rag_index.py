@@ -1,19 +1,21 @@
 from opengraphrag.llm.azure_openai import AzureOpenAILLM
 from opengraphrag.llm.base import LLMBase
-from opengraphrag.prompt_functions.graph_extraction import (
-    generate_entity_relationship_examples, 
-    generate_topic, generate_expert, 
-    generate_entity_types
-)
+from opengraphrag.prompt_functions.chunk_graph_extraction import generate_entity_relationship_examples
 from unstructured.partition.text import partition_text
 from unstructured.chunking.basic import chunk_elements
 from unstructured.cleaners.core import clean_non_ascii_chars, clean_extra_whitespace
 from loguru import logger
-from typing import List
+from typing import List, Tuple
+from opengraphrag.data_contracts.graph import Entity, Relationship
+from opengraphrag.prompt_functions.disambiguation import disambiguate_entity_type, merge_summary_entity
+from opengraphrag.utils.chunk_executer import flatten_dict_list, get_entity_types_mapping, merge_entity_types
+from opengraphrag.utils.dataclass_utils import dict_matches_dataclass
 import os
 
+from opengraphrag.visual.network_x import visualize_knowledge_graph
 
-def chuncking_executor(filename:str, chunk_size=800, overlap=100) -> List[str]:
+
+def chuncking_executor(filename:str, chunk_size=1000, overlap=100) -> List[str]:
     elements = partition_text(filename=filename)
     for elem in elements:
         elem.text = clean_extra_whitespace(clean_non_ascii_chars(elem.text))
@@ -21,33 +23,48 @@ def chuncking_executor(filename:str, chunk_size=800, overlap=100) -> List[str]:
     return [chunk.text for chunk in chunks]
 
 
-def indexing_executor(llm: LLMBase, chunk:str):
+def chunk_graph_executor(llm: LLMBase, chunk:str) -> Tuple[List[Relationship], List[Entity]]:
     logger.info(f"Current chunk: {chunk}.")
-
-    logger.info("Generating topic...")
-    topic = generate_topic(llm, chunk)
-    logger.info(f"Generated topic: {topic}")
-
-    logger.info("Generating expert descripiton...")
-    expert = generate_expert(llm, topic)
-    logger.info(f"Generated expert descripiton: {expert}")
+    
+    # logger.info("Generating expert descripiton...")
+    # expert = generate_expert(llm, chunk)
+    # logger.info(f"Generated expert descripiton: {expert}")
 
     logger.info("Detecting language...")
     language = "English"
     logger.info(f"Detected language: {language}")
 
-    logger.info("Generating entity types")
-    entity_types = generate_entity_types(llm, topic, expert, chunk)
-    logger.info(f"Generated entity types: {entity_types}")
-
     logger.info("Generating entity relationship examples...")
-    example = generate_entity_relationship_examples(llm, entity_types, chunk, language)
+    chunk_entity_relation = generate_entity_relationship_examples(llm, chunk, language)
     logger.info("Done generating entity relationship examples")
-    logger.info(f"Generating entity relationship examples: {example}")
+    logger.info(f"Generating entity relationship examples: {chunk_entity_relation}")
 
-    # logger.info("Generating entity extraction prompt...")
-    # output = create_entity_extraction_prompt(llm, entity_types, chunk, example, language)
-    # logger.info(f"Generated entity extraction prompt, stored in folder {output}")
+    logger.info("Generating entity relationship classes...")
+    relations, entities = [], []
+    for item in chunk_entity_relation:
+        if "entity_name" in item:
+            entities.append(item)
+        else:
+            relations.append(item)
+    
+    relations = [Relationship(**relation) for relation in relations if dict_matches_dataclass(Relationship, relation)]
+    entities = [Entity(**entity) for entity in entities if dict_matches_dataclass(Entity, entity)]
+    logger.info(f"Generating entity relationship classes, entities: {entities}, relations: {relations}")
+    return relations, entities
+
+
+def disambiguation_entity(llm: LLMBase, entities: List[Entity]) -> List[Entity]:
+    logger.info("Merging entity types...")
+    entity_type_dict = get_entity_types_mapping(entities)
+    merged_entity_types = disambiguate_entity_type(llm, list(entity_type_dict.keys()))
+    logger.info(f"Merging entity types: {merged_entity_types}")
+
+    entity_type_dict = merge_entity_types(entity_type_dict, merged_entity_types)
+    logger.info(f"Merging entity mapping: {entity_type_dict}")
+
+    entity_type_dict = merge_summary_entity(llm, entity_type_dict)
+    logger.info(f"Merging the same entity name with descriptions: {entity_type_dict}")
+    return flatten_dict_list(entity_type_dict)
 
 
 if __name__ == "__main__":
@@ -62,4 +79,10 @@ if __name__ == "__main__":
         endpoint=AZURE_OPENAI_ENDPOINT
     )
     chunks = chuncking_executor(filename)
-    indexing_executor(aoai_llm, chunks[-1])
+    relations, entities = [], []
+    for chunk in chunks[0:3]:
+        current_relations, current_entities = chunk_graph_executor(aoai_llm, chunk)
+        relations.extend(current_relations)
+        entities.extend(current_entities)
+    entities = disambiguation_entity(aoai_llm, entities)
+    visualize_knowledge_graph(entities, relations)

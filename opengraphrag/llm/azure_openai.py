@@ -10,7 +10,7 @@ class AzureOpenAILLM(LLMBase):
             azure_endpoint = endpoint
             )
 
-    def invoke(self, prompt: str, max_tokens=1024, temperature=0.3, top_p=0.9) -> str:
+    def invoke(self, prompt: str, max_tokens=1024, temperature=0.1, top_p=0.8) -> str:
         response = self.client.chat.completions.create(
             model=self.model_id,
             messages=[
