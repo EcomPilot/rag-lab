@@ -16,9 +16,10 @@ def merge_entity_types(entity_dict: Dict[str, Entity], merged_entity_type_list: 
     for type_list in merged_entity_type_list:
         new_type = type_list[0]
         for old_type in type_list:
-            current_entity_list = entity_dict[old_type]
-            current_entity_list = __reset_entity_type(current_entity_list, new_type)
-            merged_entity_dict[new_type].extend(current_entity_list)
+            if old_type in entity_dict:
+                current_entity_list = entity_dict[old_type]
+                current_entity_list = __reset_entity_type(current_entity_list, new_type)
+                merged_entity_dict[new_type].extend(current_entity_list)
     
     return dict(merged_entity_dict)
 

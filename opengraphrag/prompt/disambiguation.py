@@ -1,4 +1,5 @@
-DISAMBIGUATION_ENTITY_PROMPT = """Given a knowledge graph with nodes representing various entities, your task is to review the entity descriptions of the nodes and identify which nodes represent the same entity. Create a list of nodes that need to be merged based on their descriptions.
+DISAMBIGUATION_ENTITY_PROMPT = """{expert}
+Given a knowledge graph with nodes representing various entities, your task is to review the entity descriptions of the nodes and identify which nodes represent the same entity. Create a list of nodes that need to be merged based on their descriptions.
 
 -Steps-
 1. Review the given entity types in the knowledge graph:
@@ -88,7 +89,8 @@ Entities: {entities}
 RESPONSE:
 """
 
-DISAMBIGUATION_ENTITY_TYPE_PROMPT = """You are working with a knowledge graph that contains various entity types. Your task is to generate a list of entity types that should be merged together. Merging entity types means combining them into a single category, where all instances of those entity types will be treated as the same type.
+DISAMBIGUATION_ENTITY_TYPE_PROMPT = """{expert}
+You are working with a knowledge graph that contains various entity types. Your task is to generate a list of entity types that should be merged together. Merging entity types means combining them into a single category, where all instances of those entity types will be treated as the same type.
 
 -Steps-
 1. Review the given entity types in the knowledge graph: {entity_types}.
@@ -126,7 +128,8 @@ Entity types: {entity_types}
 RESPONSE:
 """
 
-SUMMARY_ENTITY_DISCRIPTIONS_PROMPT = """Your task involves working with a knowledge graph where nodes symbolize different entities. You are required to combine the multiple descriptions of the same entity provided by the user and create a summary for it.
+SUMMARY_ENTITY_DISCRIPTIONS_PROMPT = """{expert}
+Your task involves working with a knowledge graph where nodes symbolize different entities. You are required to combine the multiple descriptions of the same entity provided by the user and create a summary for it.
 
 -Steps-
 1. Review the given descriptions for the entity.
@@ -154,7 +157,8 @@ Discriptions: {discriptions}
 RESPONSE:
 """
 
-SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT = """Your task is to process a knowledge graph in which relationships represent relationships between source and target entities. You need to merge multiple descriptions provided by users about the same relationship and create a summary for it.
+SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT = """{expert}
+Your task is to process a knowledge graph in which relationships represent relationships between source and target entities. You need to merge multiple descriptions provided by users about the same relationship and create a summary for it.
 
 -Steps-
 1. Review the multiple descriptions of the source and target entities of the relationship and summarise the description of the relationship.
