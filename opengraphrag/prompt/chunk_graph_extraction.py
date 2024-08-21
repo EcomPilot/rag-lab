@@ -7,7 +7,7 @@ Given a text document that is potentially relevant to this activity and a list o
 - entity_name: Name of the entity, capitalized
 - entity_type: The type of the entity. Avoid general entity types such as "other" or "unknown". This is VERY IMPORTANT: Do not generate redundant or overlapping entity types. For example, if the text contains "company" and "organization" entity types, you should return only one of them.
 - entity_description: Comprehensive description of the entity's attributes and activities
-Format each entity as JSON: {{"entity_name":<entity_name>, "entity_type":<entity_type>, "entity_description":<entity_description>}}
+Format each entity as JSON: {{"type":"entity", "entity_name":<entity_name>, "entity_type":<entity_type>, "entity_description":<entity_description>}}
 
 2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
 For each pair of related entities, extract the following information:
@@ -15,7 +15,7 @@ For each pair of related entities, extract the following information:
 - target_entity: name of the target entity, as identified in step 1
 - relationship_description: explanation as to why you think the source entity and the target entity are related to each other
 - relationship_strength: an integer score between 1 to 10, indicating strength of the relationship between the source entity and target entity
-Format each relationship as JSON: {{"source_entity":<source_entity>, "target_entity":<target_entity>, "relationship_description":<relationship_description>, "relationship_strength":<relationship_strength>}}
+Format each relationship as JSON: {{"type":"relationship", "source_entity":<source_entity>, "target_entity":<target_entity>, "relationship_description":<relationship_description>, "relationship_strength":<relationship_strength>}}
 
 3. Return output in {language} as a single list of all the entities and relationships identified in steps 1 and 2. 
 
@@ -30,9 +30,9 @@ The Verdantis's Central Institution is scheduled to meet on Monday and Thursday,
 ######################
 Output:
 [
-    {{"entity_name": "CENTRAL INSTITUTION", "entity_type": "ORGANIZATION", "entity_description":"The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday"}},
-    {{"entity_name":"MARTIN SMITH", "entity_type":"PERSON", "entity_description":"Martin Smith is the chair of the Central Institution"}},
-    {{"source_entity":"MARTIN SMITH", "target_entity":"CENTRAL INSTITUTION", "relationship_description":"Martin Smith is the Chair of the Central Institution and will answer questions at a press conference.", "relationship_strength": 9}}
+    {{"type":"entity", "entity_name": "CENTRAL INSTITUTION", "entity_type": "ORGANIZATION", "entity_description":"The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday"}},
+    {{"type":"entity", "entity_name":"MARTIN SMITH", "entity_type":"PERSON", "entity_description":"Martin Smith is the chair of the Central Institution"}},
+    {{"type":"relationship", "source_entity":"MARTIN SMITH", "target_entity":"CENTRAL INSTITUTION", "relationship_description":"Martin Smith is the Chair of the Central Institution and will answer questions at a press conference.", "relationship_strength": 9}}
 ]
 ######################
 Example 2:
@@ -49,26 +49,26 @@ The Aurelians include 39-year-old businessman Samuel Namara, who has been held i
 ######################
 Output:
 [  
-    {{ "entity_name": "FIRUZABAD", "entity_type": "GEO", "entity_description": "Firuzabad held Aurelians as hostages"}},  
-    {{ "entity_name": "AURELIA", "entity_type": "GEO", "entity_description": "Country seeking to release hostages" }},  
-    {{ "entity_name": "QUINTARA", "entity_type": "GEO", "entity_description": "Country that negotiated a swap of money in exchange for hostages" }},  
-    {{ "entity_name": "TIRUZIA", "entity_type": "GEO", "entity_description": "Capital of Firuzabad where the Aurelians were being held" }},  
-    {{ "entity_name": "KROHAARA", "entity_type": "GEO", "entity_description": "Capital city in Quintara" }},  
-    {{ "entity_name": "CASHION", "entity_type": "GEO", "entity_description": "Capital city in Aurelia" }},  
-    {{ "entity_name": "SAMUEL NAMARA", "entity_type": "PERSON", "entity_description": "Aurelian who spent time in Tiruzia's Alhamia Prison" }},  
-    {{ "entity_name": "ALHAMIA PRISON", "entity_type": "GEO", "entity_description": "Prison in Tiruzia" }},  
-    {{ "entity_name": "DURKE BATAGLANI", "entity_type": "PERSON", "entity_description": "Aurelian journalist who was held hostage" }},  
-    {{ "entity_name": "MEGGIE TAZBAH", "entity_type": "PERSON",  "entity_description": "Bratinas national and environmentalist who was held hostage"  }},  
-    {{ "source_entity": "FIRUZABAD", "target_entity": "AURELIA", "relationship_description": "Firuzabad negotiated a hostage exchange with Aurelia", "relationship_strength": 2}},  
-    {{ "source_entity": "QUINTARA", "target_entity": "AURELIA", "relationship_description": "Quintara brokered the hostage exchange between Firuzabad and Aurelia", "relationship_strength": 2 }},  
-    {{ "source_entity": "QUINTARA", "target_entity": "FIRUZABAD", "relationship_description": "Quintara brokered the hostage exchange between Firuzabad and Aurelia", "relationship_strength": 8 }},  
-    {{ "source_entity": "SAMUEL NAMARA", "target_entity": "ALHAMIA PRISON", "relationship_description": "Samuel Namara was a prisoner at Alhamia prison", "relationship_strength": 2 }},  
-    {{ "source_entity": "SAMUEL NAMARA", "target_entity": "MEGGIE TAZBAH", "relationship_description": "Samuel Namara and Meggie Tazbah were exchanged in the same hostage release", "relationship_strength": 2 }},  
-    {{ "source_entity": "SAMUEL NAMARA", "target_entity": "DURKE BATAGLANI", "relationship_description": "Samuel Namara and Durke Bataglani were exchanged in the same hostage release", "relationship_strength": 2 }},  
-    {{ "source_entity": "MEGGIE TAZBAH", "target_entity": "DURKE BATAGLANI", "relationship_description": "Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release", "relationship_strength": 2 }},  
-    {{ "source_entity": "SAMUEL NAMARA", "target_entity": "FIRUZABAD", "relationship_description": "Samuel Namara was a hostage in Firuzabad", "relationship_strength": 2 }},  
-    {{ "source_entity": "MEGGIE TAZBAH", "target_entity": "FIRUZABAD", "relationship_description": "Meggie Tazbah was a hostage in Firuzabad", "relationship_strength": 2 }},  
-    {{ "source_entity": "DURKE BATAGLANI", "target_entity": "FIRUZABAD", "relationship_description": "Durke Bataglani was a hostage in Firuzabad", "relationship_strength": 2 }}
+    {{"type":"entity",  "entity_name": "FIRUZABAD", "entity_type": "GEO", "entity_description": "Firuzabad held Aurelians as hostages"}},  
+    {{"type":"entity",  "entity_name": "AURELIA", "entity_type": "GEO", "entity_description": "Country seeking to release hostages" }},  
+    {{"type":"entity",  "entity_name": "QUINTARA", "entity_type": "GEO", "entity_description": "Country that negotiated a swap of money in exchange for hostages" }},  
+    {{"type":"entity",  "entity_name": "TIRUZIA", "entity_type": "GEO", "entity_description": "Capital of Firuzabad where the Aurelians were being held" }},  
+    {{"type":"entity",  "entity_name": "KROHAARA", "entity_type": "GEO", "entity_description": "Capital city in Quintara" }},  
+    {{"type":"entity",  "entity_name": "CASHION", "entity_type": "GEO", "entity_description": "Capital city in Aurelia" }},  
+    {{"type":"entity",  "entity_name": "SAMUEL NAMARA", "entity_type": "PERSON", "entity_description": "Aurelian who spent time in Tiruzia's Alhamia Prison" }},  
+    {{"type":"entity",  "entity_name": "ALHAMIA PRISON", "entity_type": "GEO", "entity_description": "Prison in Tiruzia" }},  
+    {{"type":"entity",  "entity_name": "DURKE BATAGLANI", "entity_type": "PERSON", "entity_description": "Aurelian journalist who was held hostage" }},  
+    {{"type":"entity",  "entity_name": "MEGGIE TAZBAH", "entity_type": "PERSON",  "entity_description": "Bratinas national and environmentalist who was held hostage"  }},  
+    {{"type":"relationship", "source_entity": "FIRUZABAD", "target_entity": "AURELIA", "relationship_description": "Firuzabad negotiated a hostage exchange with Aurelia", "relationship_strength": 2}},  
+    {{"type":"relationship", "source_entity": "QUINTARA", "target_entity": "AURELIA", "relationship_description": "Quintara brokered the hostage exchange between Firuzabad and Aurelia", "relationship_strength": 2 }},  
+    {{"type":"relationship", "source_entity": "QUINTARA", "target_entity": "FIRUZABAD", "relationship_description": "Quintara brokered the hostage exchange between Firuzabad and Aurelia", "relationship_strength": 8 }},  
+    {{"type":"relationship", "source_entity": "SAMUEL NAMARA", "target_entity": "ALHAMIA PRISON", "relationship_description": "Samuel Namara was a prisoner at Alhamia prison", "relationship_strength": 2 }},  
+    {{"type":"relationship", "source_entity": "SAMUEL NAMARA", "target_entity": "MEGGIE TAZBAH", "relationship_description": "Samuel Namara and Meggie Tazbah were exchanged in the same hostage release", "relationship_strength": 2 }},  
+    {{"type":"relationship", "source_entity": "SAMUEL NAMARA", "target_entity": "DURKE BATAGLANI", "relationship_description": "Samuel Namara and Durke Bataglani were exchanged in the same hostage release", "relationship_strength": 2 }},  
+    {{"type":"relationship", "source_entity": "MEGGIE TAZBAH", "target_entity": "DURKE BATAGLANI", "relationship_description": "Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release", "relationship_strength": 2 }},  
+    {{"type":"relationship", "source_entity": "SAMUEL NAMARA", "target_entity": "FIRUZABAD", "relationship_description": "Samuel Namara was a hostage in Firuzabad", "relationship_strength": 2 }},  
+    {{"type":"relationship", "source_entity": "MEGGIE TAZBAH", "target_entity": "FIRUZABAD", "relationship_description": "Meggie Tazbah was a hostage in Firuzabad", "relationship_strength": 2 }},  
+    {{"type":"relationship", "source_entity": "DURKE BATAGLANI", "target_entity": "FIRUZABAD", "relationship_description": "Durke Bataglani was a hostage in Firuzabad", "relationship_strength": 2 }}
 ]
 
 ######################

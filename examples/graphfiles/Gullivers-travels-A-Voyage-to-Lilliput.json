@@ -1,0 +1,3248 @@
+{
+    "entities": [
+        {
+            "entity_name": "GULLIVERS TRAVELS",
+            "entity_type": "BOOK",
+            "entity_description": "Gulliver's Travels is a novel written by Jonathan Swift",
+            "entity_id": "5488edef-1b7e-456d-8fc5-df11db26c0d9",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "entity_name": "JONATHAN SWIFT",
+            "entity_type": "PERSON",
+            "entity_description": "Jonathan Swift is the author of Gulliver's Travels",
+            "entity_id": "7707b41f-2a2f-48b4-a15e-e801958432e9",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "entity_name": "LEMUEL GULLIVER",
+            "entity_type": "PERSON",
+            "entity_description": "Lemuel Gulliver is the main character in Gulliver's Travels",
+            "entity_id": "3a8c491f-eade-4180-bad3-68842a06a203",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "entity_name": "MR. GULLIVER",
+            "entity_type": "PERSON",
+            "entity_description": "Author of the papers, known for his veracity",
+            "entity_id": "d753718d-0240-4b9d-84b6-390a72a9073b",
+            "source_chunk_ids": [
+                "f3540703-9241-4d3d-993e-602a971ea1d8"
+            ]
+        },
+        {
+            "entity_name": "RICHARD SYMPSON",
+            "entity_type": "PERSON",
+            "entity_description": "Richard Symson is the author of the book and the recipient of a letter from Captain Gulliver",
+            "entity_id": "8dde15ff-9382-45fd-8812-93d2191c8074",
+            "source_chunk_ids": [
+                "b8d4104b-e77f-441b-98ab-8a74439af6b8"
+            ]
+        },
+        {
+            "entity_name": "CAPTAIN GULLIVER",
+            "entity_type": "PERSON",
+            "entity_description": "Captain Gulliver is the author of the letter to Richard Symson",
+            "entity_id": "00f17d06-9892-42f0-97a9-e5ff4ca219e3",
+            "source_chunk_ids": [
+                "b8d4104b-e77f-441b-98ab-8a74439af6b8"
+            ]
+        },
+        {
+            "entity_name": "COUSIN DAMPIER",
+            "entity_type": "PERSON",
+            "entity_description": "Cousin Dampier is a person who corrected the style of a book called A Voyage round the world",
+            "entity_id": "2324af8c-21e7-4af4-9f09-df59df6e7fde",
+            "source_chunk_ids": [
+                "9c4e6e95-1174-4d04-94ea-e195d8c4d69b"
+            ]
+        },
+        {
+            "entity_name": "QUEEN ANNE",
+            "entity_type": "PERSON",
+            "entity_description": "Queen Anne was a pious and glorious monarch",
+            "entity_id": "10013ff8-6583-4c26-800d-c5b2b7bf16fb",
+            "source_chunk_ids": [
+                "9c4e6e95-1174-4d04-94ea-e195d8c4d69b"
+            ]
+        },
+        {
+            "entity_name": "QUEEN ELIZABETH I",
+            "entity_type": "PERSON",
+            "entity_description": "Queen of England during the author's time",
+            "entity_id": "af4a0024-d5cd-4e3e-83a0-a8910921cf78",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3"
+            ]
+        },
+        {
+            "entity_name": "LORD OF GODOLPHIN",
+            "entity_type": "PERSON",
+            "entity_description": "First chief minister during Queen Elizabeth I's reign",
+            "entity_id": "1a38f571-ea81-43cf-964c-9482f37394b2",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3"
+            ]
+        },
+        {
+            "entity_name": "LORD OF OXFORD",
+            "entity_type": "PERSON",
+            "entity_description": "Second chief minister during Queen Elizabeth I's reign",
+            "entity_id": "652ae46d-61fa-4c35-b62b-8da3d9223631",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3"
+            ]
+        },
+        {
+            "entity_name": "MASTER HOUYHNHNM",
+            "entity_type": "PERSON",
+            "entity_description": "Master Houyhnhnm is a character mentioned in the text",
+            "entity_id": "ba013823-48cd-47a7-b9c3-51deec6afc79",
+            "source_chunk_ids": [
+                "c78d78ef-bc18-4b10-b871-1f4764958604"
+            ]
+        },
+        {
+            "entity_name": "YOURSELF",
+            "entity_type": "PERSON",
+            "entity_description": "Referring to the person being addressed in the text",
+            "entity_id": "66e4a6b7-b9e0-4eb2-9a53-7d7581e722db",
+            "source_chunk_ids": [
+                "09cfadc1-3a50-4fc1-b1f0-57af3507f14c"
+            ]
+        },
+        {
+            "entity_name": "PRINTER",
+            "entity_type": "PERSON",
+            "entity_description": "The person responsible for printing the book",
+            "entity_id": "18232feb-2c9f-4128-aa52-c696f64c8576",
+            "source_chunk_ids": [
+                "6a1efcc0-122c-4b9d-84e7-77107815acbf"
+            ]
+        },
+        {
+            "entity_name": "MARINER",
+            "entity_type": "PERSON",
+            "entity_description": "Oldest mariners who instructed the speaker in sea-language",
+            "entity_id": "b9b4fea1-7fef-4731-9ea0-4581e3fc6ce4",
+            "source_chunk_ids": [
+                "f4e8be6b-7ce4-4f2c-8350-d159dd738ae6"
+            ]
+        },
+        {
+            "entity_name": "SPEAKER",
+            "entity_type": "PERSON",
+            "entity_description": "The person speaking",
+            "entity_id": "657cfd12-86ea-44b2-8aec-e9f39b30c9d2",
+            "source_chunk_ids": [
+                "f4e8be6b-7ce4-4f2c-8350-d159dd738ae6"
+            ]
+        },
+        {
+            "entity_name": "AUTHOR",
+            "entity_type": "PERSON",
+            "entity_description": "The entity is a person who is both the author of the story and the person who was bound and then freed by the workmen.",
+            "entity_id": "cb68f632-92e2-4401-bc04-56bb5c47005e",
+            "source_chunk_ids": [
+                "b4ef00cd-e0e4-4af2-ac7e-e2aa49096a78",
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "entity_name": "JAMES BATES",
+            "entity_type": "PERSON",
+            "entity_description": "Eminent surgeon in London who the narrator was apprenticed to",
+            "entity_id": "67660467-a325-48c9-aa85-230cbedab33c",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "entity_name": "MR. BATES",
+            "entity_type": "PERSON",
+            "entity_description": "Mr. James Bates is an eminent surgeon in London who was recommended by the author's good master to pursue a career in surgery.",
+            "entity_id": "c289a910-fe25-4281-89c7-d97f90755f11",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8",
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "entity_name": "JOHN",
+            "entity_type": "PERSON",
+            "entity_description": "Uncle of the narrator who provided assistance",
+            "entity_id": "fb5eb7d7-b501-4642-83bd-f66ef46d56ab",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "entity_name": "ABRAHAM PANNEL",
+            "entity_type": "PERSON",
+            "entity_description": "Captain of the Swallow",
+            "entity_id": "348a8a8f-861b-47ab-99b5-7ee099ec85a3",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "entity_name": "MARY BURTON",
+            "entity_type": "PERSON",
+            "entity_description": "Author's wife, daughter of Mr. Edmund Burton",
+            "entity_id": "90e2b824-e71a-4b93-9fa3-37b053680635",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "entity_name": "EDMUND BURTON",
+            "entity_type": "PERSON",
+            "entity_description": "Hosier and father of the author's wife",
+            "entity_id": "0c8cd2ec-0164-48f5-a98e-56c4294316ba",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "entity_name": "MASTER BATES",
+            "entity_type": "PERSON",
+            "entity_description": "Master Bates was the good master of the narrator who died after two years",
+            "entity_id": "e99295d4-a0ae-4062-9bdc-f9973c01cb69",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "entity_name": "WIFE",
+            "entity_type": "PERSON",
+            "entity_description": "The narrator's wife who was consulted before the decision to go to sea",
+            "entity_id": "791bfda4-acc1-45cc-830c-2d480f23cb1b",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "entity_name": "ACQUAINTANCE",
+            "entity_type": "PERSON",
+            "entity_description": "People known to the narrator who were consulted before the decision to go to sea",
+            "entity_id": "f0639f6a-0cbb-4f5a-954b-72bcc325b847",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "entity_name": "CAPTAIN WILLIAM PRICHARD",
+            "entity_type": "PERSON",
+            "entity_description": "Captain of the Antelope ship",
+            "entity_id": "f591b3e3-a430-4e02-a072-75aecab0a87a",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "entity_name": "I",
+            "entity_type": "PERSON",
+            "entity_description": "The narrator of the text is the speaker who desires their liberty in the story.",
+            "entity_id": "da88ef52-6c4a-43a3-b095-f09ed37014cf",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44",
+                "0c818c33-3408-494f-87a4-36bf8365c9c9",
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "entity_name": "READER",
+            "entity_type": "PERSON",
+            "entity_description": "The person who is reading the text",
+            "entity_id": "f3e349c9-c641-4e2d-881c-04f9d37a8c94",
+            "source_chunk_ids": [
+                "754c1896-bb68-4052-b06f-90a499885af8"
+            ]
+        },
+        {
+            "entity_name": "PERSON OF QUALITY",
+            "entity_type": "PERSON",
+            "entity_description": "An individual who gave a speech to the narrator",
+            "entity_id": "c46c79cf-ce10-4e72-8225-4e628ef3dbbb",
+            "source_chunk_ids": [
+                "ebd13efb-9362-44a3-8a85-e2bd47658022"
+            ]
+        },
+        {
+            "entity_name": "PERSON",
+            "entity_type": "PERSON",
+            "entity_description": "The person who is speaking and acting as an orator",
+            "entity_id": "5e6119ae-5f7f-405d-9cc2-93be2cd5692c",
+            "source_chunk_ids": [
+                "819a848e-0d1e-4232-8363-0d60ee9b42c9"
+            ]
+        },
+        {
+            "entity_name": "PAGE",
+            "entity_type": "PERSON",
+            "entity_description": "The person who is holding up the train of the orator",
+            "entity_id": "6e8fc6f0-82e7-48ce-b67e-44efa7441d56",
+            "source_chunk_ids": [
+                "819a848e-0d1e-4232-8363-0d60ee9b42c9"
+            ]
+        },
+        {
+            "entity_name": "HIGH RANK PERSON",
+            "entity_type": "PERSON",
+            "entity_description": "A person of high rank who came from the imperial majesty to communicate with the narrator",
+            "entity_id": "60cda1a0-c047-462f-acde-be2e7b4aa804",
+            "source_chunk_ids": [
+                "904a7854-b91c-4fb2-965e-96a0d4696441"
+            ]
+        },
+        {
+            "entity_name": "HURGO",
+            "entity_type": "PERSON",
+            "entity_description": "The leader of the group that captured the speaker",
+            "entity_id": "e174231c-c1b8-4981-a1b2-3c0380c38e66",
+            "source_chunk_ids": [
+                "d9fd1a39-1fed-47c9-88ff-e355e3c0687f"
+            ]
+        },
+        {
+            "entity_name": "EMPEROR",
+            "entity_type": "PERSON",
+            "entity_description": "The ruler of the country, who is also the emperor, is a renowned patron of learning and encourages the development of mathematics and mechanics. He ordered the protagonist to be tied up and sent food and a machine. The emperor came out to meet the narrator and the ruler of the city also came out to meet the speaker. Overall, the ruler of the country is a significant figure in the land.",
+            "entity_id": "1a832425-6468-4f77-aa23-6a6e387fad54",
+            "source_chunk_ids": [
+                "cd076702-c4a6-42bd-a199-9e626487fa06",
+                "83905757-67a1-490e-b61a-de014b086d05",
+                "e79163d3-d54c-4c72-8a5d-282ce3de4271",
+                "d33692b4-4c95-483e-903a-d737cb167b78",
+                "1a202400-5412-4719-ba61-19e1be408911",
+                "c07ef053-60df-4bd0-b22d-ee8b015e7e75"
+            ]
+        },
+        {
+            "entity_name": "CARPENTERS",
+            "entity_type": "PERSON",
+            "entity_description": "Five hundred carpenters and engineers were employed to build the greatest engine",
+            "entity_id": "47151c63-4766-4437-b8b3-a0822dc3aedf",
+            "source_chunk_ids": [
+                "83905757-67a1-490e-b61a-de014b086d05"
+            ]
+        },
+        {
+            "entity_name": "WORKMEN",
+            "entity_type": "PERSON",
+            "entity_description": "The workmen were responsible for erecting the poles, fastening the cords to the bandages, and cutting the strings that bound the author.",
+            "entity_id": "c9944ed1-b433-480e-93b6-fda4f2e5ba21",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652",
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "entity_name": "MEN",
+            "entity_type": "PERSON",
+            "entity_description": "Nine hundred of the strongest men were employed to draw up the cords using pulleys",
+            "entity_id": "d761b60f-9252-4aa6-bfa6-78dd1f64c001",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "entity_name": "YOUNG NATIVES",
+            "entity_type": "PERSON",
+            "entity_description": "The young natives who climbed into the engine and tickled the narrator's nose",
+            "entity_id": "969a013f-46c4-43b4-a9a9-fc744ec61aaf",
+            "source_chunk_ids": [
+                "d33692b4-4c95-483e-903a-d737cb167b78"
+            ]
+        },
+        {
+            "entity_name": "OFFICER",
+            "entity_type": "PERSON",
+            "entity_description": "The officer in the guards who put his half-pike into the narrator's nostril",
+            "entity_id": "48d4917a-8be0-4882-b810-a6f7234301c2",
+            "source_chunk_ids": [
+                "d33692b4-4c95-483e-903a-d737cb167b78"
+            ]
+        },
+        {
+            "entity_name": "KING'S SMITH",
+            "entity_type": "PERSON",
+            "entity_description": "The person who locked chains to the narrator's left leg",
+            "entity_id": "1201632f-430e-442c-9cfb-90760c305728",
+            "source_chunk_ids": [
+                "1dd4e45c-b6ef-4d7b-903f-da4ecdbe5af2"
+            ]
+        },
+        {
+            "entity_name": "EMPEROR OF LILLIPUT",
+            "entity_type": "PERSON",
+            "entity_description": "The emperor who comes to see the author in his confinement",
+            "entity_id": "407bc6ea-89ff-4422-bb7e-cf1f961c03d5",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "entity_name": "REDRIFF",
+            "entity_type": "GEO",
+            "entity_description": "Redriff is a location that serves as the setting for Gulliver's house. It is also the place where the author left custody of the papers.",
+            "entity_id": "20e03954-97ce-4cda-b490-2b9342d5ce57",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e",
+                "f3540703-9241-4d3d-993e-602a971ea1d8"
+            ]
+        },
+        {
+            "entity_name": "NEWARK",
+            "entity_type": "GEO",
+            "entity_description": "Newark is the location where Gulliver now lives",
+            "entity_id": "a6e41120-4798-42fc-ab27-1fd24014b0bd",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "entity_name": "NOTTINGHAMSHIRE",
+            "entity_type": "GEO",
+            "entity_description": "Nottinghamshire is Gulliver's native country and also the location of the small estate owned by the narrator's father.",
+            "entity_id": "d2dfedd0-251e-4547-8f2f-ab48ce7eed9b",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e",
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "entity_name": "BANBURY",
+            "entity_type": "GEO",
+            "entity_description": "Banbury is a town in Oxfordshire where there are tombs and monuments of the Gullivers",
+            "entity_id": "3fa059e7-3855-46d2-91f5-5bbd3a5f707a",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "entity_name": "ENGLAND",
+            "entity_type": "GEO",
+            "entity_description": "Country where the author was during Queen Elizabeth I's reign",
+            "entity_id": "318cf74f-d3f0-4ec3-b32a-9e627da3a230",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3"
+            ]
+        },
+        {
+            "entity_name": "ISLAND",
+            "entity_type": "GEO",
+            "entity_description": "Refers to a small island where the author expected to see an end to corruption and abuse",
+            "entity_id": "dee7c4d3-4ca1-4680-9813-54a309371918",
+            "source_chunk_ids": [
+                "30edec5a-eb8d-4dd1-bf03-62e6209fbbfe"
+            ]
+        },
+        {
+            "entity_name": "SMITHFIELD",
+            "entity_type": "GEO",
+            "entity_description": "Location where there are pyramids of law books",
+            "entity_id": "0cb2872c-8df8-4b2f-8c38-8b99d599149d",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "entity_name": "LONDON",
+            "entity_type": "GEO",
+            "entity_description": "The city that Yahoos come from to visit the speaker is the same city where Mr. James Bates practices as a surgeon and where the author decided to settle.",
+            "entity_id": "e8f513d4-94ec-4a61-a8e2-4e12e9a04ed7",
+            "source_chunk_ids": [
+                "f4e8be6b-7ce4-4f2c-8350-d159dd738ae6",
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8",
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "entity_name": "LILLIPUT",
+            "entity_type": "GEO",
+            "entity_description": "The entity is a place mentioned in the text and it is also the country where the author is shipwrecked and becomes a prisoner.",
+            "entity_id": "19098a76-4a8a-41d4-b7f6-cc9786816657",
+            "source_chunk_ids": [
+                "081d373d-f016-4c68-8b1e-1458cc5df03a",
+                "b4ef00cd-e0e4-4af2-ac7e-e2aa49096a78"
+            ]
+        },
+        {
+            "entity_name": "BROBDINGRAG",
+            "entity_type": "GEO",
+            "entity_description": "A place mentioned in the text",
+            "entity_id": "2416327c-4c00-4864-b843-242b2cfe8a97",
+            "source_chunk_ids": [
+                "081d373d-f016-4c68-8b1e-1458cc5df03a"
+            ]
+        },
+        {
+            "entity_name": "LAPUTA",
+            "entity_type": "GEO",
+            "entity_description": "A place mentioned in the text",
+            "entity_id": "c8ae1979-d789-46a8-b037-171c49ad79f7",
+            "source_chunk_ids": [
+                "081d373d-f016-4c68-8b1e-1458cc5df03a"
+            ]
+        },
+        {
+            "entity_name": "HOUYHNHNMLAND",
+            "entity_type": "GEO",
+            "entity_description": "The land where the Yahoo species resides",
+            "entity_id": "46524c87-4596-437f-81c8-ca9cd5993a91",
+            "source_chunk_ids": [
+                "3b254bbe-f765-4d70-a210-283159364ff2"
+            ]
+        },
+        {
+            "entity_name": "CAMBRIDGE",
+            "entity_type": "GEO",
+            "entity_description": "City where Emanuel College is located",
+            "entity_id": "ff920904-6ce9-4c87-86d0-573e79af4bdd",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "entity_name": "LEYDEN",
+            "entity_type": "GEO",
+            "entity_description": "The entity is a location where the narrator studied physics and the city where the author returned from.",
+            "entity_id": "01e35d7b-9a1f-4c7c-97e6-2534d4254eec",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8",
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "entity_name": "LEVANT",
+            "entity_type": "GEO",
+            "entity_description": "Region that the author made voyages to",
+            "entity_id": "cef140e4-dd13-48f2-bf09-36521bf0f028",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "entity_name": "OLD JEWRY",
+            "entity_type": "GEO",
+            "entity_description": "The entity is a location that is described as the small house where the author lived and as the previous residence of the speaker before moving to Fetter Lane.",
+            "entity_id": "84bfd959-4f2f-4190-be72-8f3618474250",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae",
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "entity_name": "NEWGATE-STREET",
+            "entity_type": "GEO",
+            "entity_description": "Street where Mr. Edmund Burton's shop is located",
+            "entity_id": "477e2956-976e-42fc-9ae0-eca052b2bc70",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "entity_name": "EAST AND WEST INDIES",
+            "entity_type": "GEO",
+            "entity_description": "Regions where the narrator made several voyages",
+            "entity_id": "c33387ac-cd36-41a2-9087-85661927fa4e",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "entity_name": "FETTER LANE",
+            "entity_type": "GEO",
+            "entity_description": "Location where the speaker lived before moving to Wapping",
+            "entity_id": "3698dacd-433e-477e-9a7c-30894a9db628",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "entity_name": "WAPPING",
+            "entity_type": "GEO",
+            "entity_description": "Location where the speaker lived before starting the voyage",
+            "entity_id": "b33f54e0-da12-4240-9621-4f3a033f6307",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "entity_name": "BRISTOL",
+            "entity_type": "GEO",
+            "entity_description": "Location where the voyage started",
+            "entity_id": "21b39981-851f-4d0a-84b5-1fccf72533fd",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "entity_name": "SOUTH SEA",
+            "entity_type": "GEO",
+            "entity_description": "Destination of the voyage",
+            "entity_id": "cc42fb80-2b4e-46c0-8bd9-88e73e093391",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "entity_name": "VAN DIEMENS LAND",
+            "entity_type": "GEO",
+            "entity_description": "An island located in the north-west of the East Indies",
+            "entity_id": "fc4c6e7c-726c-46c2-a470-4a391ba84a01",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb"
+            ]
+        },
+        {
+            "entity_name": "EAST INDIES",
+            "entity_type": "GEO",
+            "entity_description": "A region in Southeast Asia, including countries such as Indonesia, Malaysia, and the Philippines",
+            "entity_id": "88c443e1-faf6-4477-9cf9-d4b503b61f89",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb"
+            ]
+        },
+        {
+            "entity_name": "SHORE",
+            "entity_type": "GEO",
+            "entity_description": "The land at the edge of the body of water",
+            "entity_id": "43cdbd29-b170-474f-9085-73dccea4c3fa",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "GROUND",
+            "entity_type": "GEO",
+            "entity_description": "The surface on which the narrator is lying",
+            "entity_id": "d8cad482-a9db-41a1-afe2-ef8f564d2efc",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44"
+            ]
+        },
+        {
+            "entity_name": "SKY",
+            "entity_type": "GEO",
+            "entity_description": "The area above the narrator",
+            "entity_id": "f50806ca-8a35-42ea-b6e8-8bbb72994c4f",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44"
+            ]
+        },
+        {
+            "entity_name": "BURGUNDY",
+            "entity_type": "GEO",
+            "entity_description": "A region in France known for its wine",
+            "entity_id": "9c6e9049-6f3c-492e-99c1-081e336fd55f",
+            "source_chunk_ids": [
+                "a08bc007-670b-4acd-8ef8-2b4a840bc44a"
+            ]
+        },
+        {
+            "entity_name": "CAPITAL CITY",
+            "entity_type": "GEO",
+            "entity_description": "The main city of the land, located about half a mile from the narrator, is also the main city of the country where the protagonist was to be taken.",
+            "entity_id": "ac2ea33b-02cd-46d1-9a8a-887a221bab13",
+            "source_chunk_ids": [
+                "904a7854-b91c-4fb2-965e-96a0d4696441",
+                "cd076702-c4a6-42bd-a199-9e626487fa06"
+            ]
+        },
+        {
+            "entity_name": "METROPOLIS",
+            "entity_type": "GEO",
+            "entity_description": "The capital city",
+            "entity_id": "310228a2-7768-45af-b605-e3122ba73054",
+            "source_chunk_ids": [
+                "e79163d3-d54c-4c72-8a5d-282ce3de4271"
+            ]
+        },
+        {
+            "entity_name": "TOWN",
+            "entity_type": "GEO",
+            "entity_description": "The place where the inhabitants live, the town looks like a painted scene in a theater.",
+            "entity_id": "6182f3d9-647f-473b-89f8-3c08a3a6161d",
+            "source_chunk_ids": [
+                "c07ef053-60df-4bd0-b22d-ee8b015e7e75",
+                "fcc59ee8-5c0c-491f-9d52-178bf043b9e0"
+            ]
+        },
+        {
+            "entity_name": "COUNTRY",
+            "entity_type": "GEO",
+            "entity_description": "The country around is like a beautiful garden",
+            "entity_id": "c3df12a3-6dc7-4664-bd46-66fe92d2c27d",
+            "source_chunk_ids": [
+                "fcc59ee8-5c0c-491f-9d52-178bf043b9e0"
+            ]
+        },
+        {
+            "entity_name": "UTOPIA",
+            "entity_type": "GEO",
+            "entity_description": "Utopia is a fictional place mentioned in the book of travels",
+            "entity_id": "34f5a517-a7c6-4db6-aadc-6e25190e29be",
+            "source_chunk_ids": [
+                "81d9ac77-ce46-443a-a0fc-52acfda2ad15"
+            ]
+        },
+        {
+            "entity_name": "CITY GATES",
+            "entity_type": "GEO",
+            "entity_description": "Entrance to the city where the emperor and his court came out to meet the speaker",
+            "entity_id": "abc9ce02-1ff0-41c1-a46d-f1f7f586b032",
+            "source_chunk_ids": [
+                "1a202400-5412-4719-ba61-19e1be408911"
+            ]
+        },
+        {
+            "entity_name": "WORLD",
+            "entity_type": "OTHER",
+            "entity_description": "The place where the papers are being sent",
+            "entity_id": "870cf769-5217-4b05-8020-9bc131797135",
+            "source_chunk_ids": [
+                "f3540703-9241-4d3d-993e-602a971ea1d8"
+            ]
+        },
+        {
+            "entity_name": "WRITTEN",
+            "entity_type": "OTHER",
+            "entity_description": "The text was written",
+            "entity_id": "2b160356-9517-415d-8795-83fe2c763ebf",
+            "source_chunk_ids": [
+                "cbbb30d1-f6cc-479e-bf24-a1248774c2dc"
+            ]
+        },
+        {
+            "entity_name": "HOUYHNHNM",
+            "entity_type": "OTHER",
+            "entity_description": "Houyhnhnm is a fictional race of intelligent horses mentioned in the novel Gulliver's Travels.",
+            "entity_id": "44a0e324-77e4-4c26-ad18-0895eb087ebd",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3",
+                "c78d78ef-bc18-4b10-b871-1f4764958604"
+            ]
+        },
+        {
+            "entity_name": "CHIEF MINISTER",
+            "entity_type": "OTHER",
+            "entity_description": "Political position in the government",
+            "entity_id": "b5754adb-f814-4c6e-bb7b-30c8222f2e91",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3"
+            ]
+        },
+        {
+            "entity_name": "YAHOO",
+            "entity_type": "OTHER",
+            "entity_description": "Yahoo is a species mentioned in the text. Female Yahoos are described as virtuous, honorable, truthful, and sensible.",
+            "entity_id": "4afc1058-86a7-4b36-a7e4-b24d53d3963c",
+            "source_chunk_ids": [
+                "c78d78ef-bc18-4b10-b871-1f4764958604",
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "entity_name": "PHYSICIANS",
+            "entity_type": "OTHER",
+            "entity_description": "Physicians have been banished",
+            "entity_id": "ee96f1e6-7c5a-44db-8513-3dc4a882d008",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "entity_name": "PRESS",
+            "entity_type": "OTHER",
+            "entity_description": "Disgracers of the press in prose and verse are condemned to eat their own cotton and drink their own ink",
+            "entity_id": "3bdef1c6-4c64-4277-9943-8d88c672c153",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "entity_name": "HOOUYHNNHMS",
+            "entity_type": "OTHER",
+            "entity_description": "A group of beings mentioned in the text",
+            "entity_id": "69bf6b58-a89b-4198-b84a-439bc797567d",
+            "source_chunk_ids": [
+                "081d373d-f016-4c68-8b1e-1458cc5df03a"
+            ]
+        },
+        {
+            "entity_name": "YAHOOS",
+            "entity_type": "OTHER",
+            "entity_description": "A group of beings mentioned in the text",
+            "entity_id": "cc58c48d-a5d3-4c14-a582-4d62e509d888",
+            "source_chunk_ids": [
+                "081d373d-f016-4c68-8b1e-1458cc5df03a"
+            ]
+        },
+        {
+            "entity_name": "PHYSIC",
+            "entity_type": "OTHER",
+            "entity_description": "Field of study pursued by the narrator in Leyden",
+            "entity_id": "2881ad3f-4554-4bf5-ae17-2f0902231109",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "entity_name": "ROCK",
+            "entity_type": "OTHER",
+            "entity_description": "A rock that the ship was driven onto",
+            "entity_id": "e7e3d0f7-1cc9-4451-9236-c721e9cb5513",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb"
+            ]
+        },
+        {
+            "entity_name": "SHIP",
+            "entity_type": "OTHER",
+            "entity_description": "The ship that the crew was on is a vessel that the speaker and their companions were in. It is a large watercraft used for transportation on the sea or other navigable waters.",
+            "entity_id": "e7ec72da-01a8-4199-ab0a-9285a0ef35aa",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb",
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6",
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "BOAT",
+            "entity_type": "OTHER",
+            "entity_description": "The boat that the crew used to escape the ship is a smaller watercraft that the speaker and their companions were in.",
+            "entity_id": "46ee03c8-4550-44c4-911e-22647967e366",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb",
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6"
+            ]
+        },
+        {
+            "entity_name": "CREW",
+            "entity_type": "OTHER",
+            "entity_description": "The group of people on the ship",
+            "entity_id": "3708a9c7-719a-4aa4-9384-a4a8f4b0a06f",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb"
+            ]
+        },
+        {
+            "entity_name": "CREATURES",
+            "entity_type": "OTHER",
+            "entity_description": "Unidentified beings that ran off",
+            "entity_id": "f0df7d37-4c33-41ec-a499-9946a8cf8188",
+            "source_chunk_ids": [
+                "b227b8b6-6622-4e8e-990b-2b0017702122"
+            ]
+        },
+        {
+            "entity_name": "TOLGO PHONAC",
+            "entity_type": "OTHER",
+            "entity_description": "Phrase shouted by one of the creatures",
+            "entity_id": "791de48b-86b9-42bf-92d0-22afa9d10bec",
+            "source_chunk_ids": [
+                "b227b8b6-6622-4e8e-990b-2b0017702122"
+            ]
+        },
+        {
+            "entity_name": "ANIMALS",
+            "entity_type": "OTHER",
+            "entity_description": "Several animals whose flesh was consumed",
+            "entity_id": "6eb13855-00b7-4558-869e-5b033bdef848",
+            "source_chunk_ids": [
+                "01765f35-f1a0-4048-81cf-aa20a14d83bc"
+            ]
+        },
+        {
+            "entity_name": "MUSKET BULLETS",
+            "entity_type": "OTHER",
+            "entity_description": "Size comparison for the loaves of bread",
+            "entity_id": "68d28138-1e99-4600-8aa7-50931b90a0a6",
+            "source_chunk_ids": [
+                "01765f35-f1a0-4048-81cf-aa20a14d83bc"
+            ]
+        },
+        {
+            "entity_name": "DRINK",
+            "entity_type": "OTHER",
+            "entity_description": "The entity is a liquid that was requested and provided to the narrator.",
+            "entity_id": "a14a13b7-e494-4851-928c-40ed14beeeff",
+            "source_chunk_ids": [
+                "01765f35-f1a0-4048-81cf-aa20a14d83bc",
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "entity_name": "MACHINES",
+            "entity_type": "OTHER",
+            "entity_description": "The emperor has machines on wheels for transporting heavy objects, such as trees and warships",
+            "entity_id": "65d068d3-9a6b-4e67-8f30-aca695b4b2a1",
+            "source_chunk_ids": [
+                "83905757-67a1-490e-b61a-de014b086d05"
+            ]
+        },
+        {
+            "entity_name": "ENGINE",
+            "entity_type": "OTHER",
+            "entity_description": "The greatest engine is a wooden frame raised from the ground, measuring about seven feet long and four feet wide. It is supported by twenty-two wheels. The engine is also the place where the speaker was raised and securely fastened.",
+            "entity_id": "4f2b04d1-ca33-4246-bf3a-e6e2784a5756",
+            "source_chunk_ids": [
+                "83905757-67a1-490e-b61a-de014b086d05",
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "entity_name": "ENCLOSED FIELDS",
+            "entity_type": "OTHER",
+            "entity_description": "Fields that are forty feet square and resemble beds of flowers",
+            "entity_id": "bda16774-7328-4f00-91c5-e2141757a105",
+            "source_chunk_ids": [
+                "fcc59ee8-5c0c-491f-9d52-178bf043b9e0"
+            ]
+        },
+        {
+            "entity_name": "WOODS",
+            "entity_type": "OTHER",
+            "entity_description": "Woods that are half a stang in size",
+            "entity_id": "39c07402-38f2-4578-8f86-894574a97842",
+            "source_chunk_ids": [
+                "fcc59ee8-5c0c-491f-9d52-178bf043b9e0"
+            ]
+        },
+        {
+            "entity_name": "TREES",
+            "entity_type": "OTHER",
+            "entity_description": "The tallest trees are seven feet high",
+            "entity_id": "22e4eb99-a63c-4288-99d8-4e8ba6fbd03c",
+            "source_chunk_ids": [
+                "fcc59ee8-5c0c-491f-9d52-178bf043b9e0"
+            ]
+        },
+        {
+            "entity_name": "VEHICLE",
+            "entity_type": "OTHER",
+            "entity_description": "A means of transportation used by the Houyhnhnms and a mode of transportation used to raise and transport the speaker.",
+            "entity_id": "3d49798b-e746-4068-a7bf-dfff45f9c354",
+            "source_chunk_ids": [
+                "a44d9060-8b64-4c30-912d-17bb6783932c",
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "entity_name": "BOOK",
+            "entity_type": "OTHER",
+            "entity_description": "The entity refers to the author's published book, which is also known as the published work.",
+            "entity_id": "f1e1341a-6dca-4c23-a241-0f852ea85830",
+            "source_chunk_ids": [
+                "30edec5a-eb8d-4dd1-bf03-62e6209fbbfe",
+                "6a1efcc0-122c-4b9d-84e7-77107815acbf"
+            ]
+        },
+        {
+            "entity_name": "MANUSCRIPT",
+            "entity_type": "OTHER",
+            "entity_description": "The original handwritten copy of the book",
+            "entity_id": "76a0b70f-c7ff-413d-8338-b82a01e2802a",
+            "source_chunk_ids": [
+                "6a1efcc0-122c-4b9d-84e7-77107815acbf"
+            ]
+        },
+        {
+            "entity_name": "CORRECTIONS",
+            "entity_type": "OTHER",
+            "entity_description": "Changes or revisions made to the book",
+            "entity_id": "b8fbd18f-4e03-4afd-a418-e7fc531d54b4",
+            "source_chunk_ids": [
+                "6a1efcc0-122c-4b9d-84e7-77107815acbf"
+            ]
+        },
+        {
+            "entity_name": "SECOND EDITION",
+            "entity_type": "OTHER",
+            "entity_description": "A revised version of the book",
+            "entity_id": "18375a93-7a1b-42ec-adc2-6a76b7921d5d",
+            "source_chunk_ids": [
+                "6a1efcc0-122c-4b9d-84e7-77107815acbf"
+            ]
+        },
+        {
+            "entity_name": "BOOKS",
+            "entity_type": "OTHER",
+            "entity_description": "The narrator always carried a good number of books with him",
+            "entity_id": "1ef1a8d7-dcdb-4c01-8b45-526fb408c710",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "entity_name": "BOTTOM",
+            "entity_type": "OTHER",
+            "entity_description": "The bottom of the body of water that the speaker could not feel",
+            "entity_id": "b8722d0e-2da8-4bf1-9753-687e39c8a324",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "DECLIVITY",
+            "entity_type": "OTHER",
+            "entity_description": "A small slope that the speaker walked down",
+            "entity_id": "b45783e5-8ba6-4691-aef9-5a41ccaec9b3",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "BRANDY",
+            "entity_type": "OTHER",
+            "entity_description": "A type of alcoholic drink that the speaker drank",
+            "entity_id": "d6393977-b0f3-489e-a735-182b3d2dbdb4",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "GRASS",
+            "entity_type": "OTHER",
+            "entity_description": "The surface on which the speaker lay down to sleep",
+            "entity_id": "4b585e43-3a4a-4d32-983a-32f812510f7b",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "BOW AND ARROW",
+            "entity_type": "OTHER",
+            "entity_description": "A weapon held by the small human creature",
+            "entity_id": "44e768f9-908a-4ed4-ac28-c85cbc7f342f",
+            "source_chunk_ids": [
+                "72fb2948-38e2-4387-9bbb-51a0ff5a7d9d"
+            ]
+        },
+        {
+            "entity_name": "QUIVER",
+            "entity_type": "OTHER",
+            "entity_description": "A container for arrows, carried by the small human creature",
+            "entity_id": "f6bb5216-28e3-4ed9-8ec9-01ae37b450ca",
+            "source_chunk_ids": [
+                "72fb2948-38e2-4387-9bbb-51a0ff5a7d9d"
+            ]
+        },
+        {
+            "entity_name": "ARROWS",
+            "entity_type": "OTHER",
+            "entity_description": "The entity is projectiles/weapons used by the attackers.",
+            "entity_id": "a511ebab-3c79-4eea-b277-43c6ebf8ffe1",
+            "source_chunk_ids": [
+                "ebd13efb-9362-44a3-8a85-e2bd47658022",
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "entity_name": "STAGE",
+            "entity_type": "OTHER",
+            "entity_description": "Elevated platform capable of holding four people",
+            "entity_id": "7f8864db-0625-4d0c-ba10-bea992b6cdbc",
+            "source_chunk_ids": [
+                "ebd13efb-9362-44a3-8a85-e2bd47658022"
+            ]
+        },
+        {
+            "entity_name": "SUN",
+            "entity_type": "OTHER",
+            "entity_description": "The sun is a celestial object that provides light and heat to the Earth",
+            "entity_id": "d068e883-ed0e-44fc-89d9-05da12ab518e",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "LADDERS",
+            "entity_type": "OTHER",
+            "entity_description": "A set of steps or rungs used for climbing up or down",
+            "entity_id": "5e9cb5b4-ca3f-47fd-9611-ca484256d73a",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "BASKETS",
+            "entity_type": "OTHER",
+            "entity_description": "Containers made of woven materials, used for carrying or storing items",
+            "entity_id": "bc5abcc5-8bb2-4267-8842-1f44e5a35d96",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "HOGSHEAD",
+            "entity_type": "OTHER",
+            "entity_description": "A large barrel-like container used for holding liquids",
+            "entity_id": "3fde7763-0b9f-426f-bf91-040f673a5ff5",
+            "source_chunk_ids": [
+                "a08bc007-670b-4acd-8ef8-2b4a840bc44a"
+            ]
+        },
+        {
+            "entity_name": "OINTMENT",
+            "entity_type": "OTHER",
+            "entity_description": "A substance applied to the narrator's face and hands",
+            "entity_id": "955225d6-d946-4d80-94a7-a263035f1796",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "entity_name": "VICTUALS",
+            "entity_type": "OTHER",
+            "entity_description": "Food provided to the narrator",
+            "entity_id": "b2a04f99-0489-4be6-bbff-62e8f7ef78c9",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "entity_name": "SLEEPY POTION",
+            "entity_type": "OTHER",
+            "entity_description": "A potion added to the wine to induce sleep",
+            "entity_id": "93792ad7-f20b-455b-b064-8f878c67d6be",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "entity_name": "POLES",
+            "entity_type": "OTHER",
+            "entity_description": "Eighty poles, each one foot high, were erected to assist in raising the speaker into the vehicle",
+            "entity_id": "8c42c6cf-4615-4707-9511-ebf878c1ab32",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "entity_name": "CORDS",
+            "entity_type": "OTHER",
+            "entity_description": "Strong cords, the size of packthread, were fastened to bandages wrapped around the speaker's neck, hands, body, and legs",
+            "entity_id": "9bc25566-c44d-4829-9914-73bcf41b640d",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "entity_name": "HOOKS",
+            "entity_type": "OTHER",
+            "entity_description": "Hooks were used to fasten the cords to the bandages",
+            "entity_id": "bb861a9e-8a57-41c4-bd08-7315bf4dccf9",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "entity_name": "BANDAGES",
+            "entity_type": "OTHER",
+            "entity_description": "Bandages were wrapped around the speaker's neck, hands, body, and legs to secure the cords",
+            "entity_id": "519afa31-c6f3-48b7-b6d1-9e3d8a95f30e",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "entity_name": "BODY",
+            "entity_type": "OTHER",
+            "entity_description": "The physical body of the speaker",
+            "entity_id": "1bbb4ba4-df0b-40f0-a3b3-6c191e0610d6",
+            "source_chunk_ids": [
+                "a61d58a7-3f79-4cee-8a1a-705c9f855fe7"
+            ]
+        },
+        {
+            "entity_name": "GROUND",
+            "entity_type": "OTHER",
+            "entity_description": "The surface of the earth",
+            "entity_id": "d9be5047-1828-496e-b5db-b9e00418c9e3",
+            "source_chunk_ids": [
+                "a61d58a7-3f79-4cee-8a1a-705c9f855fe7"
+            ]
+        },
+        {
+            "entity_name": "YEAR 1727",
+            "entity_type": "TIME",
+            "entity_description": "The year 1727",
+            "entity_id": "a5933d7b-a9c1-4dd2-ae26-197f5f374831",
+            "source_chunk_ids": [
+                "cbbb30d1-f6cc-479e-bf24-a1248774c2dc"
+            ]
+        },
+        {
+            "entity_name": "EVENING",
+            "entity_type": "TIME",
+            "entity_description": "The time of day when the speaker reached the shore",
+            "entity_id": "1f240813-0575-4f86-b773-7e35b3218fed",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "DAY-LIGHT",
+            "entity_type": "TIME",
+            "entity_description": "The time of day when the speaker woke up",
+            "entity_id": "287b4dad-6470-42b2-bde6-5602c5270b01",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "NIGHT",
+            "entity_type": "TIME",
+            "entity_description": "The time period when the narrator was able to free themselves",
+            "entity_id": "cd9d57a8-4aed-411c-9810-9c56f8671f13",
+            "source_chunk_ids": [
+                "74b5af55-ec21-429d-b006-9ddf6750d709"
+            ]
+        },
+        {
+            "entity_name": "APRIL 2, 1727",
+            "entity_type": "TIME",
+            "entity_description": "The date when the text was written",
+            "entity_id": "e7128381-0a13-42c5-94ab-2f9a4a344a37",
+            "source_chunk_ids": [
+                "3b254bbe-f765-4d70-a210-283159364ff2"
+            ]
+        },
+        {
+            "entity_name": "NOVEMBER",
+            "entity_type": "TIME",
+            "entity_description": "The month in which the ship split",
+            "entity_id": "2bba36a3-d3de-418c-944b-89d7b42e95d5",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb"
+            ]
+        },
+        {
+            "entity_name": "SUMMER",
+            "entity_type": "TIME",
+            "entity_description": "The season in which the ship split",
+            "entity_id": "4380a874-f2a8-4fbe-a7fb-5f675ec1c680",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb"
+            ]
+        },
+        {
+            "entity_name": "ACADEMY OF PROJECTORS",
+            "entity_type": "ORGANIZATION",
+            "entity_description": "The Academy of Projectors is an organization mentioned in the text",
+            "entity_id": "aec7f875-1950-4d7d-90a3-5e7d0ab6da2c",
+            "source_chunk_ids": [
+                "c78d78ef-bc18-4b10-b871-1f4764958604"
+            ]
+        },
+        {
+            "entity_name": "GREAT MINISTERS",
+            "entity_type": "ORGANIZATION",
+            "entity_description": "Courts and levees of great ministers have been cleaned up",
+            "entity_id": "144c00a4-72b3-4153-a6ab-ac6107323bd8",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "entity_name": "EMANUEL COLLEGE",
+            "entity_type": "ORGANIZATION",
+            "entity_description": "College in Cambridge where the narrator studied",
+            "entity_id": "5981010b-dce2-46e3-8c4b-27b5fca446cb",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "entity_name": "GUARDS",
+            "entity_type": "ORGANIZATION",
+            "entity_description": "The guards who surrounded the narrator during the march",
+            "entity_id": "7ee99b10-43fc-4886-9cb5-61644e5c69dd",
+            "source_chunk_ids": [
+                "d33692b4-4c95-483e-903a-d737cb167b78"
+            ]
+        },
+        {
+            "entity_name": "COURT",
+            "entity_type": "ORGANIZATION",
+            "entity_description": "The emperor's court is a group of principal lords who advise and come out to meet the narrator.",
+            "entity_id": "fc5bb9f1-52c9-4773-ac45-6d752ed10e81",
+            "source_chunk_ids": [
+                "d33692b4-4c95-483e-903a-d737cb167b78",
+                "c07ef053-60df-4bd0-b22d-ee8b015e7e75"
+            ]
+        },
+        {
+            "entity_name": "HOUYHNHNMS",
+            "entity_type": "SPECIES",
+            "entity_description": "Houyhnhnms are rational creatures who carry others in a vehicle",
+            "entity_id": "429ec5a0-b18e-4317-8597-c1ccb4ae7059",
+            "source_chunk_ids": [
+                "a44d9060-8b64-4c30-912d-17bb6783932c"
+            ]
+        },
+        {
+            "entity_name": "YAHOO",
+            "entity_type": "SPECIES",
+            "entity_description": "The Yahoos are a species of animals known for their inability to improve. They are also characterized by their habit of lying, shuffling, deceiving, and equivocating. Additionally, they are described as creatures that use new-fangled words. The Yahoos are a fictional race of creatures mentioned in the book of travels.",
+            "entity_id": "a15d0743-45ea-4c87-b84f-ff0402e39a34",
+            "source_chunk_ids": [
+                "30edec5a-eb8d-4dd1-bf03-62e6209fbbfe",
+                "3b254bbe-f765-4d70-a210-283159364ff2",
+                "f4e8be6b-7ce4-4f2c-8350-d159dd738ae6",
+                "81d9ac77-ce46-443a-a0fc-52acfda2ad15"
+            ]
+        },
+        {
+            "entity_name": "EUROPEANS",
+            "entity_type": "SPECIES",
+            "entity_description": "A species of humans known for their habit of lying, shuffling, deceiving, and equivocating",
+            "entity_id": "79ba508d-2e07-45e6-bcda-abcbfb716266",
+            "source_chunk_ids": [
+                "3b254bbe-f765-4d70-a210-283159364ff2"
+            ]
+        },
+        {
+            "entity_name": "HUMAN CREATURE",
+            "entity_type": "SPECIES",
+            "entity_description": "A small creature, approximately six inches high, with a bow and arrow and a quiver",
+            "entity_id": "037e8f68-f002-47d1-8155-62822d9808ef",
+            "source_chunk_ids": [
+                "72fb2948-38e2-4387-9bbb-51a0ff5a7d9d"
+            ]
+        },
+        {
+            "entity_name": "SEA YAHOO",
+            "entity_type": "SPECIES",
+            "entity_description": "Sea creatures that find fault with the speaker's sea-language",
+            "entity_id": "ac45c815-7520-465d-ba13-85ba6fb66a76",
+            "source_chunk_ids": [
+                "f4e8be6b-7ce4-4f2c-8350-d159dd738ae6"
+            ]
+        },
+        {
+            "entity_name": "HOOUYHNHNM",
+            "entity_type": "SPECIES",
+            "entity_description": "The Houyhnhnms are a fictional race of creatures in the book of travels",
+            "entity_id": "78e0ea0a-44c1-411a-98ff-107c4dc1ea34",
+            "source_chunk_ids": [
+                "81d9ac77-ce46-443a-a0fc-52acfda2ad15"
+            ]
+        },
+        {
+            "entity_name": "LARK",
+            "entity_type": "SPECIES",
+            "entity_description": "Type of bird whose wings the meat was smaller than",
+            "entity_id": "7578b80f-98cc-42a8-a949-17c62e538b18",
+            "source_chunk_ids": [
+                "01765f35-f1a0-4048-81cf-aa20a14d83bc"
+            ]
+        },
+        {
+            "entity_name": "VOYAGES",
+            "entity_type": "ACTIVITY",
+            "entity_description": "The author's various journeys and travels",
+            "entity_id": "e9a52184-a2f4-480d-90d7-f31d72e9e97c",
+            "source_chunk_ids": [
+                "6a1efcc0-122c-4b9d-84e7-77107815acbf"
+            ]
+        },
+        {
+            "entity_name": "SLEEP",
+            "entity_type": "ACTIVITY",
+            "entity_description": "The state of rest that the speaker experienced",
+            "entity_id": "082c602b-fea1-447c-a789-4bd1293cf472",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "SWALLOW",
+            "entity_type": "SHIP",
+            "entity_description": "Ship that the author served on as a surgeon",
+            "entity_id": "b6dbc390-fe9c-48d7-b7bb-287d5deb8d18",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "entity_name": "ANTELOPE",
+            "entity_type": "SHIP",
+            "entity_description": "Ship that the speaker sailed on",
+            "entity_id": "24676374-a70e-418f-8780-c311d236f2e2",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "entity_name": "SURGEON",
+            "entity_type": "PROFESSION",
+            "entity_description": "The narrator's profession during his time at sea",
+            "entity_id": "c3af7a27-9765-4b6c-acb9-daa0fe908108",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "entity_name": "WAVES",
+            "entity_type": "PHENOMENON",
+            "entity_description": "The movement of water caused by wind or other forces",
+            "entity_id": "2f5cb0b9-28a8-47bd-95ff-c476bc37d81a",
+            "source_chunk_ids": [
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6"
+            ]
+        },
+        {
+            "entity_name": "STORM",
+            "entity_type": "PHENOMENON",
+            "entity_description": "A weather event that was happening",
+            "entity_id": "c2d7be2a-936e-4fda-8fed-8d77e41fcb04",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "NORTH",
+            "entity_type": "DIRECTION",
+            "entity_description": "The direction opposite to south",
+            "entity_id": "c6daab7c-d781-44e0-a0d0-d9e47fa4a568",
+            "source_chunk_ids": [
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6"
+            ]
+        },
+        {
+            "entity_name": "COMPANIONS",
+            "entity_type": "GROUP",
+            "entity_description": "The people who were with the speaker in the boat",
+            "entity_id": "86e9e454-8625-47a1-8317-6927a3411d8f",
+            "source_chunk_ids": [
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6"
+            ]
+        },
+        {
+            "entity_name": "INHABITANTS",
+            "entity_type": "GROUP",
+            "entity_description": "The entity in question is \"the people\".",
+            "entity_id": "3f0be09f-8c19-4143-bcb4-a5bd42507d22",
+            "source_chunk_ids": [
+                "74b5af55-ec21-429d-b006-9ddf6750d709",
+                "ebd13efb-9362-44a3-8a85-e2bd47658022",
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "ARMY",
+            "entity_type": "GROUP",
+            "entity_description": "The military force that the inhabitants could bring against the narrator",
+            "entity_id": "287d1338-03f8-4aba-8028-c62c5f2a2575",
+            "source_chunk_ids": [
+                "74b5af55-ec21-429d-b006-9ddf6750d709"
+            ]
+        },
+        {
+            "entity_name": "PEOPLE",
+            "entity_type": "GROUP",
+            "entity_description": "The group of individuals who observed the narrator were astonished at seeing the author rise and walk.",
+            "entity_id": "0497aacd-6bd8-415e-8977-7eb57101735f",
+            "source_chunk_ids": [
+                "ebd13efb-9362-44a3-8a85-e2bd47658022",
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "entity_name": "THEY",
+            "entity_type": "GROUP",
+            "entity_description": "A group of people who attacked the narrator",
+            "entity_id": "bf1d3082-025e-405c-a836-7190c401ff06",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "entity_name": "NOBILITY",
+            "entity_type": "GROUP",
+            "entity_description": "The nobility who accompany the emperor of Lilliput",
+            "entity_id": "7395eac2-85e6-4c69-a005-5449b7d6bd87",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "entity_name": "LEARNED MEN",
+            "entity_type": "GROUP",
+            "entity_description": "The learned men who are appointed to teach the author their language",
+            "entity_id": "63676c6c-4e55-4ae4-aeb9-eaac3a2fbd30",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "entity_name": "LEG",
+            "entity_type": "BODY_PART",
+            "entity_description": "Part of the body that the speaker often lets drop",
+            "entity_id": "d91e09f1-d25e-4d70-a5e9-49260b3a8459",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "entity_name": "ARMS",
+            "entity_type": "BODY_PART",
+            "entity_description": "The limbs of the narrator's body",
+            "entity_id": "e7b17834-8429-4354-b7a4-88a1932dc4a5",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44"
+            ]
+        },
+        {
+            "entity_name": "LEGS",
+            "entity_type": "BODY_PART",
+            "entity_description": "The limbs of the narrator's body",
+            "entity_id": "f6fe7fb9-e0e7-47b2-b6fc-002529e3e12c",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44"
+            ]
+        },
+        {
+            "entity_name": "HAIR",
+            "entity_type": "BODY_PART",
+            "entity_description": "The narrator's hair is tied down on the left side.",
+            "entity_id": "aa2763a0-8a5b-4e56-9a4a-4dc29114fd40",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44",
+                "754c1896-bb68-4052-b06f-90a499885af8"
+            ]
+        },
+        {
+            "entity_name": "LEFT ARM",
+            "entity_type": "BODY_PART",
+            "entity_description": "The arm that was bound to the ground",
+            "entity_id": "535b0846-8f5f-495f-a17a-f340c7c816ff",
+            "source_chunk_ids": [
+                "754c1896-bb68-4052-b06f-90a499885af8"
+            ]
+        },
+        {
+            "entity_name": "LEFT HAND",
+            "entity_type": "BODY_PART",
+            "entity_description": "The narrator's hand that was already loose",
+            "entity_id": "fa85cf62-1bc2-4db7-a21d-7bbfa2107afc",
+            "source_chunk_ids": [
+                "74b5af55-ec21-429d-b006-9ddf6750d709"
+            ]
+        },
+        {
+            "entity_name": "FINGER",
+            "entity_type": "BODY_PART",
+            "entity_description": "One of the five digits on the hand, used for pointing, touching, and grasping",
+            "entity_id": "d288b43d-fc01-48c7-a8f2-1106fce0f1c2",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "MOUTH",
+            "entity_type": "BODY_PART",
+            "entity_description": "The opening through which food and drink enter the body",
+            "entity_id": "412eba0c-874a-4c79-b520-545d76844237",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "SIZE",
+            "entity_type": "ATTRIBUTE",
+            "entity_description": "The physical attribute that the narrator believed would determine their ability to defeat the inhabitants",
+            "entity_id": "c69d107d-1f73-4b2d-a132-e14a39c33e0c",
+            "source_chunk_ids": [
+                "74b5af55-ec21-429d-b006-9ddf6750d709"
+            ]
+        },
+        {
+            "entity_name": "HUNGER",
+            "entity_type": "EMOTION",
+            "entity_description": "The feeling of discomfort or weakness caused by lack of food",
+            "entity_id": "2e7f6ce1-4544-4aa8-a256-1b913b25c987",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "IMPATIENCE",
+            "entity_type": "EMOTION",
+            "entity_description": "The feeling of wanting or needing something to happen sooner or more quickly",
+            "entity_id": "70edafa9-5d4d-451b-9b6f-db0ea87b8037",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "NATURE",
+            "entity_type": "CONCEPT",
+            "entity_description": "The natural world and everything in it, including plants, animals, and physical forces",
+            "entity_id": "845ca40f-89ac-47e7-9031-0cfaf855ac5f",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "HURGO",
+            "entity_type": "TITLE",
+            "entity_description": "A title given to a great lord or noble",
+            "entity_id": "85f7e12e-a809-48b6-ae2f-fe56c9098319",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "KINGS",
+            "entity_type": "TITLE",
+            "entity_description": "The male ruler of a country or territory",
+            "entity_id": "799531ed-c025-4f7d-930a-3fb016232d21",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "IMPERIAL MAJESTY",
+            "entity_type": "TITLE",
+            "entity_description": "The ruler of the land, who sent a representative to communicate with the narrator",
+            "entity_id": "b8707291-6436-437b-9aff-3feebd0fb4b1",
+            "source_chunk_ids": [
+                "904a7854-b91c-4fb2-965e-96a0d4696441"
+            ]
+        },
+        {
+            "entity_name": "MEAT",
+            "entity_type": "FOOD",
+            "entity_description": "The flesh of animals, typically used as food",
+            "entity_id": "86c541c8-4184-4b56-9085-b7bcb6a96944",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "entity_name": "MUTTON",
+            "entity_type": "FOOD",
+            "entity_description": "Type of meat that the flesh resembled",
+            "entity_id": "ff24c239-9781-4554-baa0-ee7f429cdaf1",
+            "source_chunk_ids": [
+                "01765f35-f1a0-4048-81cf-aa20a14d83bc"
+            ]
+        },
+        {
+            "entity_name": "LOAVES",
+            "entity_type": "FOOD",
+            "entity_description": "Bread that was consumed",
+            "entity_id": "c8c0310b-d3c9-48fa-a729-59cd8f2d1f60",
+            "source_chunk_ids": [
+                "01765f35-f1a0-4048-81cf-aa20a14d83bc"
+            ]
+        },
+        {
+            "entity_name": "INGENIOUS PEOPLE",
+            "entity_type": "CULTURE",
+            "entity_description": "A highly skilled and clever group of people",
+            "entity_id": "9a5e2c2c-aec3-47e8-94f1-2c765ca9bb8c",
+            "source_chunk_ids": [
+                "a08bc007-670b-4acd-8ef8-2b4a840bc44a"
+            ]
+        },
+        {
+            "entity_name": "PEPLOM SELAN",
+            "entity_type": "UNKNOWN",
+            "entity_description": "A phrase shouted by the crowd",
+            "entity_id": "3b734197-8b4b-4ee2-a3e2-8405d6857949",
+            "source_chunk_ids": [
+                "d9fd1a39-1fed-47c9-88ff-e355e3c0687f"
+            ]
+        },
+        {
+            "entity_name": "ANCIENT TEMPLE",
+            "entity_type": "BUILDING",
+            "entity_description": "The largest temple in the kingdom, which was previously polluted and now used for common purposes",
+            "entity_id": "6d126773-4952-487c-9c26-18382ae88e9d",
+            "source_chunk_ids": [
+                "1dd4e45c-b6ef-4d7b-903f-da4ecdbe5af2"
+            ]
+        },
+        {
+            "entity_name": "TURRET",
+            "entity_type": "BUILDING",
+            "entity_description": "A structure at least five feet high",
+            "entity_id": "fd858447-6bcc-4022-9d85-6a6eaf6986aa",
+            "source_chunk_ids": [
+                "c07ef053-60df-4bd0-b22d-ee8b015e7e75"
+            ]
+        },
+        {
+            "entity_name": "GATE",
+            "entity_type": "BUILDING",
+            "entity_description": "The gate near which the chains that held the author's left leg were fixed",
+            "entity_id": "ed6ea1c8-87eb-4677-9ca7-29396abea751",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "entity_name": "TEMPLE",
+            "entity_type": "BUILDING",
+            "entity_description": "The temple where the author is able to creep in and lie at his full length",
+            "entity_id": "2e9413be-f250-4d6e-8711-769c60f2d069",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "source_entity": "GULLIVERS TRAVELS",
+            "target_entity": "JONATHAN SWIFT",
+            "relationship_description": "Jonathan Swift is the author of Gulliver's Travels",
+            "relationship_strength": 10.0,
+            "relationship_id": "610e42e9-1071-4646-8d30-95d291b37998",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "source_entity": "GULLIVERS TRAVELS",
+            "target_entity": "LEMUEL GULLIVER",
+            "relationship_description": "Lemuel Gulliver is the main character in Gulliver's Travels",
+            "relationship_strength": 10.0,
+            "relationship_id": "9d9e33a0-ab32-4f4e-a13b-1e0e0e8c3f5b",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "source_entity": "GULLIVERS TRAVELS",
+            "target_entity": "REDRIFF",
+            "relationship_description": "Gulliver's house is located in Redriff",
+            "relationship_strength": 8.0,
+            "relationship_id": "66ec727e-7846-4029-847e-52238f763b4a",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "source_entity": "GULLIVERS TRAVELS",
+            "target_entity": "NEWARK",
+            "relationship_description": "Gulliver now lives in Newark",
+            "relationship_strength": 8.0,
+            "relationship_id": "2978366d-990d-49e8-ba2a-2fcbeb506155",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "source_entity": "GULLIVERS TRAVELS",
+            "target_entity": "NOTTINGHAMSHIRE",
+            "relationship_description": "Gulliver's native country is Nottinghamshire",
+            "relationship_strength": 8.0,
+            "relationship_id": "de55008f-727f-44c9-a706-15edd7635913",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "source_entity": "GULLIVERS TRAVELS",
+            "target_entity": "BANBURY",
+            "relationship_description": "There are tombs and monuments of the Gullivers in Banbury",
+            "relationship_strength": 6.0,
+            "relationship_id": "f9b745bc-6a49-4f58-9aa3-f2f8c0fcb52e",
+            "source_chunk_ids": [
+                "15aad679-ab7c-49b4-8471-80a1d5ed004e"
+            ]
+        },
+        {
+            "source_entity": "MR. GULLIVER",
+            "target_entity": "REDRIFF",
+            "relationship_description": "The author left the papers in the custody of Redriff",
+            "relationship_strength": 5.0,
+            "relationship_id": "54705686-60c0-482c-8a02-c3c8c721fddb",
+            "source_chunk_ids": [
+                "f3540703-9241-4d3d-993e-602a971ea1d8"
+            ]
+        },
+        {
+            "source_entity": "MR. GULLIVER",
+            "target_entity": "WORLD",
+            "relationship_description": "The papers are being sent into the world by the author",
+            "relationship_strength": 7.0,
+            "relationship_id": "603f9270-0fe8-4e40-8e4a-3f51b8bc54d5",
+            "source_chunk_ids": [
+                "f3540703-9241-4d3d-993e-602a971ea1d8"
+            ]
+        },
+        {
+            "source_entity": "CAPTAIN GULLIVER",
+            "target_entity": "RICHARD SYMPSON",
+            "relationship_description": "Captain Gulliver wrote a letter to Richard Symson",
+            "relationship_strength": 5.0,
+            "relationship_id": "e0a82dfd-eecf-4efb-8502-101fbd67c09f",
+            "source_chunk_ids": [
+                "b8d4104b-e77f-441b-98ab-8a74439af6b8"
+            ]
+        },
+        {
+            "source_entity": "COUSIN DAMPIER",
+            "target_entity": "A VOYAGE ROUND THE WORLD",
+            "relationship_description": "Cousin Dampier corrected the style of the book A Voyage round the world",
+            "relationship_strength": 5.0,
+            "relationship_id": "e6ac7c24-d5d8-4a43-8359-e512e72e6f65",
+            "source_chunk_ids": [
+                "9c4e6e95-1174-4d04-94ea-e195d8c4d69b"
+            ]
+        },
+        {
+            "source_entity": "QUEEN ANNE",
+            "target_entity": "COUSIN DAMPIER",
+            "relationship_description": "Queen Anne is mentioned in the book A Voyage round the world",
+            "relationship_strength": 3.0,
+            "relationship_id": "7e4d72d4-1dfe-426e-a2da-2d0943ea7316",
+            "source_chunk_ids": [
+                "9c4e6e95-1174-4d04-94ea-e195d8c4d69b"
+            ]
+        },
+        {
+            "source_entity": "ENGLAND",
+            "target_entity": "QUEEN ELIZABETH I",
+            "relationship_description": "Queen Elizabeth I was the ruler of England during the author's time",
+            "relationship_strength": 8.0,
+            "relationship_id": "97f7c28b-3a1f-4b33-ad93-5771d4ea9667",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3"
+            ]
+        },
+        {
+            "source_entity": "QUEEN ELIZABETH I",
+            "target_entity": "CHIEF MINISTER",
+            "relationship_description": "Queen Elizabeth I governed England through chief ministers",
+            "relationship_strength": 7.0,
+            "relationship_id": "6445f15b-99df-4520-bd24-a609e0ecdfd2",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3"
+            ]
+        },
+        {
+            "source_entity": "CHIEF MINISTER",
+            "target_entity": "LORD OF GODOLPHIN",
+            "relationship_description": "The lord of Godolphin was the first chief minister during Queen Elizabeth I's reign",
+            "relationship_strength": 6.0,
+            "relationship_id": "2d7baa08-c9b8-474b-b273-383c6de1438d",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3"
+            ]
+        },
+        {
+            "source_entity": "CHIEF MINISTER",
+            "target_entity": "LORD OF OXFORD",
+            "relationship_description": "The lord of Oxford was the second chief minister during Queen Elizabeth I's reign",
+            "relationship_strength": 6.0,
+            "relationship_id": "d7ad1301-08f3-47f8-abc9-cadd40fd4a31",
+            "source_chunk_ids": [
+                "f7d7450e-c375-4707-83cb-a13426d6f1b3"
+            ]
+        },
+        {
+            "source_entity": "ACADEMY OF PROJECTORS",
+            "target_entity": "MASTER HOUYHNHNM",
+            "relationship_description": "The Academy of Projectors is mentioned in relation to the discourse with Master Houyhnhnm",
+            "relationship_strength": 5.0,
+            "relationship_id": "30cfdfc5-2aec-4301-a780-8b3009898696",
+            "source_chunk_ids": [
+                "c78d78ef-bc18-4b10-b871-1f4764958604"
+            ]
+        },
+        {
+            "source_entity": "MASTER HOUYHNHNM",
+            "target_entity": "YAHOO",
+            "relationship_description": "Master Houyhnhnm carries the Yahoos in a vehicle",
+            "relationship_strength": 7.0,
+            "relationship_id": "510c56c1-cb36-4831-8542-cc54dfc983d6",
+            "source_chunk_ids": [
+                "c78d78ef-bc18-4b10-b871-1f4764958604"
+            ]
+        },
+        {
+            "source_entity": "HOUYHNHNMS",
+            "target_entity": "VEHICLE",
+            "relationship_description": "Houyhnhnms carry others in a vehicle",
+            "relationship_strength": 8.0,
+            "relationship_id": "29c408d9-6abc-472c-97fc-d9eb4f00f216",
+            "source_chunk_ids": [
+                "a44d9060-8b64-4c30-912d-17bb6783932c"
+            ]
+        },
+        {
+            "source_entity": "YOURSELF",
+            "target_entity": "TRUST",
+            "relationship_description": "The speaker has placed trust in the person being addressed",
+            "relationship_strength": 5.0,
+            "relationship_id": "af356c99-828c-48cb-89cb-ad5bf09ec4d0",
+            "source_chunk_ids": [
+                "09cfadc1-3a50-4fc1-b1f0-57af3507f14c"
+            ]
+        },
+        {
+            "source_entity": "BOOK",
+            "target_entity": "ISLAND",
+            "relationship_description": "The book was intended to have an effect on the island, but it did not",
+            "relationship_strength": 5.0,
+            "relationship_id": "d13f34c6-cfa0-4169-b5a2-808eae916db3",
+            "source_chunk_ids": [
+                "30edec5a-eb8d-4dd1-bf03-62e6209fbbfe"
+            ]
+        },
+        {
+            "source_entity": "SMITHFIELD",
+            "target_entity": "LAW BOOKS",
+            "relationship_description": "Smithfield is blazing with pyramids of law books",
+            "relationship_strength": 5.0,
+            "relationship_id": "e1fbcaa0-3635-4f48-b3b2-34ac421d83ef",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "source_entity": "YAHOO",
+            "target_entity": "VIRTUE",
+            "relationship_description": "Female Yahoos are abounding in virtue",
+            "relationship_strength": 8.0,
+            "relationship_id": "b57c49ca-66f2-46d2-a4ff-d7facddb5b05",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "source_entity": "YAHOO",
+            "target_entity": "HONOR",
+            "relationship_description": "Female Yahoos are abounding in honor",
+            "relationship_strength": 8.0,
+            "relationship_id": "b748f72b-2189-455d-bc1a-648ac6295584",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "source_entity": "YAHOO",
+            "target_entity": "TRUTH",
+            "relationship_description": "Female Yahoos are abounding in truth",
+            "relationship_strength": 8.0,
+            "relationship_id": "5e52d18c-e3c3-4b7c-b8f8-3f8a957bcdbf",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "source_entity": "YAHOO",
+            "target_entity": "GOOD SENSE",
+            "relationship_description": "Female Yahoos are abounding in good sense",
+            "relationship_strength": 8.0,
+            "relationship_id": "3cb002a8-f19d-4ac5-b1f3-18f8503c5c7b",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "source_entity": "PHYSICIANS",
+            "target_entity": "BANISHED",
+            "relationship_description": "Physicians have been banished",
+            "relationship_strength": 7.0,
+            "relationship_id": "a6ed6c41-f209-4c04-94e4-62bcd64fe82e",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "source_entity": "GREAT MINISTERS",
+            "target_entity": "COURTS",
+            "relationship_description": "Courts of great ministers have been thoroughly weeded and swept",
+            "relationship_strength": 9.0,
+            "relationship_id": "0b2aea05-51df-4d42-ad27-1df9535d90b9",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "source_entity": "GREAT MINISTERS",
+            "target_entity": "LEVEES",
+            "relationship_description": "Levees of great ministers have been thoroughly weeded and swept",
+            "relationship_strength": 9.0,
+            "relationship_id": "c6a46feb-f33b-4c11-86ae-ce805885ac4b",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "source_entity": "PRESS",
+            "target_entity": "DISGRACERS",
+            "relationship_description": "Disgracers of the press in prose and verse are condemned to eat their own cotton and drink their own ink",
+            "relationship_strength": 6.0,
+            "relationship_id": "6061aca6-2ecc-44f0-ae58-2f22bdc91d60",
+            "source_chunk_ids": [
+                "1ecc4237-d2e2-490e-8fbc-3a4ad5c61698"
+            ]
+        },
+        {
+            "source_entity": "PRINTER",
+            "target_entity": "BOOK",
+            "relationship_description": "The printer made mistakes in the publication of the book",
+            "relationship_strength": 5.0,
+            "relationship_id": "67694c69-57bc-4c01-bc6b-f1157539a232",
+            "source_chunk_ids": [
+                "6a1efcc0-122c-4b9d-84e7-77107815acbf"
+            ]
+        },
+        {
+            "source_entity": "MANUSCRIPT",
+            "target_entity": "BOOK",
+            "relationship_description": "The original manuscript was destroyed after the book was published",
+            "relationship_strength": 7.0,
+            "relationship_id": "58b28efb-dc27-42ad-9103-b5243becbf75",
+            "source_chunk_ids": [
+                "6a1efcc0-122c-4b9d-84e7-77107815acbf"
+            ]
+        },
+        {
+            "source_entity": "CORRECTIONS",
+            "target_entity": "SECOND EDITION",
+            "relationship_description": "The corrections can be included in a future edition of the book",
+            "relationship_strength": 8.0,
+            "relationship_id": "6c8ade44-afff-41b8-823b-a50ca149dcb9",
+            "source_chunk_ids": [
+                "6a1efcc0-122c-4b9d-84e7-77107815acbf"
+            ]
+        },
+        {
+            "source_entity": "SEA YAHOO",
+            "target_entity": "SPEAKER",
+            "relationship_description": "Sea Yahoos find fault with the speaker's sea-language",
+            "relationship_strength": 7.0,
+            "relationship_id": "ac80dc26-4aae-4327-9be1-8589add99a5e",
+            "source_chunk_ids": [
+                "f4e8be6b-7ce4-4f2c-8350-d159dd738ae6"
+            ]
+        },
+        {
+            "source_entity": "YAHOO",
+            "target_entity": "SPEAKER",
+            "relationship_description": "Yahoos and the speaker are unable to understand each other's conceptions",
+            "relationship_strength": 6.0,
+            "relationship_id": "a4f500d0-9095-4012-aef6-d4d1cc30aa6b",
+            "source_chunk_ids": [
+                "f4e8be6b-7ce4-4f2c-8350-d159dd738ae6"
+            ]
+        },
+        {
+            "source_entity": "MARINER",
+            "target_entity": "SPEAKER",
+            "relationship_description": "The speaker learned sea-language from the oldest mariners",
+            "relationship_strength": 8.0,
+            "relationship_id": "c11071a3-0a2a-47cd-8c51-cd093b09f1c9",
+            "source_chunk_ids": [
+                "f4e8be6b-7ce4-4f2c-8350-d159dd738ae6"
+            ]
+        },
+        {
+            "source_entity": "LONDON",
+            "target_entity": "SPEAKER",
+            "relationship_description": "Yahoos from London visit the speaker at their house",
+            "relationship_strength": 5.0,
+            "relationship_id": "91f2478c-3120-449b-b691-3a28eab73ff4",
+            "source_chunk_ids": [
+                "f4e8be6b-7ce4-4f2c-8350-d159dd738ae6"
+            ]
+        },
+        {
+            "source_entity": "YAHOO",
+            "target_entity": "HOOUYHNHNM",
+            "relationship_description": "The Yahoos and Houyhnhnms are both fictional races mentioned in the book of travels",
+            "relationship_strength": 8.0,
+            "relationship_id": "9a5304bb-9faa-4e51-9a20-6f11bcb76f6d",
+            "source_chunk_ids": [
+                "81d9ac77-ce46-443a-a0fc-52acfda2ad15"
+            ]
+        },
+        {
+            "source_entity": "YAHOO",
+            "target_entity": "UTOPIA",
+            "relationship_description": "The Yahoos are compared to the inhabitants of Utopia in the book of travels",
+            "relationship_strength": 6.0,
+            "relationship_id": "07e0ede9-f838-4988-b76b-0ea68b52336d",
+            "source_chunk_ids": [
+                "81d9ac77-ce46-443a-a0fc-52acfda2ad15"
+            ]
+        },
+        {
+            "source_entity": "HOOUYHNNHMS",
+            "target_entity": "YAHOOS",
+            "relationship_description": "The Houyhnhnms and Yahoos are mentioned together in the text",
+            "relationship_strength": 8.0,
+            "relationship_id": "47cc3760-4d99-47a6-8540-5e313ae8b593",
+            "source_chunk_ids": [
+                "081d373d-f016-4c68-8b1e-1458cc5df03a"
+            ]
+        },
+        {
+            "source_entity": "YAHOO",
+            "target_entity": "HOUYHNHNMLAND",
+            "relationship_description": "Yahoos are a species that reside in Houyhnhnmland",
+            "relationship_strength": 8.0,
+            "relationship_id": "e945b338-1c58-4234-9fba-8b632ce00b23",
+            "source_chunk_ids": [
+                "3b254bbe-f765-4d70-a210-283159364ff2"
+            ]
+        },
+        {
+            "source_entity": "YAHOO",
+            "target_entity": "EUROPEANS",
+            "relationship_description": "Yahoos and Europeans are species known for their habit of lying, shuffling, deceiving, and equivocating",
+            "relationship_strength": 6.0,
+            "relationship_id": "93c66e65-50b4-400a-ab4d-b4db95127f0e",
+            "source_chunk_ids": [
+                "3b254bbe-f765-4d70-a210-283159364ff2"
+            ]
+        },
+        {
+            "source_entity": "AUTHOR",
+            "target_entity": "LILLIPUT",
+            "relationship_description": "The author is shipwrecked in Lilliput and becomes a prisoner",
+            "relationship_strength": 8.0,
+            "relationship_id": "9b0eb960-b9ee-4337-9b1d-769725a1078d",
+            "source_chunk_ids": [
+                "b4ef00cd-e0e4-4af2-ac7e-e2aa49096a78"
+            ]
+        },
+        {
+            "source_entity": "NOTTINGHAMSHIRE",
+            "target_entity": "EMANUEL COLLEGE",
+            "relationship_description": "The narrator's father owned a small estate in Nottinghamshire and the narrator was sent to Emanuel College in Cambridge",
+            "relationship_strength": 1.0,
+            "relationship_id": "f90c5b6c-bb3d-4c67-9b38-fe3c1051def4",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "source_entity": "EMANUEL COLLEGE",
+            "target_entity": "CAMBRIDGE",
+            "relationship_description": "Emanuel College is located in Cambridge",
+            "relationship_strength": 1.0,
+            "relationship_id": "f5aefa6c-8b62-4bd3-9e96-c7fc75e3b450",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "source_entity": "MR. BATES",
+            "target_entity": "LONDON",
+            "relationship_description": "Mr. James Bates is an eminent surgeon in London",
+            "relationship_strength": 1.0,
+            "relationship_id": "5398e088-187c-466f-9e89-dc5abc5eb8e8",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "source_entity": "MR. BATES",
+            "target_entity": "JAMES BATES",
+            "relationship_description": "Mr. James Bates is the eminent surgeon in London who the narrator was apprenticed to",
+            "relationship_strength": 1.0,
+            "relationship_id": "a232aa38-2d84-4f73-843d-5eff917583a0",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "source_entity": "JOHN",
+            "target_entity": "LEYDEN",
+            "relationship_description": "Uncle John provided assistance to the narrator to study physic in Leyden",
+            "relationship_strength": 1.0,
+            "relationship_id": "cf5230c7-44a5-4744-99f3-bb37d0fc06d0",
+            "source_chunk_ids": [
+                "45bc4981-4a3a-4509-9d11-f6ddb23216c8"
+            ]
+        },
+        {
+            "source_entity": "MR. BATES",
+            "target_entity": "SWALLOW",
+            "relationship_description": "Mr. Bates recommended the author to be a surgeon on the Swallow",
+            "relationship_strength": 8.0,
+            "relationship_id": "42414466-f324-4cb7-aa68-4e0e36f957f8",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "source_entity": "ABRAHAM PANNEL",
+            "target_entity": "SWALLOW",
+            "relationship_description": "Abraham Pannel is the captain of the Swallow",
+            "relationship_strength": 9.0,
+            "relationship_id": "a9213ab3-0fe1-451a-a6f7-da0b516af630",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "source_entity": "LEYDEN",
+            "target_entity": "LONDON",
+            "relationship_description": "The author returned from Leyden and settled in London",
+            "relationship_strength": 7.0,
+            "relationship_id": "f1954db2-42a6-4917-b6de-3890098db4f5",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "source_entity": "MR. BATES",
+            "target_entity": "AUTHOR",
+            "relationship_description": "Mr. Bates recommended the author to several patients",
+            "relationship_strength": 6.0,
+            "relationship_id": "7ec66135-c9a0-4a9b-96a1-6d68c8805370",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "source_entity": "MARY BURTON",
+            "target_entity": "AUTHOR",
+            "relationship_description": "The author married Mary Burton",
+            "relationship_strength": 9.0,
+            "relationship_id": "0e9f203a-8ed3-4e1d-b598-67441a0213a3",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "source_entity": "EDMUND BURTON",
+            "target_entity": "MARY BURTON",
+            "relationship_description": "Edmund Burton is the father of Mary Burton",
+            "relationship_strength": 8.0,
+            "relationship_id": "9ec68ef7-e802-4e2e-b50b-7c29c7ce7e32",
+            "source_chunk_ids": [
+                "fd829e8e-f111-4702-a555-e770dd1fd2ae"
+            ]
+        },
+        {
+            "source_entity": "MASTER BATES",
+            "target_entity": "NARRATOR",
+            "relationship_description": "Master Bates was the good master of the narrator",
+            "relationship_strength": 5.0,
+            "relationship_id": "0668a9ac-1dbc-4622-a177-bb1691b84b52",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "source_entity": "WIFE",
+            "target_entity": "NARRATOR",
+            "relationship_description": "The narrator consulted with his wife before deciding to go to sea",
+            "relationship_strength": 7.0,
+            "relationship_id": "84056885-4560-4aca-b78b-404abe1559ad",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "source_entity": "ACQUAINTANCE",
+            "target_entity": "NARRATOR",
+            "relationship_description": "The narrator consulted with some of his acquaintances before deciding to go to sea",
+            "relationship_strength": 6.0,
+            "relationship_id": "1f16498f-5885-479b-ab1a-2e7bfb5c11c6",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "source_entity": "SURGEON",
+            "target_entity": "NARRATOR",
+            "relationship_description": "The narrator worked as a surgeon during his time at sea",
+            "relationship_strength": 8.0,
+            "relationship_id": "f528c025-bbe8-413f-baa0-66d9d99547c9",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "source_entity": "NARRATOR",
+            "target_entity": "EAST AND WEST INDIES",
+            "relationship_description": "The narrator made several voyages to the East and West Indies",
+            "relationship_strength": 9.0,
+            "relationship_id": "01e4a325-67d3-41ed-b8f1-698a4b0afaf5",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "source_entity": "NARRATOR",
+            "target_entity": "BOOKS",
+            "relationship_description": "The narrator always carried a good number of books with him",
+            "relationship_strength": 7.0,
+            "relationship_id": "36d6e399-c279-4390-af0c-1adb0a7258bf",
+            "source_chunk_ids": [
+                "68233e66-a7fc-4cb5-a3c1-448dbb9d61f0"
+            ]
+        },
+        {
+            "source_entity": "OLD JEWRY",
+            "target_entity": "FETTER LANE",
+            "relationship_description": "The speaker moved from Old Jewry to Fetter Lane",
+            "relationship_strength": 2.0,
+            "relationship_id": "c378c7f6-fcc8-40f6-aefb-d1fec211284e",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "source_entity": "FETTER LANE",
+            "target_entity": "WAPPING",
+            "relationship_description": "The speaker moved from Fetter Lane to Wapping",
+            "relationship_strength": 2.0,
+            "relationship_id": "bf3f5ba7-f9b5-4594-8a24-5119b4cc7b9f",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "source_entity": "WAPPING",
+            "target_entity": "BRISTOL",
+            "relationship_description": "The speaker sailed from Wapping to Bristol",
+            "relationship_strength": 2.0,
+            "relationship_id": "581c0b1e-ec3a-49f5-9cf4-755d2fccd68d",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "source_entity": "BRISTOL",
+            "target_entity": "ANTELOPE",
+            "relationship_description": "The voyage started from Bristol on the Antelope ship",
+            "relationship_strength": 2.0,
+            "relationship_id": "8552c6c3-60a2-4aee-ae87-ab9e58f06e90",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "source_entity": "CAPTAIN WILLIAM PRICHARD",
+            "target_entity": "ANTELOPE",
+            "relationship_description": "Captain William Prichard was the captain of the Antelope ship",
+            "relationship_strength": 2.0,
+            "relationship_id": "c790afec-ec05-4aa2-aa24-b31849a1b953",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "source_entity": "ANTELOPE",
+            "target_entity": "SOUTH SEA",
+            "relationship_description": "The voyage was heading to the South Sea",
+            "relationship_strength": 2.0,
+            "relationship_id": "3e1d07e9-52c5-4ecf-b6a4-9b8006ca4209",
+            "source_chunk_ids": [
+                "5d421fba-a525-48c0-99ca-bf9595215604"
+            ]
+        },
+        {
+            "source_entity": "SHIP",
+            "target_entity": "ROCK",
+            "relationship_description": "The ship was driven onto the rock and split",
+            "relationship_strength": 8.0,
+            "relationship_id": "d6cc6072-fdf1-4e92-8ba5-abf692fe9193",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb"
+            ]
+        },
+        {
+            "source_entity": "CREW",
+            "target_entity": "BOAT",
+            "relationship_description": "The crew used the boat to escape the ship",
+            "relationship_strength": 9.0,
+            "relationship_id": "250eb200-42c4-47ae-ae6c-bcbc88f5d36e",
+            "source_chunk_ids": [
+                "15f8492d-9ba4-44ae-a036-86e7f1666dfb"
+            ]
+        },
+        {
+            "source_entity": "BOAT",
+            "target_entity": "WAVES",
+            "relationship_description": "The boat was overturned by the waves",
+            "relationship_strength": 8.0,
+            "relationship_id": "69ada8d8-c0db-4cfa-897b-1d198d1ba5ea",
+            "source_chunk_ids": [
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6"
+            ]
+        },
+        {
+            "source_entity": "COMPANIONS",
+            "target_entity": "BOAT",
+            "relationship_description": "The companions were in the boat",
+            "relationship_strength": 6.0,
+            "relationship_id": "d458cf34-3171-4f57-973b-919aaf355e68",
+            "source_chunk_ids": [
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6"
+            ]
+        },
+        {
+            "source_entity": "COMPANIONS",
+            "target_entity": "SHIP",
+            "relationship_description": "The companions were in the ship",
+            "relationship_strength": 6.0,
+            "relationship_id": "c9bf8863-9fa7-47b0-b6ec-ebbb5d625f0e",
+            "source_chunk_ids": [
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6"
+            ]
+        },
+        {
+            "source_entity": "COMPANIONS",
+            "target_entity": "ROCK",
+            "relationship_description": "Some companions escaped to the rock",
+            "relationship_strength": 4.0,
+            "relationship_id": "83c241ef-80fc-4a02-b8fb-7fd280516a0f",
+            "source_chunk_ids": [
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6"
+            ]
+        },
+        {
+            "source_entity": "COMPANIONS",
+            "target_entity": "VESSEL",
+            "relationship_description": "Some companions were left in the vessel",
+            "relationship_strength": 4.0,
+            "relationship_id": "f8e41324-01b9-4def-9e0a-fcb8b04469a7",
+            "source_chunk_ids": [
+                "1ba10a6f-616f-4e6f-9a4b-5ccedc05f3b6"
+            ]
+        },
+        {
+            "source_entity": "LEG",
+            "target_entity": "BOTTOM",
+            "relationship_description": "The speaker let their legs drop and could not feel the bottom of the water",
+            "relationship_strength": 5.0,
+            "relationship_id": "abd6ee89-6508-4167-93ce-34af003f933e",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "source_entity": "STORM",
+            "target_entity": "DECLIVITY",
+            "relationship_description": "The storm abated and the speaker walked down the slope",
+            "relationship_strength": 7.0,
+            "relationship_id": "62700486-028d-4195-8399-9db547295bd6",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "source_entity": "DECLIVITY",
+            "target_entity": "SHORE",
+            "relationship_description": "The speaker walked down the slope and reached the shore",
+            "relationship_strength": 8.0,
+            "relationship_id": "297ed446-478d-45d9-8738-4d00788b6602",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "source_entity": "SHORE",
+            "target_entity": "EVENING",
+            "relationship_description": "The speaker reached the shore in the evening",
+            "relationship_strength": 6.0,
+            "relationship_id": "515d1324-41e0-427d-8e14-d98c64517636",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "source_entity": "BRANDY",
+            "target_entity": "SLEEP",
+            "relationship_description": "The speaker drank brandy and felt inclined to sleep",
+            "relationship_strength": 4.0,
+            "relationship_id": "2858b130-546d-400b-96f2-2a4d0c1f4d5c",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "source_entity": "SLEEP",
+            "target_entity": "GRASS",
+            "relationship_description": "The speaker slept on the grass",
+            "relationship_strength": 9.0,
+            "relationship_id": "c6f3bbe5-cf93-4eb4-82e0-f34b889eb919",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "source_entity": "SLEEP",
+            "target_entity": "DAY-LIGHT",
+            "relationship_description": "The speaker slept for about nine hours and woke up at day-light",
+            "relationship_strength": 8.0,
+            "relationship_id": "21b0c193-2c79-4080-8703-3e901b3f4f60",
+            "source_chunk_ids": [
+                "3563cbdc-184f-44c8-85fc-95773f1b5318"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "ARMS",
+            "relationship_description": "The narrator's arms are fastened to the ground",
+            "relationship_strength": 8.0,
+            "relationship_id": "6636c495-2ff9-4778-a63f-4f130b137152",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "LEGS",
+            "relationship_description": "The narrator's legs are fastened to the ground",
+            "relationship_strength": 8.0,
+            "relationship_id": "5a05f3fb-760e-4f33-a459-c6948ca52479",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "HAIR",
+            "relationship_description": "The narrator's hair is tied down",
+            "relationship_strength": 6.0,
+            "relationship_id": "a9f3bbd9-4b74-49ba-b7fd-59b849083ebd",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "GROUND",
+            "relationship_description": "The narrator is lying on the ground",
+            "relationship_strength": 9.0,
+            "relationship_id": "7a117b80-ccde-4568-a550-c9d0d9911117",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "SKY",
+            "relationship_description": "The narrator can only see the sky",
+            "relationship_strength": 7.0,
+            "relationship_id": "de20af79-1a45-4d58-96f7-3f33f7b55a7c",
+            "source_chunk_ids": [
+                "dffe9710-74dc-433d-a52e-60324e2ebe44"
+            ]
+        },
+        {
+            "source_entity": "HUMAN CREATURE",
+            "target_entity": "BOW AND ARROW",
+            "relationship_description": "The human creature is holding a bow and arrow",
+            "relationship_strength": 8.0,
+            "relationship_id": "c801bc37-5a10-4cec-8287-9cb3c96f7937",
+            "source_chunk_ids": [
+                "72fb2948-38e2-4387-9bbb-51a0ff5a7d9d"
+            ]
+        },
+        {
+            "source_entity": "HUMAN CREATURE",
+            "target_entity": "QUIVER",
+            "relationship_description": "The human creature is carrying a quiver",
+            "relationship_strength": 8.0,
+            "relationship_id": "4fcaba06-08ef-4250-87c0-c827a8ee69f2",
+            "source_chunk_ids": [
+                "72fb2948-38e2-4387-9bbb-51a0ff5a7d9d"
+            ]
+        },
+        {
+            "source_entity": "LEFT ARM",
+            "target_entity": "READER",
+            "relationship_description": "The left arm was bound to the ground, causing the reader great uneasiness",
+            "relationship_strength": 7.0,
+            "relationship_id": "d1be2487-eeb5-4934-9db2-e4ef9a3563f5",
+            "source_chunk_ids": [
+                "754c1896-bb68-4052-b06f-90a499885af8"
+            ]
+        },
+        {
+            "source_entity": "HAIR",
+            "target_entity": "READER",
+            "relationship_description": "The hair was tied down on the left side, causing the reader discomfort",
+            "relationship_strength": 5.0,
+            "relationship_id": "5f60fe78-4b98-4049-829a-6dae9e7c7db6",
+            "source_chunk_ids": [
+                "754c1896-bb68-4052-b06f-90a499885af8"
+            ]
+        },
+        {
+            "source_entity": "CREATURES",
+            "target_entity": "TOLGO PHONAC",
+            "relationship_description": "The creatures shouted the phrase 'Tolgo phonac'",
+            "relationship_strength": 5.0,
+            "relationship_id": "a0b82ee0-92a1-44f0-840b-5090783d17a9",
+            "source_chunk_ids": [
+                "b227b8b6-6622-4e8e-990b-2b0017702122"
+            ]
+        },
+        {
+            "source_entity": "LEFT HAND",
+            "target_entity": "NIGHT",
+            "relationship_description": "The narrator was able to free themselves during the night",
+            "relationship_strength": 8.0,
+            "relationship_id": "ecf35955-4569-4282-9fd5-0d65c8298540",
+            "source_chunk_ids": [
+                "74b5af55-ec21-429d-b006-9ddf6750d709"
+            ]
+        },
+        {
+            "source_entity": "INHABITANTS",
+            "target_entity": "ARMY",
+            "relationship_description": "The inhabitants could bring an army against the narrator",
+            "relationship_strength": 6.0,
+            "relationship_id": "2d301330-5349-4e6a-b126-d701ba4b0c60",
+            "source_chunk_ids": [
+                "74b5af55-ec21-429d-b006-9ddf6750d709"
+            ]
+        },
+        {
+            "source_entity": "INHABITANTS",
+            "target_entity": "SIZE",
+            "relationship_description": "The narrator believed they could defeat the inhabitants if they were all the same size as the one they saw",
+            "relationship_strength": 7.0,
+            "relationship_id": "2c8af448-0372-4b28-8bb0-d60535471646",
+            "source_chunk_ids": [
+                "74b5af55-ec21-429d-b006-9ddf6750d709"
+            ]
+        },
+        {
+            "source_entity": "PEOPLE",
+            "target_entity": "ARROWS",
+            "relationship_description": "The people stopped shooting arrows when they saw the narrator was quiet",
+            "relationship_strength": 7.0,
+            "relationship_id": "2936dabd-33be-45df-9714-d8d907d4dc7b",
+            "source_chunk_ids": [
+                "ebd13efb-9362-44a3-8a85-e2bd47658022"
+            ]
+        },
+        {
+            "source_entity": "INHABITANTS",
+            "target_entity": "STAGE",
+            "relationship_description": "The inhabitants built the stage for the narrator",
+            "relationship_strength": 6.0,
+            "relationship_id": "e728c3d8-ee97-4601-9b02-a9da3dd08b0a",
+            "source_chunk_ids": [
+                "ebd13efb-9362-44a3-8a85-e2bd47658022"
+            ]
+        },
+        {
+            "source_entity": "INHABITANTS",
+            "target_entity": "PERSON OF QUALITY",
+            "relationship_description": "The inhabitants included a person of quality who gave a speech to the narrator",
+            "relationship_strength": 8.0,
+            "relationship_id": "3c12abb0-e5fa-49b7-8504-a1f056958979",
+            "source_chunk_ids": [
+                "ebd13efb-9362-44a3-8a85-e2bd47658022"
+            ]
+        },
+        {
+            "source_entity": "PERSON",
+            "target_entity": "PAGE",
+            "relationship_description": "The page is supporting the orator by holding up his train",
+            "relationship_strength": 7.0,
+            "relationship_id": "e781d417-a957-40d5-9fea-423a40b930f6",
+            "source_chunk_ids": [
+                "819a848e-0d1e-4232-8363-0d60ee9b42c9"
+            ]
+        },
+        {
+            "source_entity": "SUN",
+            "target_entity": "WITNESS",
+            "relationship_description": "The narrator lifted their eyes to the sun as a way of calling it as a witness",
+            "relationship_strength": 7.0,
+            "relationship_id": "d366257a-a93d-4dce-abe5-64f3f43e7d40",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "source_entity": "SHIP",
+            "target_entity": "HUNGER",
+            "relationship_description": "The narrator had not eaten for hours before leaving the ship, causing them to feel hungry",
+            "relationship_strength": 6.0,
+            "relationship_id": "9c00ebe3-145e-4028-92d5-54e3a4c54df5",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "source_entity": "NATURE",
+            "target_entity": "HUNGER",
+            "relationship_description": "The demands of nature, such as hunger, were strong upon the narrator",
+            "relationship_strength": 8.0,
+            "relationship_id": "a21a15c1-3716-428d-8999-37c9641568cb",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "source_entity": "IMPATIENCE",
+            "target_entity": "FINGER",
+            "relationship_description": "The narrator showed their impatience by putting their finger to their mouth",
+            "relationship_strength": 5.0,
+            "relationship_id": "e2acfde3-746a-4ab1-ad7a-ddf76c128ad3",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "source_entity": "MOUTH",
+            "target_entity": "HUNGER",
+            "relationship_description": "The narrator put their finger to their mouth to signify that they wanted food",
+            "relationship_strength": 7.0,
+            "relationship_id": "4c4c0cdf-f7cb-42b6-8f72-833b843572ac",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "source_entity": "HURGO",
+            "target_entity": "INHABITANTS",
+            "relationship_description": "The hurgo is a great lord, and the inhabitants followed his command",
+            "relationship_strength": 9.0,
+            "relationship_id": "ce63896d-9973-4020-a2e7-ac2c3bd76ff4",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "source_entity": "LADDERS",
+            "target_entity": "INHABITANTS",
+            "relationship_description": "The inhabitants used ladders to climb towards the narrator's mouth",
+            "relationship_strength": 6.0,
+            "relationship_id": "abe165f0-c78d-41d5-b42d-99b3a4c540a2",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "source_entity": "INHABITANTS",
+            "target_entity": "BASKETS",
+            "relationship_description": "The inhabitants carried baskets full of meat towards the narrator's mouth",
+            "relationship_strength": 8.0,
+            "relationship_id": "2ee94176-2609-42d4-9b88-1fb89e77a22e",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "source_entity": "KINGS",
+            "target_entity": "MEAT",
+            "relationship_description": "The king ordered the provision of meat to be sent to the narrator",
+            "relationship_strength": 7.0,
+            "relationship_id": "2d591e95-6410-4aae-9018-4eb51340b49d",
+            "source_chunk_ids": [
+                "95a41e99-945b-4a61-8cd5-f5b24131d782"
+            ]
+        },
+        {
+            "source_entity": "ANIMALS",
+            "target_entity": "MUTTON",
+            "relationship_description": "The flesh of the animals resembled mutton",
+            "relationship_strength": 5.0,
+            "relationship_id": "02a75a05-4fa0-4289-a75d-018d368aa42e",
+            "source_chunk_ids": [
+                "01765f35-f1a0-4048-81cf-aa20a14d83bc"
+            ]
+        },
+        {
+            "source_entity": "ANIMALS",
+            "target_entity": "LARK",
+            "relationship_description": "The meat was smaller than the wings of a lark",
+            "relationship_strength": 3.0,
+            "relationship_id": "765c8599-bf34-49a6-9671-fee3669b18ca",
+            "source_chunk_ids": [
+                "01765f35-f1a0-4048-81cf-aa20a14d83bc"
+            ]
+        },
+        {
+            "source_entity": "LOAVES",
+            "target_entity": "MUSKET BULLETS",
+            "relationship_description": "The size of the loaves was about the same as musket bullets",
+            "relationship_strength": 4.0,
+            "relationship_id": "9dcb7f36-9387-46b7-bcb3-0d8f40432144",
+            "source_chunk_ids": [
+                "01765f35-f1a0-4048-81cf-aa20a14d83bc"
+            ]
+        },
+        {
+            "source_entity": "INGENIOUS PEOPLE",
+            "target_entity": "HOGSHEAD",
+            "relationship_description": "The ingenious people slung up a hogshead for the speaker to drink from",
+            "relationship_strength": 7.0,
+            "relationship_id": "9cd5d1b9-4058-45b1-b66b-a29f07a43c3c",
+            "source_chunk_ids": [
+                "a08bc007-670b-4acd-8ef8-2b4a840bc44a"
+            ]
+        },
+        {
+            "source_entity": "HOGSHEAD",
+            "target_entity": "BURGUNDY",
+            "relationship_description": "The drink from the hogshead tasted like a small wine of Burgundy",
+            "relationship_strength": 6.0,
+            "relationship_id": "b5a50577-497f-4631-8262-cdaf91786ba9",
+            "source_chunk_ids": [
+                "a08bc007-670b-4acd-8ef8-2b4a840bc44a"
+            ]
+        },
+        {
+            "source_entity": "BODY",
+            "target_entity": "GROUND",
+            "relationship_description": "The speaker was tempted to seize creatures and dash them against the ground",
+            "relationship_strength": 6.0,
+            "relationship_id": "32d72c59-1859-436a-90fd-cad7c3649cd1",
+            "source_chunk_ids": [
+                "a61d58a7-3f79-4cee-8a1a-705c9f855fe7"
+            ]
+        },
+        {
+            "source_entity": "HIGH RANK PERSON",
+            "target_entity": "IMPERIAL MAJESTY",
+            "relationship_description": "The high rank person represents the imperial majesty and communicates with the narrator",
+            "relationship_strength": 8.0,
+            "relationship_id": "41f055ef-a10f-43f4-a69e-4ed135905161",
+            "source_chunk_ids": [
+                "904a7854-b91c-4fb2-965e-96a0d4696441"
+            ]
+        },
+        {
+            "source_entity": "HIGH RANK PERSON",
+            "target_entity": "CAPITAL CITY",
+            "relationship_description": "The high rank person points towards the capital city, indicating that the narrator must be taken there",
+            "relationship_strength": 7.0,
+            "relationship_id": "f855871d-ba67-47c7-8406-8a06bef4bbeb",
+            "source_chunk_ids": [
+                "904a7854-b91c-4fb2-965e-96a0d4696441"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "EXCELLENCY",
+            "relationship_description": "The speaker wants to be free from the control of the Excellency",
+            "relationship_strength": 7.0,
+            "relationship_id": "9ed5c52c-55d9-4c49-b5e8-3ca29ff531f8",
+            "source_chunk_ids": [
+                "0c818c33-3408-494f-87a4-36bf8365c9c9"
+            ]
+        },
+        {
+            "source_entity": "HURGO",
+            "target_entity": "PEPLOM SELAN",
+            "relationship_description": "The crowd shouted the phrase Peplom Selan",
+            "relationship_strength": 5.0,
+            "relationship_id": "69ddefe0-5666-4ab2-9b05-74009608f869",
+            "source_chunk_ids": [
+                "d9fd1a39-1fed-47c9-88ff-e355e3c0687f"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "THEY",
+            "relationship_description": "The narrator was attacked by the group of people",
+            "relationship_strength": 8.0,
+            "relationship_id": "0a15e6b3-ebcf-42f5-87d5-f2028fe84bed",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "ARROWS",
+            "relationship_description": "The narrator was shot with arrows by the attackers",
+            "relationship_strength": 7.0,
+            "relationship_id": "f331f8f1-1bbf-4972-88f8-3f7d86b26c39",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "OINTMENT",
+            "relationship_description": "The ointment applied by the attackers relieved the pain of the arrows",
+            "relationship_strength": 9.0,
+            "relationship_id": "f37e0b73-2f70-4f38-93fe-d40a77a8806c",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "VICTUALS",
+            "relationship_description": "The food provided to the narrator was nourishing",
+            "relationship_strength": 6.0,
+            "relationship_id": "681dccd7-3350-43c1-99e0-92789d7ad108",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "DRINK",
+            "relationship_description": "The drink provided to the narrator was nourishing",
+            "relationship_strength": 6.0,
+            "relationship_id": "f899c628-72f7-4a9d-9459-dd4286445892",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "source_entity": "I",
+            "target_entity": "SLEEPY POTION",
+            "relationship_description": "The sleepy potion in the wine caused the narrator to sleep for eight hours",
+            "relationship_strength": 9.0,
+            "relationship_id": "1708d632-16f0-4d8d-949e-82308a5930b1",
+            "source_chunk_ids": [
+                "bf62e7f3-8ddc-44e5-b91a-24b8084dcaf5"
+            ]
+        },
+        {
+            "source_entity": "EMPEROR",
+            "target_entity": "CAPITAL CITY",
+            "relationship_description": "The emperor ordered a machine to be prepared to carry the protagonist to the capital city",
+            "relationship_strength": 8.0,
+            "relationship_id": "5cc5f7f6-6cb4-47fb-9ebf-9d29d3237fd5",
+            "source_chunk_ids": [
+                "cd076702-c4a6-42bd-a199-9e626487fa06"
+            ]
+        },
+        {
+            "source_entity": "EMPEROR",
+            "target_entity": "MACHINES",
+            "relationship_description": "The emperor uses machines for transportation and construction",
+            "relationship_strength": 8.0,
+            "relationship_id": "110c3d29-39f3-46ab-a2ef-0a2cc2c43190",
+            "source_chunk_ids": [
+                "83905757-67a1-490e-b61a-de014b086d05"
+            ]
+        },
+        {
+            "source_entity": "CARPENTERS",
+            "target_entity": "ENGINE",
+            "relationship_description": "The carpenters and engineers built the greatest engine",
+            "relationship_strength": 9.0,
+            "relationship_id": "a0be751a-d123-479d-943a-d4a1a8c33b46",
+            "source_chunk_ids": [
+                "83905757-67a1-490e-b61a-de014b086d05"
+            ]
+        },
+        {
+            "source_entity": "VEHICLE",
+            "target_entity": "POLES",
+            "relationship_description": "The vehicle was raised using the poles",
+            "relationship_strength": 6.0,
+            "relationship_id": "c67acb3b-c596-4dbe-9103-ec27a258b8a9",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "source_entity": "CORDS",
+            "target_entity": "BANDAGES",
+            "relationship_description": "The cords were fastened to the bandages",
+            "relationship_strength": 8.0,
+            "relationship_id": "1051f9ef-0070-419d-88a3-49e1252489f7",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "source_entity": "HOOKS",
+            "target_entity": "CORDS",
+            "relationship_description": "The hooks were used to fasten the cords",
+            "relationship_strength": 7.0,
+            "relationship_id": "82e82f5e-fb15-49a7-a5cc-064163e81cff",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "source_entity": "WORKMEN",
+            "target_entity": "POLES",
+            "relationship_description": "The workmen erected the poles",
+            "relationship_strength": 5.0,
+            "relationship_id": "2a304c58-9574-40b1-9101-87ffac29d16b",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "source_entity": "MEN",
+            "target_entity": "CORDS",
+            "relationship_description": "The men drew up the cords using pulleys",
+            "relationship_strength": 9.0,
+            "relationship_id": "05bcb16e-1698-46f6-96e4-64ccfb9006e6",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "source_entity": "CORDS",
+            "target_entity": "POLES",
+            "relationship_description": "The cords were drawn up using pulleys fastened on the poles",
+            "relationship_strength": 9.0,
+            "relationship_id": "a4f4c304-1214-4c8c-8bd7-1b1e2bad8083",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "source_entity": "MEN",
+            "target_entity": "POLES",
+            "relationship_description": "The men were employed to draw up the cords using pulleys fastened on the poles",
+            "relationship_strength": 9.0,
+            "relationship_id": "bcc256a4-5fde-4976-aa0d-dc497102bd4f",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "source_entity": "ENGINE",
+            "target_entity": "VEHICLE",
+            "relationship_description": "The speaker was raised and slung into the engine",
+            "relationship_strength": 8.0,
+            "relationship_id": "748ec60c-02d1-4831-a611-3bcabdd56277",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "source_entity": "ENGINE",
+            "target_entity": "CORDS",
+            "relationship_description": "The speaker was tied fast in the engine",
+            "relationship_strength": 7.0,
+            "relationship_id": "c3932e66-3bd0-49d6-af33-b736ad2053da",
+            "source_chunk_ids": [
+                "966b2c65-2d3c-4bd2-9747-37b5c7489652"
+            ]
+        },
+        {
+            "source_entity": "EMPEROR",
+            "target_entity": "METROPOLIS",
+            "relationship_description": "The emperor is the ruler of the metropolis",
+            "relationship_strength": 8.0,
+            "relationship_id": "5362123c-0784-4ebe-a3be-124df996736c",
+            "source_chunk_ids": [
+                "e79163d3-d54c-4c72-8a5d-282ce3de4271"
+            ]
+        },
+        {
+            "source_entity": "YOUNG NATIVES",
+            "target_entity": "OFFICER",
+            "relationship_description": "The young natives were curious and climbed into the engine, where the officer tickled the narrator's nose",
+            "relationship_strength": 7.0,
+            "relationship_id": "905f44f0-c6ea-4bf5-b20b-395f517b0bfb",
+            "source_chunk_ids": [
+                "d33692b4-4c95-483e-903a-d737cb167b78"
+            ]
+        },
+        {
+            "source_entity": "GUARDS",
+            "target_entity": "YOUNG NATIVES",
+            "relationship_description": "The guards surrounded the narrator and prevented the young natives from being noticed",
+            "relationship_strength": 6.0,
+            "relationship_id": "5e2d5d6b-5044-4175-a827-08d2a8716556",
+            "source_chunk_ids": [
+                "d33692b4-4c95-483e-903a-d737cb167b78"
+            ]
+        },
+        {
+            "source_entity": "GUARDS",
+            "target_entity": "EMPEROR",
+            "relationship_description": "The guards protected the narrator during the march to meet the emperor",
+            "relationship_strength": 8.0,
+            "relationship_id": "258c99cd-3367-4864-b074-6ba782db2ad8",
+            "source_chunk_ids": [
+                "d33692b4-4c95-483e-903a-d737cb167b78"
+            ]
+        },
+        {
+            "source_entity": "GUARDS",
+            "target_entity": "COURT",
+            "relationship_description": "The guards protected the narrator during the march to meet the emperor's court",
+            "relationship_strength": 8.0,
+            "relationship_id": "15a70638-2875-466d-97d5-b7bd21151537",
+            "source_chunk_ids": [
+                "d33692b4-4c95-483e-903a-d737cb167b78"
+            ]
+        },
+        {
+            "source_entity": "EMPEROR",
+            "target_entity": "CITY GATES",
+            "relationship_description": "The emperor and his court came out to meet the speaker at the city gates",
+            "relationship_strength": 8.0,
+            "relationship_id": "39d4fd40-4a8b-475c-89e2-82e2260621a4",
+            "source_chunk_ids": [
+                "1a202400-5412-4719-ba61-19e1be408911"
+            ]
+        },
+        {
+            "source_entity": "KING'S SMITH",
+            "target_entity": "ANCIENT TEMPLE",
+            "relationship_description": "The king's smith locked chains to the narrator's left leg in the ancient temple",
+            "relationship_strength": 7.0,
+            "relationship_id": "42178049-e2f5-4401-a708-677e0db219dd",
+            "source_chunk_ids": [
+                "1dd4e45c-b6ef-4d7b-903f-da4ecdbe5af2"
+            ]
+        },
+        {
+            "source_entity": "EMPEROR",
+            "target_entity": "TURRET",
+            "relationship_description": "The emperor ascended the turret to view the speaker",
+            "relationship_strength": 8.0,
+            "relationship_id": "a9b82b23-39bb-47e5-8540-7b32c001b928",
+            "source_chunk_ids": [
+                "c07ef053-60df-4bd0-b22d-ee8b015e7e75"
+            ]
+        },
+        {
+            "source_entity": "COURT",
+            "target_entity": "EMPEROR",
+            "relationship_description": "The principal lords of the court accompanied the emperor to view the speaker",
+            "relationship_strength": 7.0,
+            "relationship_id": "422c4ce7-7b13-406c-8825-9703bf5f594b",
+            "source_chunk_ids": [
+                "c07ef053-60df-4bd0-b22d-ee8b015e7e75"
+            ]
+        },
+        {
+            "source_entity": "TOWN",
+            "target_entity": "TURRET",
+            "relationship_description": "The inhabitants of the town came out to view the speaker from the turret",
+            "relationship_strength": 6.0,
+            "relationship_id": "08f85642-fd17-4dea-9455-016b0147d185",
+            "source_chunk_ids": [
+                "c07ef053-60df-4bd0-b22d-ee8b015e7e75"
+            ]
+        },
+        {
+            "source_entity": "WORKMEN",
+            "target_entity": "AUTHOR",
+            "relationship_description": "The workmen cut the strings that bound the author",
+            "relationship_strength": 8.0,
+            "relationship_id": "bcc3873d-9941-4ca1-b4fb-ee192f04feac",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "source_entity": "PEOPLE",
+            "target_entity": "AUTHOR",
+            "relationship_description": "The people were astonished at seeing the author rise and walk",
+            "relationship_strength": 9.0,
+            "relationship_id": "f245829b-e3e6-47e8-971a-bcc5492eae58",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "source_entity": "EMPEROR OF LILLIPUT",
+            "target_entity": "AUTHOR",
+            "relationship_description": "The emperor of Lilliput comes to see the author in his confinement",
+            "relationship_strength": 7.0,
+            "relationship_id": "b3e0c96f-e0b2-4f74-8903-f7e873fecd82",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "source_entity": "NOBILITY",
+            "target_entity": "EMPEROR OF LILLIPUT",
+            "relationship_description": "The nobility accompany the emperor of Lilliput",
+            "relationship_strength": 6.0,
+            "relationship_id": "f0cc1686-632c-48d6-bd99-62b7fc3a7c14",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "source_entity": "LEARNED MEN",
+            "target_entity": "AUTHOR",
+            "relationship_description": "The learned men are appointed to teach the author their language",
+            "relationship_strength": 5.0,
+            "relationship_id": "d58ea58a-5586-4b79-b8e4-e7da53a766f2",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "source_entity": "GATE",
+            "target_entity": "AUTHOR",
+            "relationship_description": "The chains that held the author's left leg were fixed near the gate",
+            "relationship_strength": 4.0,
+            "relationship_id": "52bedf82-a9a0-498e-b129-eb67e27548b0",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "source_entity": "TEMPLE",
+            "target_entity": "AUTHOR",
+            "relationship_description": "The author is able to creep in and lie at his full length in the temple",
+            "relationship_strength": 3.0,
+            "relationship_id": "ea98458d-533b-41b9-a239-c2dbce04e46c",
+            "source_chunk_ids": [
+                "cc58c03f-b61a-40ff-86d6-9b35160a5ce2"
+            ]
+        },
+        {
+            "source_entity": "COUNTRY",
+            "target_entity": "ENCLOSED FIELDS",
+            "relationship_description": "The enclosed fields are part of the beautiful country landscape",
+            "relationship_strength": 5.0,
+            "relationship_id": "06132f46-d4f6-4f37-98bc-b62d4eb778b7",
+            "source_chunk_ids": [
+                "fcc59ee8-5c0c-491f-9d52-178bf043b9e0"
+            ]
+        },
+        {
+            "source_entity": "COUNTRY",
+            "target_entity": "WOODS",
+            "relationship_description": "The woods are part of the beautiful country landscape",
+            "relationship_strength": 5.0,
+            "relationship_id": "3ae28b64-96bb-40c0-9d96-2800fa3c1ff9",
+            "source_chunk_ids": [
+                "fcc59ee8-5c0c-491f-9d52-178bf043b9e0"
+            ]
+        },
+        {
+            "source_entity": "COUNTRY",
+            "target_entity": "TREES",
+            "relationship_description": "The trees are part of the beautiful country landscape",
+            "relationship_strength": 5.0,
+            "relationship_id": "5db3ce72-14ce-4279-8456-af35171178a3",
+            "source_chunk_ids": [
+                "fcc59ee8-5c0c-491f-9d52-178bf043b9e0"
+            ]
+        },
+        {
+            "source_entity": "COUNTRY",
+            "target_entity": "TOWN",
+            "relationship_description": "The town is part of the beautiful country landscape",
+            "relationship_strength": 5.0,
+            "relationship_id": "f283ce7d-c99d-49b2-a1e6-7c63379981d3",
+            "source_chunk_ids": [
+                "fcc59ee8-5c0c-491f-9d52-178bf043b9e0"
+            ]
+        }
+    ]
+}
