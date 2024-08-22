@@ -2,14 +2,10 @@ from typing import Dict, List
 from opengraphrag.data_contracts.graph import Entity, Relationship
 from opengraphrag.data_contracts.type import Strategy
 from opengraphrag.llm.base import LLMBase
-from opengraphrag.prompt.disambiguation import DISAMBIGUATION_ENTITY_PROMPT, DISAMBIGUATION_ENTITY_TYPE_PROMPT, SUMMARY_ENTITY_DISCRIPTIONS_PROMPT, SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT
+from opengraphrag.prompt.disambiguation import DISAMBIGUATION_ENTITY_PROMPT, SUMMARY_ENTITY_DISCRIPTIONS_PROMPT, SUMMARY_ENTITY_TYPE_PROMPT, SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT
 from opengraphrag.utils.json_paser import list_loads_from_text
 from collections import defaultdict
 import json
-
-
-def disambiguate_entity_type(llm: LLMBase, entity_types:List[str], expert: str='') -> List[str]:
-    return list_loads_from_text(llm.invoke(DISAMBIGUATION_ENTITY_TYPE_PROMPT.format(entity_types=json.dumps(entity_types), expert=expert)))
 
 
 def disambigute_entity(llm: LLMBase, entities:List[Entity], expert: str='') -> List[List[int]]:
@@ -20,28 +16,32 @@ def disambigute_entity(llm: LLMBase, entities:List[Entity], expert: str='') -> L
     return list_loads_from_text(llm.invoke(DISAMBIGUATION_ENTITY_PROMPT.format(entities=json.dumps(entities_with_id), expert=expert)))
 
 
-def merge_summary_entity(llm: LLMBase, origin_entity_dict:Dict[str, List[Entity]], expert: str='', strategy:Strategy = Strategy.accuracy) -> Dict[str, List[Entity]]:
-    for entity_type in origin_entity_dict:
-        entity_name_description_list_mapping = defaultdict(list)
-        entity_name_chunk_ids_mapping = defaultdict(list)
-        current_entity_list = origin_entity_dict[entity_type]
-        for entity in current_entity_list:
-            entity_name_description_list_mapping[entity.entity_name].append(entity.entity_description)
-            entity_name_chunk_ids_mapping[entity.entity_name].extend(entity.source_chunk_ids)
-        entity_name_description_list_mapping = dict(entity_name_description_list_mapping)
-        entity_name_chunk_ids_mapping = dict(entity_name_chunk_ids_mapping)
+def merge_summary_entity(llm: LLMBase, entities:List[Entity], expert: str='', strategy:Strategy = Strategy.accuracy) -> List[Entity]:
+    entity_name_description_list_mapping = defaultdict(list)
+    entity_name_type_list_mapping = defaultdict(set)
+    entity_name_chunk_ids_mapping = defaultdict(list)
 
-        current_entity_list.clear()
-        for entity_name in entity_name_description_list_mapping:
-            discription_list = entity_name_description_list_mapping[entity_name]
-            source_chunk_ids = entity_name_chunk_ids_mapping[entity_name]
-            discription_summary = '.'.join(discription_list)
-            if strategy == Strategy.accuracy and len(discription_list) > 1:
-                discription_summary = llm.invoke(SUMMARY_ENTITY_DISCRIPTIONS_PROMPT.format(discriptions=json.dumps(discription_list), expert=expert))
-            current_entity_list.append(Entity(entity_name=entity_name, entity_type=entity_type, entity_description=discription_summary, source_chunk_ids=source_chunk_ids))
+    for entity in entities:
+        entity_name_description_list_mapping[entity.entity_name].append(entity.entity_description)
+        entity_name_type_list_mapping[entity.entity_name].add(entity.entity_type)
+        entity_name_chunk_ids_mapping[entity.entity_name].extend(entity.source_chunk_ids)
+    entity_name_description_list_mapping = dict(entity_name_description_list_mapping)
+    entity_name_chunk_ids_mapping = dict(entity_name_chunk_ids_mapping)
+    entity_name_type_list_mapping = dict(entity_name_type_list_mapping)
 
-        origin_entity_dict[entity_type] = current_entity_list
-    return origin_entity_dict
+    entities.clear()
+    for entity_name in entity_name_description_list_mapping:
+        discription_list = entity_name_description_list_mapping[entity_name]
+        type_list = entity_name_type_list_mapping[entity_name]
+        source_chunk_ids = entity_name_chunk_ids_mapping[entity_name]
+        discription_summary = '.'.join(discription_list)
+        entity_type = ','.join(type_list)
+        if strategy == Strategy.accuracy:
+            if len(discription_list) > 1: discription_summary = llm.invoke(SUMMARY_ENTITY_DISCRIPTIONS_PROMPT.format(discriptions=json.dumps(discription_list), expert=expert))
+            if len(type_list) > 1: entity_type = llm.invoke(SUMMARY_ENTITY_TYPE_PROMPT.format(expert=expert, entity_types=entity_type, discriptions=discription_summary, entity_name=entity_name))
+        entities.append(Entity(entity_name=entity_name, entity_type=entity_type, entity_description=discription_summary, source_chunk_ids=source_chunk_ids))
+
+    return entities
 
 
 def merge_summary_relationship(llm: LLMBase, origin_relationships:List[Relationship], expert: str='', strategy:Strategy = Strategy.accuracy) -> List[Relationship]:

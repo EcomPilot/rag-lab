@@ -26,7 +26,7 @@ def graph_load(filepath: str) -> Tuple[List[Entity], List[Relationship]]:
 
     entities = output.get("entities")
     relationships = output.get("relationships")
-    assert (not isinstance(entities, list)) or (not isinstance(relationships, list)), f"please check your file path {filepath}, we cannot load graph file from it."
+    assert isinstance(entities, list) or isinstance(relationships, list), f"please check your file path {filepath}, we cannot load graph file from it."
     entities = [Entity(**entity) for entity in entities]
     relationships = [Relationship(**rel) for rel in relationships]
     logger.info(f"Loading entities, relationship succeed.")

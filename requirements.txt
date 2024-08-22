@@ -1,9 +1,13 @@
 openai
 requests
 unstructured
+numpy
 
 # visual echart
 pyecharts
 # visual network-x
 matplotlib
 networkx
+
+# community
+communities

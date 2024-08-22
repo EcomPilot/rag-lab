@@ -2,18 +2,11 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from typing import List
 from opengraphrag.data_contracts.graph import Entity, Relationship
+from opengraphrag.utils.graph_network_x_utils import convert_to_network_x_graph
 
 
 def visualize_knowledge_graph_network_x(entities: List[Entity], relationships: List[Relationship]):
-    G = nx.DiGraph()
-
-    for entity in entities:
-        G.add_node(entity.entity_name, type=entity.entity_type, description=entity.entity_description)
-
-    for relationship in relationships:
-        G.add_edge(relationship.source_entity, relationship.target_entity, 
-                   description=relationship.relationship_description, 
-                   strength=relationship.relationship_strength)
+    G = convert_to_network_x_graph(entities, relationships)
 
     pos = nx.spring_layout(G)
     node_labels = {node: f"{node}\n({G.nodes[node].get('type', 'N/A')})" for node in G.nodes}

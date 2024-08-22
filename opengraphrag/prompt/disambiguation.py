@@ -89,42 +89,16 @@ Entities: {entities}
 RESPONSE:
 """
 
-DISAMBIGUATION_ENTITY_TYPE_PROMPT = """{expert}
-You are working with a knowledge graph that contains various entity types. Your task is to generate a list of entity types that should be merged together. Merging entity types means combining them into a single category, where all instances of those entity types will be treated as the same type.
+SUMMARY_ENTITY_TYPE_PROMPT = """{expert}
+You are tasked with working with a knowledge graph in which the nodes represent different entities. You need to generate a suitable entity type based on the description of the entity provided by the user.
 
 -Steps-
-1. Review the given entity types in the knowledge graph: {entity_types}.
-2. Determine which entity types should be merged together based on their semantic similarity. For example, if "organization" and "company" represent the same concept, they should be merged into a single category.
-3. Return the entity types in as a python list of merged types.
-
-=====================================================================
-EXAMPLE SECTION: The following section includes example output. These examples **must be excluded from your answer**.
-
-EXAMPLE 1
-Entity types: ["organization", "technology", "sectors", "company"]
-RESPONSE:
-[
-    ["organization", "company"],
-    ["technology"],
-    ["sectors"]
-]
-END OF EXAMPLE 1
-
-EXAMPLE 2
-Entity types: ["organization", "technology", "sectors", "investment strategies"]
-RESPONSE:
-[
-    ["organization"],
-    ["technology"],
-    ["sectors"],
-    ["investment strategies"]
-]
-END OF EXAMPLE 2
+1. Review the given namd and description of the entity.
+2. You can refer to these entity types to name the current entity: {entity_types}
 ======================================================================
-
-======================================================================
-REAL DATA: The following section is the real data. You should use only this real data to prepare your answer. Generate merged entity list only.
-Entity types: {entity_types}
+REAL DATA: The following section is the real data. You should use only this real data to prepare your answer. Generate entity type only.
+Entity name: {entity_name}
+Discriptions: {discriptions}
 RESPONSE:
 """
 
@@ -152,7 +126,7 @@ END OF EXAMPLE 2
 ======================================================================
 
 ======================================================================
-REAL DATA: The following section is the real data. You should use only this real data to prepare your answer. Generate merged entity list only.
+REAL DATA: The following section is the real data. You should use only this real data to prepare your answer. Generate entity description summary only.
 Discriptions: {discriptions}
 RESPONSE:
 """
