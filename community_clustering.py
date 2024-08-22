@@ -14,7 +14,7 @@ if __name__ == "__main__":
     # visualize_knowledge_graph_network_x(entities, relationships)
     G = convert_to_network_x_graph(entities, relationships)
     adj_matrix = nx.to_numpy_array(G)
-    communities, _ = louvain_method(adj_matrix, n=10)
+    communities, _ = louvain_method(adj_matrix)
     pos = nx.spring_layout(G)
     colors = plt.cm.rainbow(np.linspace(0, 1, len(communities)))
 
