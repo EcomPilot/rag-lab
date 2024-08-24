@@ -14,6 +14,7 @@ from opengraphrag.utils.dataclass_utils import dict2object, dict_matches_datacla
 import os
 import uuid
 from opengraphrag.utils.graph_file_loader import graph_save
+from opengraphrag.utils.graph_utils import covert_virtual_relationship_to_enetity
 from opengraphrag.utils.parallel_utils import parallel_for
 from opengraphrag.visual import visualize_knowledge_graph_echart, visualize_knowledge_graph_network_x
 
@@ -55,13 +56,14 @@ def generate_chunk_graph_executor(llm: LLMBase, chunk:str, chunk_id:str="", expe
     return relations, entities
 
 
-def disambiguate_entity_executor(llm: LLMBase, entities: List[Entity], expert: str='', strategy:Strategy = Strategy.accuracy) -> List[Entity]:
+def disambiguate_entity_executor(llm: LLMBase, entities: List[Entity], relationships: List[Relationship], expert: str='', strategy:Strategy = Strategy.accuracy) -> Tuple[List[Entity], List[Relationship]]:
     logger.info(f"Current executor strategy: {strategy}")
-    logger.info("Merging entity...")
-    
+    logger.info("Merge Relationship that do not have correct target or source entity to Entity...")
+    entities, relationships = covert_virtual_relationship_to_enetity(entities, relationships)
+    logger.info(f"Merging the same entity name with descriptions...")
     entities = merge_summary_entity(llm, entities, expert, strategy)
     logger.info(f"Merging the same entity name with descriptions: {entities}")
-    return entities
+    return entities, relationships
 
 
 def disambiguate_relationship_executor(llm: LLMBase, relationships: List[Relationship], expert: str='', strategy:Strategy = Strategy.accuracy) -> List[Relationship]:
@@ -107,7 +109,7 @@ if __name__ == "__main__":
             relations.extend(current_relations)
             entities.extend(current_entities)
 
-    entities = disambiguate_entity_executor(aoai_llm, entities, expert, strategy)
+    entities, relations = disambiguate_entity_executor(aoai_llm, entities, relations, expert, strategy)
     relations = disambiguate_relationship_executor(aoai_llm, relations, expert, strategy)
 
     # save graph to local file

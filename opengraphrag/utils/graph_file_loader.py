@@ -7,7 +7,7 @@ import os
 
 
 def graph_save(entities: List[Entity], relationships: List[Relationship], filepath: str):
-    logger.info(f"Saveing graph to {filepath}...")
+    logger.info(f"Saveing graph to [{filepath}]...")
     output = {
         "entities": [asdict(entity) for entity in entities],
         "relationships": [asdict(rel) for rel in relationships]
