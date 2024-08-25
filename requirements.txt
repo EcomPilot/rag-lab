@@ -1,6 +1,6 @@
 openai
 requests
-unstructured
+# unstructured
 numpy
 
 # visual echart

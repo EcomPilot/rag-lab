@@ -33,6 +33,8 @@ class Community:
     findings: List[Dict[str,str]]
     readable_id:int = 0
     community_id:str = field(default_factory=lambda: str(uuid.uuid4()))
+    source_entity_ids:list = field(default_factory=list)
+    source_relationship_ids:list = field(default_factory=list)
 
 
 if __name__ == "__main__":
