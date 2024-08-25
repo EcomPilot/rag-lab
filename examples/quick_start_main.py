@@ -44,7 +44,7 @@ if __name__ == "__main__":
         endpoint=AZURE_OPENAI_ENDPOINT
     )
 
-    chunks = chuncking_executor(filename)[:2]
+    chunks = chuncking_executor(filename)
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
     logger.info("Generating expert descripiton...")
     expert = generate_expert(aoai_llm, chunks)
