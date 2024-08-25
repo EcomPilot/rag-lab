@@ -10,7 +10,7 @@ from loguru import logger
 import os
 import uuid
 from graphrag import generate_expert, detect_text_language
-from graphrag.utils.graph_file_loader import graph_load_json, graph_save_json
+from graphrag.utils.graph_file_loader import graph_save_json
 from graphrag.visual import visualize_knowledge_graph_echart, visualize_knowledge_graph_network_x
 
 
@@ -37,7 +37,7 @@ if __name__ == "__main__":
         endpoint=AZURE_OPENAI_ENDPOINT
     )
 
-    chunks = chuncking_executor(filename)[:3]
+    chunks = chuncking_executor(filename)
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
     logger.info("Generating expert descripiton...")
     expert = generate_expert(aoai_llm, chunks)

@@ -9,6 +9,17 @@ import json
 
 
 def disambigute_entity(llm: LLMBase, entities:List[Entity], expert: str='') -> List[List[int]]:
+    '''
+    The `disambigute_entity` function is designed to disambiguate entities by generating a list of entity IDs that are considered to be the same entity.
+
+    #### Parameters
+    - `llm: LLMBase`: An instance of a language model used for disambiguating entities.
+    - `entities: List[Entity]`: A list of entities to be disambiguated.
+    - `expert: str` (default is an empty string): An optional expert input for disambiguating entities.
+
+    #### Returns
+    - `List[List[int]]`: A list of lists, where each inner list contains the IDs of entities that are considered to be the same.
+    '''
     entities_with_id = [{
         "node_id": i + 1,
         "entity_name": entity.entity_name,
@@ -17,6 +28,18 @@ def disambigute_entity(llm: LLMBase, entities:List[Entity], expert: str='') -> L
 
 
 def merge_summary_entity(llm: LLMBase, entities:List[Entity], expert: str='', strategy:Strategy = Strategy.accuracy) -> List[Entity]:
+    '''
+    The `merge_summary_entity` function is designed to merge and summarize entities based on their names, descriptions, and types.
+
+    #### Parameters
+    - `llm: LLMBase`: An instance of a language model used for summarizing entity descriptions and types.
+    - `entities: List[Entity]`: A list of entities to be merged and summarized.
+    - `expert: str` (default is an empty string): An optional expert input for summarizing entities.
+    - `strategy: Strategy` (default is `Strategy.accuracy`): The strategy to be used for summarizing entities.
+
+    #### Returns
+    - `List[Entity]`: A list of merged and summarized entities.
+    '''
     entity_name_description_list_mapping = defaultdict(list)
     entity_name_type_list_mapping = defaultdict(set)
     entity_name_chunk_ids_mapping = defaultdict(list)
@@ -45,6 +68,18 @@ def merge_summary_entity(llm: LLMBase, entities:List[Entity], expert: str='', st
 
 
 def merge_summary_relationship(llm: LLMBase, origin_relationships:List[Relationship], expert: str='', strategy:Strategy = Strategy.accuracy) -> List[Relationship]:
+    '''
+    The `merge_summary_relationship` function is designed to merge and summarize relationships based on their descriptions and strengths.
+
+    #### Parameters
+    - `llm: LLMBase`: An instance of a language model used for summarizing relationship descriptions.
+    - `origin_relationships: List[Relationship]`: A list of original relationships to be merged and summarized.
+    - `expert: str` (default is an empty string): An optional expert input for summarizing relationships.
+    - `strategy: Strategy` (default is `Strategy.accuracy`): The strategy to be used for summarizing relationships.
+
+    #### Returns
+    - `List[Relationship]`: A list of merged and summarized relationships.
+    '''
     relationship_description_dict,  relationship_strength_dict, relationship_source_chunk_ids = defaultdict(list), defaultdict(list), defaultdict(list)
     result = []
 

@@ -1,8 +1,12 @@
-from enum import IntEnum
+from enum import Enum
 
-class Strategy(IntEnum):
-    fast = 0
-    accuracy = 1
+class Strategy(Enum):
+    ''' We have tow startegy for the RAG workflow.
+    - fast
+    - accuracy
+    '''
+    fast = 'fast'
+    accuracy = 'accuracy'
 
 
 if __name__ == "__main__":

@@ -16,7 +16,22 @@ from graphrag.prompt_functions.expert import generate_expert
 from graphrag.prompt_functions.language import detect_text_language
 
 
-def generate_single_chunk_graph_executor(llm: LLMBase, chunk:str, chunk_id:str="", expert:str="", language:str="English", strategy:Strategy = Strategy.accuracy) -> Tuple[List[Entity], List[Relationship]]:
+def generate_single_chunk_graph_executor(llm: LLMBase, chunk:str, chunk_id:str="", expert:str="", language:str="English", strategy:Strategy = "accuracy") -> Tuple[List[Entity], List[Relationship]]:
+        '''
+        The `generate_single_chunk_graph_executor` function is designed to generate entity and relationship classes from a given text chunk.
+
+        #### Parameters
+        - `llm: LLMBase`: An instance of a language model used for generating entity and relationship examples.
+        - `chunk: str`: The text chunk to be analyzed.
+        - `chunk_id: str` (default is an empty string): An optional identifier for the text chunk.
+        - `expert: str` (default is an empty string): An optional expert input for generating entity and relationship examples.
+        - `language: str` (default is "English"): The language of the text chunk.
+        - `strategy: Strategy` (default is "accuracy"): The strategy to be used for generating entity and relationship examples.
+
+        #### Returns
+        - `Tuple[List[Entity], List[Relationship]]`: A tuple containing a list of entities and a list of relationships.
+        '''
+        strategy = Strategy(strategy)
         logger.info(f"Current chunk: {chunk}.")
         logger.info("Generating entity relationship examples...")
         chunk_entity_relation = generate_entity_relationship_examples(llm, chunk, language, expert)
@@ -40,7 +55,23 @@ def generate_single_chunk_graph_executor(llm: LLMBase, chunk:str, chunk_id:str="
         return entities, relations
 
 
-def generate_entire_chunk_graph_executor(llm: LLMBase, chunks:List[str], chunk_ids:List[str], expert:str="", language:str="English", strategy:Strategy = Strategy.accuracy, num_threads:int=1) -> Tuple[List[Entity], List[Relationship]]:
+def generate_entire_chunk_graph_executor(llm: LLMBase, chunks:List[str], chunk_ids:List[str], expert:str="", language:str="English", strategy:Strategy = "accuracy", num_threads:int=1) -> Tuple[List[Entity], List[Relationship]]:
+    '''
+    The `generate_entire_chunk_graph_executor` function is designed to generate entity and relationship classes from multiple text chunks, utilizing either single-threaded or multi-threaded execution.
+
+    #### Parameters
+    - `llm: LLMBase`: An instance of a language model used for generating entity and relationship examples.
+    - `chunks: List[str]`: A list of text chunks to be analyzed.
+    - `chunk_ids: List[str]`: A list of identifiers corresponding to each text chunk.
+    - `expert: str` (default is an empty string): An optional expert input for generating entity and relationship examples.
+    - `language: str` (default is "English"): The language of the text chunks.
+    - `strategy: Strategy` (default is "accuracy"): The strategy to be used for generating entity and relationship examples.
+    - `num_threads: int` (default is 1): The number of threads to use for processing the text chunks.
+
+    #### Returns
+    - `Tuple[List[Entity], List[Relationship]]`: A tuple containing a list of entities and a list of relationships.
+    '''
+    strategy = Strategy(strategy)
     logger.info(f"Creating Graphs from chunks with thread {num_threads}...")
     entities, relations = [], []
     if num_threads == 1:
@@ -60,7 +91,22 @@ def generate_entire_chunk_graph_executor(llm: LLMBase, chunks:List[str], chunk_i
     return entities, relations
 
 
-def disambiguate_entity_executor(llm: LLMBase, entities: List[Entity], relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = Strategy.accuracy) -> Tuple[List[Entity], List[Relationship]]:
+def disambiguate_entity_executor(llm: LLMBase, entities: List[Entity], relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = "accuracy") -> Tuple[List[Entity], List[Relationship]]:
+    '''
+    The `disambiguate_entity_executor` function is designed to merge and disambiguate entities and relationships, ensuring they have readable IDs.
+
+    #### Parameters
+    - `llm: LLMBase`: An instance of a language model used for merging and disambiguating entities and relationships.
+    - `entities: List[Entity]`: A list of entities to be processed.
+    - `relationships: List[Relationship]`: A list of relationships to be processed.
+    - `expert: str` (default is an empty string): An optional expert input for merging entities and relationships.
+    - `language: str` (default is "English"): The language of the entities and relationships.
+    - `strategy: Strategy` (default is "accuracy"): The strategy to be used for merging and disambiguating entities and relationships.
+
+    #### Returns
+    - `Tuple[List[Entity], List[Relationship]]`: A tuple containing a list of disambiguated entities and a list of disambiguated relationships.
+    '''
+    strategy = Strategy(strategy)
     logger.info(f"Current executor strategy: {strategy}")
     logger.info("Merge Relationship that do not have correct target or source entity to Entity...")
     entities, relationships = covert_virtual_relationship_to_enetity(entities, relationships)
@@ -74,7 +120,21 @@ def disambiguate_entity_executor(llm: LLMBase, entities: List[Entity], relations
     return entities, relationships
 
 
-def disambiguate_relationship_executor(llm: LLMBase, relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = Strategy.accuracy) -> List[Relationship]:
+def disambiguate_relationship_executor(llm: LLMBase, relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = "accuracy") -> List[Relationship]:
+    '''
+    The `disambiguate_relationship_executor` function is designed to merge and disambiguate relationships, ensuring they have readable IDs.
+
+    #### Parameters
+    - `llm: LLMBase`: An instance of a language model used for merging and disambiguating relationships.
+    - `relationships: List[Relationship]`: A list of relationships to be processed.
+    - `expert: str` (default is an empty string): An optional expert input for merging relationships.
+    - `language: str` (default is "English"): The language of the relationships.
+    - `strategy: Strategy` (default is "accuracy"): The strategy to be used for merging and disambiguating relationships.
+
+    #### Returns
+    - `List[Relationship]`: A list of disambiguated relationships with updated readable IDs.
+    '''
+    strategy = Strategy(strategy)
     logger.info("Merging relationships...")
     relationships = merge_summary_relationship(llm, relationships, expert, strategy)
     logger.info(f"Merging relationships: {relationships}")
@@ -85,7 +145,23 @@ def disambiguate_relationship_executor(llm: LLMBase, relationships: List[Relatio
     return relationships
 
 
-def generate_community_reports_executor(llm: LLMBase, entities: List[Entity], relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = Strategy.accuracy, min_entities_in_cummunity:int=5, num_threads:int = 1) -> List[Community]:
+def generate_community_reports_executor(llm: LLMBase, entities: List[Entity], relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = "accuracy", min_entities_in_cummunity:int=5, num_threads:int = 1) -> List[Community]:
+    '''
+    The `generate_community_reports_executor` function is designed to generate community reports from a list of entities and relationships, utilizing either single-threaded or multi-threaded execution.
+
+    #### Parameters
+    - `llm: LLMBase`: An instance of a language model used for generating community reports.
+    - `entities: List[Entity]`: A list of entities to be analyzed.
+    - `relationships: List[Relationship]`: A list of relationships to be analyzed.
+    - `expert: str` (default is an empty string): An optional expert input for generating community reports.
+    - `language: str` (default is "English"): The language of the entities and relationships.
+    - `strategy: Strategy` (default is "accuracy"): The strategy to be used for generating community reports.
+    - `min_entities_in_cummunity: int` (default is 5): The minimum number of entities required in a community.
+    - `num_threads: int` (default is 1): The number of threads to use for processing the communities.
+
+    #### Returns
+    - `List[Community]`: A list of generated community reports.
+    '''
     def __multi_thread_loop_generate_community_report(llm: LLMBase, entities: List[Entity], relationships: List[Relationship], community_idx:List[int], expert: str=''):
         logger.info(f"Creating community report...")
         com_entities = [entities[i] for i in community_idx]
@@ -102,6 +178,7 @@ def generate_community_reports_executor(llm: LLMBase, entities: List[Entity], re
         logger.info(f"Convert community report: {report}")
         return report
     
+    strategy = Strategy(strategy)
     logger.info("Creating communities...")
     G = convert_to_network_x_graph(entities, relationships)
     adj_matrix = nx.to_numpy_array(G)
@@ -119,3 +196,15 @@ def generate_community_reports_executor(llm: LLMBase, entities: List[Entity], re
         community_function_args_list = [(llm, entities, relationships, com, expert) for com in communities]
         community_reports = parallel_for(__multi_thread_loop_generate_community_report, community_function_args_list, num_threads=num_threads)
     return [report for report in community_reports if report is not None]
+
+
+__all__ = [
+    "generate_community_reports_executor",
+    "disambiguate_relationship_executor",
+    "disambiguate_entity_executor",
+    "disambiguate_relationship_executor",
+    "generate_entire_chunk_graph_executor",
+    "generate_single_chunk_graph_executor",
+    "detect_text_language",
+    "generate_expert",
+]

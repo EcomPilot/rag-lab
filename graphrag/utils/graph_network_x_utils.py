@@ -7,6 +7,16 @@ from loguru import logger
 
 
 def convert_to_network_x_graph(entities: List[Entity], relationships: List[Relationship]) -> Graph:
+    '''
+    The `convert_to_network_x_graph` function is designed to convert a list of entities and relationships into a NetworkX graph.
+
+    #### Parameters
+    - `entities: List[Entity]`: A list of entities to be added as nodes in the graph.
+    - `relationships: List[Relationship]`: A list of relationships to be added as edges in the graph.
+
+    #### Returns
+    - `Graph`: A NetworkX graph representing the entities and relationships.
+    '''
     G = nx.Graph()
 
     for entity in entities:

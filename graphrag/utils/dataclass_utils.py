@@ -3,6 +3,16 @@ from typing import List, Any, Dict, Type, TypeVar, get_args, get_origin
 
 
 def dict_matches_dataclass(dc_instance, dict_obj:dict):
+    '''
+    The `dict_matches_dataclass` function is designed to check if a dictionary matches the fields of a given dataclass instance.
+
+    #### Parameters
+    - `dc_instance`: A dataclass instance to be checked against.
+    - `dict_obj: dict`: A dictionary to be compared with the dataclass fields.
+
+    #### Returns
+    - `bool`: Returns `True` if the dictionary contains all required fields of the dataclass, otherwise `False`.
+    '''
     if not is_dataclass(dc_instance):
         raise TypeError("The first argument must be a dataclass instance.")
     if not isinstance(dict_obj, dict):

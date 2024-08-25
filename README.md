@@ -33,24 +33,59 @@ Proposed by Intel, HybridRAG combines different RAG methodologies to enhance per
 - **Robustness**: The hybrid approach ensures that the system remains robust and reliable, even when dealing with diverse and complex datasets.
 - **Customizability**: Users can customize HybridRAG to fit specific requirements, making it a versatile tool for a wide range of applications.
 
-## Getting Started
+## Quick Start Guide
 
-To get started with RAG-LAB, follow these steps:
+This quick start guide walks you through the process of chunking text, generating expert descriptions, detecting language, creating and disambiguating entity and relationship graphs, generating community reports, saving the graph to a file, and visualizing the knowledge graph. Follow these steps to efficiently process and visualize your data.
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/yourusername/RAG-LAB.git
+For your reference, you can find the code example in [quick_start_main.py](./examples/quick_start_main.py)
+
+### Step-by-Step Instructions
+
+1. **Chunking the Text**
+    ```python
+    chunks = chuncking_executor(filename)
+    chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
     ```
 
-2. **Install dependencies**:
-    ```bash
-    cd RAG-LAB
-    pip install -r requirements.txt
+2. **Generating Expert Description**
+    ```python
+    logger.info("Generating expert description...")
+    expert = generate_expert(aoai_llm, chunks)
+    logger.info(f"Generated expert description: {expert}")
     ```
 
-3. **Run the initial setup**:
-    ```bash
-    python setup.py
+3. **Detecting Language**
+    ```python
+    logger.info("Detect language...")
+    language = detect_text_language(aoai_llm, chunks)
+    logger.info(f"Detected language: {language}")
+    ```
+
+4. **Generating Entity and Relationship Graph**
+    ```python
+    entities, relations = generate_entire_chunk_graph_executor(aoai_llm, chunks, chunk_ids, expert, language, strategy, muti_thread)
+    ```
+
+5. **Disambiguating Entities and Relationships**
+    ```python
+    entities, relations = disambiguate_entity_executor(aoai_llm, entities, relations, expert, language, strategy)
+    relations = disambiguate_relationship_executor(aoai_llm, relations, expert, language, strategy)
+    ```
+
+6. **Generating Community Reports**
+    ```python
+    community_reports = generate_community_reports_executor(aoai_llm, entities, relations, expert, language, strategy, 5, muti_thread)
+    ```
+
+7. **Saving the Graph to a Local File**
+    ```python
+    graph_save_json(entities, relations, community_reports, graph_filepath)
+    ```
+
+8. **Visualizing the Knowledge Graph**
+    ```python
+    visualize_knowledge_graph_echart(entities, relations)
+    visualize_knowledge_graph_network_x(entities, relations)
     ```
 
 ## Contributing
