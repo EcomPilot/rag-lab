@@ -2,8 +2,9 @@ from typing import List, Tuple
 from communities.algorithms import louvain_method
 import networkx as nx
 from loguru import logger
+from raglab.embeddings.base import EmbeddingBase
 from .data_contracts import Community, Entity, Relationship, Strategy
-from raglab.llm.base import LLMBase
+from raglab.llms.base import LLMBase
 from .prompt_functions.chunk_graph_extraction import generate_entity_relationship_examples
 from .prompt_functions.community import generate_community_report
 from .prompt_functions.disambiguation import merge_summary_entity, merge_summary_relationship
@@ -198,6 +199,35 @@ def generate_community_reports_executor(llm: LLMBase, entities: List[Entity], re
     return [report for report in community_reports if report is not None]
 
 
+def update_graph_embeddings_executor(embed: EmbeddingBase, item_list: List[Entity | Relationship | Community], num_threads:int = 1) -> List[Entity | Relationship | Community]:
+    '''
+    This function updates the embeddings of a list of items (entities, relationships, or communities) using a specified embedding model. It can operate in single-threaded or multi-threaded mode.
+
+    ### Parameters
+
+    - `embed` (`EmbeddingBase`): The embedding model used to update the items' embeddings.
+    - `item_list` (`List[Entity | Relationship | Community]`): A list of items whose embeddings need to be updated. Each item can be an entity, relationship, or community.
+    - `num_threads` (`int`, optional): The number of threads to use for parallel processing. Default is 1.
+
+    ### Returns
+
+    - `List[Entity | Relationship | Community]`: A list of items with updated embeddings.
+    '''
+    def __update_embed(embed: EmbeddingBase, item: Entity | Relationship | Community) -> Entity | Relationship | Community:
+        item.embedding = embed.embed_query(repr(item))
+        return item
+    
+    logger.info(f"Creating Embedding...")
+    if num_threads == 1:
+        result = [__update_embed(embed, item) for item in item_list]
+    else:
+        args_list = [(embed, item) for item in item_list]
+        result = parallel_for(__update_embed, args_list, num_threads)
+
+    logger.info(f"Created Embedding")
+    return result
+
+
 __all__ = [
     "generate_community_reports_executor",
     "disambiguate_relationship_executor",
@@ -205,6 +235,7 @@ __all__ = [
     "disambiguate_relationship_executor",
     "generate_entire_chunk_graph_executor",
     "generate_single_chunk_graph_executor",
+    "update_graph_embeddings_executor",
     "detect_text_language",
     "generate_expert",
     "graph_load_json",

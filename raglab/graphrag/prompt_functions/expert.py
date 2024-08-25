@@ -1,5 +1,5 @@
 from typing import List, Union
-from raglab.llm.base import LLMBase
+from raglab.llms.base import LLMBase
 from ..prompt.expert import GENERATE_EXPERT_PROMPT
 import random
 

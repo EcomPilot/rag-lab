@@ -4,15 +4,18 @@ from raglab.graphrag import (
     disambiguate_relationship_executor, 
     generate_community_reports_executor, 
     generate_entire_chunk_graph_executor,
+    update_graph_embeddings_executor,
     detect_text_language,
     generate_expert,
+    graph_load_json,
     graph_save_json,
 )
 from raglab.graphrag.visual import (
     visualize_knowledge_graph_echart,
     visualize_knowledge_graph_network_x
 )
-from raglab.llm.azure_openai import AzureOpenAILLM
+from raglab.llms import AzureOpenAILLM
+from raglab.embeddings import AzureOpenAIEmbedding
 from unstructured.partition.text import partition_text
 from unstructured.chunking.basic import chunk_elements
 from unstructured.cleaners.core import clean_non_ascii_chars, clean_extra_whitespace
@@ -32,14 +35,21 @@ def chuncking_executor(filename:str, chunk_size=1000, overlap=100) -> List[str]:
 if __name__ == "__main__":
     filename = "./examples/documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
     graph_filepath = "./examples/graphfiles/Gullivers-travels-A-Voyage-to-Lilliput.json"
-    AZURE_OPENAI_DEPLOYMENT = os.environ["AZURE_OPENAI_DEPLOYMENT"]
+    AZURE_OPENAI_LLM_DEPLOYMENT = os.environ["AZURE_OPENAI_LLM_DEPLOYMENT"]
+    AZURE_OPENAI_EMBED_DEPLOYMENT = os.environ["AZURE_OPENAI_EMBED_DEPLOYMENT"]
     AZURE_OPENAI_KEY = os.environ["AZURE_OPENAI_KEY"]
     AZURE_OPENAI_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
 
     strategy = "accuracy"
     muti_thread = 2
     aoai_llm = AzureOpenAILLM(
-        model_id=AZURE_OPENAI_DEPLOYMENT,
+        model_id=AZURE_OPENAI_LLM_DEPLOYMENT,
+        access_token= AZURE_OPENAI_KEY,
+        endpoint=AZURE_OPENAI_ENDPOINT
+    )
+
+    aoai_embed = AzureOpenAIEmbedding(
+        model_id=AZURE_OPENAI_EMBED_DEPLOYMENT,
         access_token= AZURE_OPENAI_KEY,
         endpoint=AZURE_OPENAI_ENDPOINT
     )
@@ -60,6 +70,9 @@ if __name__ == "__main__":
     community_reports = generate_community_reports_executor(aoai_llm, entities, relations, expert, language, strategy, 5, muti_thread)
 
     # save graph to local file
+    entities, relations, community_reports = graph_load_json(graph_filepath)
+    entities = update_graph_embeddings_executor(aoai_embed, entities, num_threads=muti_thread)
+    community_reports = update_graph_embeddings_executor(aoai_embed, community_reports, num_threads=muti_thread)
     graph_save_json(entities, relations, community_reports, graph_filepath)
 
     # for graph visual

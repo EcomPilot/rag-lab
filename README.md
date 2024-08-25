@@ -56,12 +56,18 @@ For your reference, you can find the code example in [quick_start_main.py](./exa
         visualize_knowledge_graph_network_x
     )
 
-    # import llm from `raglab.llm.azure_openai` or `langchain.llms`.
+    # import llm from `raglab.llms` or `langchain.llms`.
     # Or You can implement the `llm.invoke` method yourself by inheriting the `LLMBase` class.
-    from raglab.llm.azure_openai import {
+    from raglab.llms import (
         AzureOpenAILLM,
         LLMBase
-    }
+    )
+
+    # Also, you can implement the `embed.embed_query` method yourself by inheriting the `EmbeddingBase` class. Or just import it from `raglab.embeddings` or `langchain.embeddings`
+    from raglab.embeddings import (
+        AzureOpenAIEmbedding, 
+        EmbeddingBase
+    )
     ```
 
 
@@ -71,18 +77,14 @@ For your reference, you can find the code example in [quick_start_main.py](./exa
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
     ```
 
-2. **Generating Expert Description**
+2. **[Options] Generating Expert Description**
     ```python
-    logger.info("Generating expert description...")
     expert = generate_expert(aoai_llm, chunks)
-    logger.info(f"Generated expert description: {expert}")
     ```
 
-3. **Detecting Language**
+3. **[Options] Detecting Language**
     ```python
-    logger.info("Detect language...")
     language = detect_text_language(aoai_llm, chunks)
-    logger.info(f"Detected language: {language}")
     ```
 
 4. **Generating Entity and Relationship Graph**
@@ -101,12 +103,18 @@ For your reference, you can find the code example in [quick_start_main.py](./exa
     community_reports = generate_community_reports_executor(aoai_llm, entities, relations, expert, language, strategy, 5, muti_thread)
     ```
 
-7. **Saving the Graph to a Local File**
+7. **Generating Embeddings for Entities and Communities**
+    ```python
+    entities = update_graph_embeddings_executor(aoai_embed, entities, num_threads=muti_thread)
+    community_reports = update_graph_embeddings_executor(aoai_embed, community_reports, num_threads=muti_thread)
+    ```
+
+8. **Saving the Graph to a Local File**
     ```python
     graph_save_json(entities, relations, community_reports, graph_filepath)
     ```
 
-8. **Visualizing the Knowledge Graph**
+9. **Visualizing the Knowledge Graph**
     ```python
     visualize_knowledge_graph_echart(entities, relations)
     visualize_knowledge_graph_network_x(entities, relations)

@@ -1,7 +1,7 @@
 from typing import Dict, List
 from ..data_contracts.graph import Entity, Relationship
 from ..data_contracts.type import Strategy
-from raglab.llm.base import LLMBase
+from raglab.llms.base import LLMBase
 from ..prompt.disambiguation import DISAMBIGUATION_ENTITY_PROMPT, SUMMARY_ENTITY_DISCRIPTIONS_PROMPT, SUMMARY_ENTITY_TYPE_PROMPT, SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT
 from ..utils.json_paser import list_loads_from_text
 from collections import defaultdict

@@ -1,7 +1,7 @@
 from dataclasses import asdict
 from typing import Any, Dict, List
 from ..data_contracts.graph import Relationship, Entity
-from raglab.llm.base import LLMBase
+from raglab.llms.base import LLMBase
 from ..prompt.community import COMMUNITY_REPORT_SUMMARIZATION_PROMPT
 import pandas as pd
 from ..utils.json_paser import json_loads_from_text

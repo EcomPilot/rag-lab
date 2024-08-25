@@ -1,5 +1,5 @@
 from typing import List
-from raglab.llm.base import LLMBase
+from raglab.llms.base import LLMBase
 from ..prompt.chunk_graph_extraction import ENTITY_RELATIONSHIPS_GENERATION_PROMPT
 from ..utils.json_paser import list_loads_from_text
 
