@@ -1,7 +1,7 @@
 from typing import List
-from opengraphrag.llm.base import LLMBase
-from opengraphrag.prompt.chunk_graph_extraction import ENTITY_RELATIONSHIPS_GENERATION_PROMPT
-from opengraphrag.utils.json_paser import list_loads_from_text
+from graphrag.llm.base import LLMBase
+from graphrag.prompt.chunk_graph_extraction import ENTITY_RELATIONSHIPS_GENERATION_PROMPT
+from graphrag.utils.json_paser import list_loads_from_text
 
 
 def generate_entity_relationship_examples(llm: LLMBase, chunk:str, language:str, expert:str='') -> List:

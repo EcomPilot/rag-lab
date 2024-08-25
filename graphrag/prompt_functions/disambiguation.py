@@ -1,9 +1,9 @@
 from typing import Dict, List
-from opengraphrag.data_contracts.graph import Entity, Relationship
-from opengraphrag.data_contracts.type import Strategy
-from opengraphrag.llm.base import LLMBase
-from opengraphrag.prompt.disambiguation import DISAMBIGUATION_ENTITY_PROMPT, SUMMARY_ENTITY_DISCRIPTIONS_PROMPT, SUMMARY_ENTITY_TYPE_PROMPT, SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT
-from opengraphrag.utils.json_paser import list_loads_from_text
+from graphrag.data_contracts.graph import Entity, Relationship
+from graphrag.data_contracts.type import Strategy
+from graphrag.llm.base import LLMBase
+from graphrag.prompt.disambiguation import DISAMBIGUATION_ENTITY_PROMPT, SUMMARY_ENTITY_DISCRIPTIONS_PROMPT, SUMMARY_ENTITY_TYPE_PROMPT, SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT
+from graphrag.utils.json_paser import list_loads_from_text
 from collections import defaultdict
 import json
 

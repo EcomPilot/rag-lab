@@ -1,5 +1,5 @@
 from typing import List
-from opengraphrag.data_contracts.graph import Entity, Relationship
+from graphrag.data_contracts.graph import Entity, Relationship
 import pyecharts.options as opts
 from pyecharts.charts import Graph
 from pyecharts.globals import ThemeType

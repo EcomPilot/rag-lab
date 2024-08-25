@@ -1,10 +1,17 @@
 import os
+from typing import List
 import numpy as np
-from opengraphrag.llm.azure_openai import AzureOpenAILLM
-from opengraphrag.prompt_functions.community import generate_community_report
-from opengraphrag.utils.graph_file_loader import graph_load
-from opengraphrag.utils.graph_network_x_utils import convert_to_network_x_graph
-from opengraphrag.visual.network_x import visualize_knowledge_graph_network_x
+from graphrag.data_contracts.graph import Community, Entity, Relationship
+from graphrag.data_contracts.type import Strategy
+from graphrag.llm.azure_openai import AzureOpenAILLM
+from graphrag.llm.base import LLMBase
+from graphrag.prompt_functions.community import generate_community_report
+from graphrag.utils.dataclass_utils import dict2object, dict_matches_dataclass
+from graphrag.utils.graph_file_loader import graph_save_json, graph_load_json
+from graphrag.utils.graph_network_x_utils import convert_to_network_x_graph
+from graphrag.utils.parallel_utils import parallel_for
+from graphrag.visual.network_x import visualize_knowledge_graph_network_x
+from loguru import logger
 from communities.algorithms import louvain_method
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -12,7 +19,7 @@ import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
     graph_filepath = "./examples/graphfiles/Gullivers-travels-A-Voyage-to-Lilliput.json"
-    entities, relationships = graph_load(graph_filepath)
+    entities, relationships, communities = graph_load_json(graph_filepath)
     min_entities_in_cummunity = 5
 
     AZURE_OPENAI_DEPLOYMENT = os.environ["AZURE_OPENAI_DEPLOYMENT"]
@@ -27,29 +34,5 @@ if __name__ == "__main__":
     )
 
     # visualize_knowledge_graph_network_x(entities, relationships)
-    G = convert_to_network_x_graph(entities, relationships)
-    adj_matrix = nx.to_numpy_array(G)
-    communities, _ = louvain_method(adj_matrix)
-    communities = [com for com in communities if len(com) >= min_entities_in_cummunity]
-
-    for com in communities:
-        com_entities = [entities[i] for i in com]
-        com_entity_set = {entity.entity_name for entity in com_entities}
-        com_rels = [rel for rel in relationships if (rel.target_entity in com_entity_set) or (rel.source_entity in com_entity_set)]
-        reprot = generate_community_report(aoai_llm, com_entities, com_rels, 'English')
-
-    pos = nx.spring_layout(G)
-    colors = plt.cm.rainbow(np.linspace(0, 1, len(communities)))
-
-    count = 0
-    for com in communities:
-        if len(com) > 6:
-            count += 1
-            print(com)
-
-    for community, color in zip(communities, colors):
-        node_names = [entities[node].entity_name for node in community]
-        nx.draw_networkx_nodes(G, pos, nodelist=node_names, node_color=[color])
-    nx.draw_networkx_edges(G, pos)
-    nx.draw_networkx_labels(G, pos, nx.get_node_attributes(G, 'label'))
-    plt.show()
+    community_reports = generate_community_reports_executor(aoai_llm, entities, relationships, num_threads=3)
+    graph_save_json(entities, relationships, community_reports, graph_filepath)
