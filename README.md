@@ -37,7 +37,7 @@ Proposed by Intel, HybridRAG combines different RAG methodologies to enhance per
 
 This quick start guide walks you through the process of chunking text, generating expert descriptions, detecting language, creating and disambiguating entity and relationship graphs, generating community reports, saving the graph to a file, and visualizing the knowledge graph. Follow these steps to efficiently process and visualize your data.
 
-For your reference, you can find the code example in [quick_start_main.py](./examples/quick_start_main.py)
+For your reference, you can find the code example in [quick_start_index.py](./examples/quick_start_index.py)
 
 ### Step-by-Step Instructions
 0. **Import tools from `raglab`**
