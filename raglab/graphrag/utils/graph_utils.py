@@ -1,6 +1,8 @@
+from dataclasses import asdict
 from typing import List, Tuple
 from ..data_contracts import Entity, Relationship, Community
 from loguru import logger
+import pandas as pd
 
 
 def covert_virtual_relationship_to_enetity(entities: List[Entity], relationships: List[Relationship]) -> Tuple[List[Entity], List[Relationship]]:
@@ -28,7 +30,6 @@ def covert_virtual_relationship_to_enetity(entities: List[Entity], relationships
 
 def update_readable_id(items:List[Entity | Relationship | Community]) -> List[Entity | Relationship | Community]:
     '''
-    #### Purpose
     The `update_readable_id` function is designed to update the `readable_id` attribute of a list of items, which can be entities, relationships, or communities.
 
     #### Parameters
@@ -41,3 +42,16 @@ def update_readable_id(items:List[Entity | Relationship | Community]) -> List[En
         items[i].readable_id = (i+1)
 
     return items
+
+
+def convert_to_dataframe(items:List[Entity | Relationship | Community]) -> pd.DataFrame:
+    '''
+    The `convert_to_dataframe` function is designed to convert a list of items (which can be entities, relationships, or communities) into a Pandas DataFrame.
+
+    #### Parameters
+    - `items: List[Entity | Relationship | Community]`: A list of items to be converted into a DataFrame.
+
+    #### Returns
+    - `pd.DataFrame`: A DataFrame containing the data from the list of items.
+    '''
+    return pd.DataFrame([asdict(item) for item in items])

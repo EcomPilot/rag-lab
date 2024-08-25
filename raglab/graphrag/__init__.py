@@ -10,7 +10,7 @@ from .prompt_functions.community import generate_community_report
 from .prompt_functions.disambiguation import merge_summary_entity, merge_summary_relationship
 from .utils.dataclass_utils import dict2object, dict_matches_dataclass
 from .utils.graph_network_x_utils import convert_to_network_x_graph
-from .utils.graph_utils import covert_virtual_relationship_to_enetity, update_readable_id
+from .utils.graph_utils import convert_to_dataframe, covert_virtual_relationship_to_enetity, update_readable_id
 from .utils.parallel_utils import parallel_for
 from .prompt_functions.expert import generate_expert
 from .prompt_functions.language import detect_text_language
@@ -239,5 +239,6 @@ __all__ = [
     "detect_text_language",
     "generate_expert",
     "graph_load_json",
-    "graph_save_json"
+    "graph_save_json",
+    "convert_to_dataframe"
 ]

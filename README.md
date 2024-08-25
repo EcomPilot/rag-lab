@@ -111,10 +111,16 @@ For your reference, you can find the code example in [quick_start_main.py](./exa
 
 8. **Saving the Graph to a Local File**
     ```python
-    graph_save_json(entities, relations, community_reports, graph_filepath)
+    ## save graph to local as json file
+    graph_save_json(entities, relations, community_reports, os.path.join(graph_filepath, "Gullivers-travels.json"))
+    ## or you can convert them to DataFrame, and save them as any table format, like csv, excel and so on.
+    entities_df, relations_df, community_reports_df = convert_to_dataframe(entities), convert_to_dataframe(relations), convert_to_dataframe(community_reports)
+    entities_df.to_csv(os.path.join(graph_filepath, "Gullivers-travels-entities.csv"), index=False)
+    relations_df.to_csv(os.path.join(graph_filepath, "Gullivers-travels-relationships.csv"), index=False)
+    community_reports_df.to_csv(os.path.join(graph_filepath, "Gullivers-travels-communities.csv"), index=False)
     ```
 
-9. **Visualizing the Knowledge Graph**
+9. **[Options] Visualizing the Knowledge Graph**
     ```python
     visualize_knowledge_graph_echart(entities, relations)
     visualize_knowledge_graph_network_x(entities, relations)
