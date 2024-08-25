@@ -1,7 +1,7 @@
 import random
 from typing import List, Union
-from graphrag.llm.base import LLMBase
-from graphrag.prompt.language import DETECT_LANGUAGE_PROMPT
+from raglab.llm.base import LLMBase
+from ..prompt.language import DETECT_LANGUAGE_PROMPT
 
 
 def detect_text_language(llm: LLMBase, chunk: Union[str, List[str]], chunk_select_num: int=3) -> str:

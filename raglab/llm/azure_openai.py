@@ -1,4 +1,4 @@
-from graphrag.llm.base import LLMBase
+from .base import LLMBase
 from openai import AzureOpenAI
 
 class AzureOpenAILLM(LLMBase):

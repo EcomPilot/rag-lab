@@ -1,6 +1,6 @@
 from dataclasses import asdict
 from typing import List, Tuple
-from graphrag.data_contracts.graph import Community, Entity, Relationship
+from ..data_contracts.graph import Community, Entity, Relationship
 import json
 from loguru import logger
 import os

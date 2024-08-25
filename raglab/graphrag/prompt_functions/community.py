@@ -1,10 +1,10 @@
 from dataclasses import asdict
 from typing import Any, Dict, List
-from graphrag.data_contracts.graph import Relationship, Entity
-from graphrag.llm.base import LLMBase
-from graphrag.prompt.community import COMMUNITY_REPORT_SUMMARIZATION_PROMPT
+from ..data_contracts.graph import Relationship, Entity
+from raglab.llm.base import LLMBase
+from ..prompt.community import COMMUNITY_REPORT_SUMMARIZATION_PROMPT
 import pandas as pd
-from graphrag.utils.json_paser import json_loads_from_text
+from ..utils.json_paser import json_loads_from_text
 
 
 def generate_community_report(llm: LLMBase, entities: List[Entity], relationships: List[Relationship], language:str, expert:str='') -> Dict[str, Any]:

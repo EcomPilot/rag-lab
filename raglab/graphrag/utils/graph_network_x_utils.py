@@ -2,7 +2,7 @@ from typing import List
 from networkx import Graph
 import numpy as np
 import networkx as nx
-from graphrag.data_contracts.graph import Entity, Relationship
+from ..data_contracts.graph import Entity, Relationship
 from loguru import logger
 
 

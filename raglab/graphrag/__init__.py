@@ -2,18 +2,18 @@ from typing import List, Tuple
 from communities.algorithms import louvain_method
 import networkx as nx
 from loguru import logger
-from graphrag.data_contracts.graph import Community, Entity, Relationship
-from graphrag.data_contracts.type import Strategy
-from graphrag.llm.base import LLMBase
-from graphrag.prompt_functions.chunk_graph_extraction import generate_entity_relationship_examples
-from graphrag.prompt_functions.community import generate_community_report
-from graphrag.prompt_functions.disambiguation import merge_summary_entity, merge_summary_relationship
-from graphrag.utils.dataclass_utils import dict2object, dict_matches_dataclass
-from graphrag.utils.graph_network_x_utils import convert_to_network_x_graph
-from graphrag.utils.graph_utils import covert_virtual_relationship_to_enetity, update_readable_id
-from graphrag.utils.parallel_utils import parallel_for
-from graphrag.prompt_functions.expert import generate_expert
-from graphrag.prompt_functions.language import detect_text_language
+from .data_contracts import Community, Entity, Relationship, Strategy
+from raglab.llm.base import LLMBase
+from .prompt_functions.chunk_graph_extraction import generate_entity_relationship_examples
+from .prompt_functions.community import generate_community_report
+from .prompt_functions.disambiguation import merge_summary_entity, merge_summary_relationship
+from .utils.dataclass_utils import dict2object, dict_matches_dataclass
+from .utils.graph_network_x_utils import convert_to_network_x_graph
+from .utils.graph_utils import covert_virtual_relationship_to_enetity, update_readable_id
+from .utils.parallel_utils import parallel_for
+from .prompt_functions.expert import generate_expert
+from .prompt_functions.language import detect_text_language
+from .utils.graph_file_loader import graph_save_json, graph_load_json
 
 
 def generate_single_chunk_graph_executor(llm: LLMBase, chunk:str, chunk_id:str="", expert:str="", language:str="English", strategy:Strategy = "accuracy") -> Tuple[List[Entity], List[Relationship]]:
@@ -207,4 +207,6 @@ __all__ = [
     "generate_single_chunk_graph_executor",
     "detect_text_language",
     "generate_expert",
+    "graph_load_json",
+    "graph_save_json"
 ]

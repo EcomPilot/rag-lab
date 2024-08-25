@@ -1,17 +1,24 @@
 from typing import List
-from graphrag import disambiguate_entity_executor, disambiguate_relationship_executor, generate_community_reports_executor, generate_entire_chunk_graph_executor
-from graphrag.data_contracts.type import Strategy
-from graphrag.llm.azure_openai import AzureOpenAILLM
-from graphrag.llm.base import LLMBase
+from raglab.graphrag import (
+    disambiguate_entity_executor, 
+    disambiguate_relationship_executor, 
+    generate_community_reports_executor, 
+    generate_entire_chunk_graph_executor,
+    detect_text_language,
+    generate_expert,
+    graph_save_json,
+)
+from raglab.graphrag.visual import (
+    visualize_knowledge_graph_echart,
+    visualize_knowledge_graph_network_x
+)
+from raglab.llm.azure_openai import AzureOpenAILLM
 from unstructured.partition.text import partition_text
 from unstructured.chunking.basic import chunk_elements
 from unstructured.cleaners.core import clean_non_ascii_chars, clean_extra_whitespace
 from loguru import logger
 import os
 import uuid
-from graphrag import generate_expert, detect_text_language
-from graphrag.utils.graph_file_loader import graph_save_json
-from graphrag.visual import visualize_knowledge_graph_echart, visualize_knowledge_graph_network_x
 
 
 def chuncking_executor(filename:str, chunk_size=1000, overlap=100) -> List[str]:
@@ -29,7 +36,7 @@ if __name__ == "__main__":
     AZURE_OPENAI_KEY = os.environ["AZURE_OPENAI_KEY"]
     AZURE_OPENAI_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
 
-    strategy = Strategy.accuracy
+    strategy = "accuracy"
     muti_thread = 2
     aoai_llm = AzureOpenAILLM(
         model_id=AZURE_OPENAI_DEPLOYMENT,
@@ -37,7 +44,7 @@ if __name__ == "__main__":
         endpoint=AZURE_OPENAI_ENDPOINT
     )
 
-    chunks = chuncking_executor(filename)
+    chunks = chuncking_executor(filename)[:2]
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
     logger.info("Generating expert descripiton...")
     expert = generate_expert(aoai_llm, chunks)

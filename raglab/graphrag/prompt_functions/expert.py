@@ -1,6 +1,6 @@
 from typing import List, Union
-from graphrag.llm.base import LLMBase
-from graphrag.prompt.expert import GENERATE_EXPERT_PROMPT
+from raglab.llm.base import LLMBase
+from ..prompt.expert import GENERATE_EXPERT_PROMPT
 import random
 
 

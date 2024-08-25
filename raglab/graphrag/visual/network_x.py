@@ -1,8 +1,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 from typing import List
-from graphrag.data_contracts.graph import Entity, Relationship
-from graphrag.utils.graph_network_x_utils import convert_to_network_x_graph
+from ..data_contracts.graph import Entity, Relationship
+from ..utils.graph_network_x_utils import convert_to_network_x_graph
 
 
 def visualize_knowledge_graph_network_x(entities: List[Entity], relationships: List[Relationship]):

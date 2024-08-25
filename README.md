@@ -40,6 +40,30 @@ This quick start guide walks you through the process of chunking text, generatin
 For your reference, you can find the code example in [quick_start_main.py](./examples/quick_start_main.py)
 
 ### Step-by-Step Instructions
+0. **Import tools from `raglab`**
+    ```python
+    from raglab.graphrag import (
+        disambiguate_entity_executor, 
+        disambiguate_relationship_executor, 
+        generate_community_reports_executor, 
+        generate_entire_chunk_graph_executor,
+        detect_text_language,
+        generate_expert,
+        graph_save_json,
+    )
+    from raglab.graphrag.visual import (
+        visualize_knowledge_graph_echart,
+        visualize_knowledge_graph_network_x
+    )
+
+    # import llm from `raglab.llm.azure_openai` or `langchain.llms`.
+    # Or You can implement the `llm.invoke` method yourself by inheriting the `LLMBase` class.
+    from raglab.llm.azure_openai import {
+        AzureOpenAILLM,
+        LLMBase
+    }
+    ```
+
 
 1. **Chunking the Text**
     ```python

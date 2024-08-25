@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from graphrag.data_contracts.graph import Entity, Relationship, Community
+from ..data_contracts import Entity, Relationship, Community
 from loguru import logger
 
 

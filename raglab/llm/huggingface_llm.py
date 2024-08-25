@@ -1,4 +1,4 @@
-from graphrag.llm.base import LLMBase
+from .base import LLMBase
 import transformers
 import torch
 import gc
