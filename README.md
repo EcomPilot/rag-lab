@@ -167,7 +167,7 @@ We welcome contributions from the community. Please read our contributing guidel
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT License](./LICENSE).
 
 ## Contact
 
