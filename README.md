@@ -37,9 +37,11 @@ Proposed by Intel, HybridRAG combines different RAG methodologies to enhance per
 
 This quick start guide walks you through the process of chunking text, generating expert descriptions, detecting language, creating and disambiguating entity and relationship graphs, generating community reports, saving the graph to a file, and visualizing the knowledge graph. Follow these steps to efficiently process and visualize your data.
 
-For your reference, you can find the code example in [quick_start_index.py](./examples/quick_start_index.py)
+For your reference, you can find the code example in:
+- Graph indexing: [quick_start_index.py](./examples/quick_start_index.py).
+- Searh: [quick_start_search.py](./examples/quick_start_search.py). **In fact, you can implement the SEARCH part of the code according to the [searching function example](./raglab/graphrag/search_functions/example.py), following the examples we have given and the instructions for each step. This will allow you to use the graph to accommodate more databases and to achieve higher performance searches.**
 
-### Step-by-Step Instructions
+### Step-by-Step Instructions (Indexing)
 0. **Import tools from `raglab`**
     ```python
     from raglab.graphrag import (
@@ -124,6 +126,39 @@ For your reference, you can find the code example in [quick_start_index.py](./ex
     ```python
     visualize_knowledge_graph_echart(entities, relations)
     visualize_knowledge_graph_network_x(entities, relations)
+    ```
+
+### Step-by-Step Instructions (Search)
+
+1. **Load graph objects**
+    ```python
+    graph_filepath = "./examples/graphfiles/Gullivers-travels.json"
+    entities, relations, communities = graph_load_json(graph_filepath)
+    entity_select_num = 5
+    ```
+
+2. **Embed the query and select the most similar search entities**
+    ```python
+    query = "Who is the king of Lilliput?"
+    query_embed = aoai_embed.embed_query(query)
+    selected_entity = select_entities(query_embed, entities)
+    ```
+
+3. **Select all relationships from selected entities**
+    ```python
+    selected_relations = select_relations(selected_entity, relations)
+    ```
+
+4. **Select correct community from selected entities**
+    ```python
+    selected_commnity = select_community(query_embed, selected_entity, communities)
+    ```
+
+5. **Generate the final answer**
+    ```python
+    prompt = generate_final_answer_prompt(query, selected_entity, selected_relations, selected_commnity)
+    final_answer = aoai_llm.invoke(prompt)
+    print(f"Final answer: {final_answer}")
     ```
 
 ## Contributing
