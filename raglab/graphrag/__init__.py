@@ -15,6 +15,8 @@ from .utils.parallel_utils import parallel_for
 from .prompt_functions.expert import generate_expert
 from .prompt_functions.language import detect_text_language
 from .utils.graph_file_loader import graph_save_json, graph_load_json
+import search_functions
+import data_contracts
 
 
 def generate_single_chunk_graph_executor(llm: LLMBase, chunk:str, chunk_id:str="", expert:str="", language:str="English", strategy:Strategy = "accuracy") -> Tuple[List[Entity], List[Relationship]]:
@@ -240,5 +242,7 @@ __all__ = [
     "generate_expert",
     "graph_load_json",
     "graph_save_json",
-    "convert_to_dataframe"
+    "convert_to_dataframe",
+    "search_functions",
+    "data_contracts"
 ]

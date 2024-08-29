@@ -1,7 +1,6 @@
 from typing import List
 from raglab.graphrag import convert_to_dataframe
 import numpy as np
-import pandas as pd
 from loguru import logger
 from raglab.graphrag.data_contracts import Entity, Relationship, Community
 from raglab.graphrag.prompt.search import SIMPLE_SEARCH_PROMPT

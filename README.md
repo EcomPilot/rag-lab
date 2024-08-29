@@ -130,6 +130,26 @@ For your reference, you can find the code example in:
 
 ### Step-by-Step Instructions (Search)
 
+0. **Import search tools from `raglab`**
+    ```python
+    from raglab.graphrag import (
+        graph_load_json
+    )
+    from raglab.graphrag.search_functions import (
+        generate_final_answer_prompt,
+        select_community,
+        select_entities,
+        select_relations
+    )
+
+    # import llm from `raglab.llms` or `langchain.llms`.
+    # Or You can implement the `llm.invoke` method yourself by inheriting the `LLMBase` class.
+    from raglab.llms import AzureOpenAILLM
+
+    # Also, you can implement the `embed.embed_query` method yourself by inheriting the `EmbeddingBase` class. Or just import it from `raglab.embeddings` or `langchain.embeddings`
+    from raglab.embeddings import AzureOpenAIEmbedding
+    ```
+
 1. **Load graph objects**
     ```python
     graph_filepath = "./examples/graphfiles/Gullivers-travels.json"

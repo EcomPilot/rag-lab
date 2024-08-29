@@ -14,3 +14,6 @@ communities
 
 # dataframe
 pandas
+
+# logging
+loguru

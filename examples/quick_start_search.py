@@ -1,12 +1,15 @@
 import os
-from typing import List
+from loguru import logger
 from raglab.embeddings import AzureOpenAIEmbedding
 from raglab.graphrag import (
     graph_load_json
 )
-from loguru import logger
-from raglab.graphrag.prompt.search import SIMPLE_SEARCH_PROMPT
-from raglab.graphrag.search_functions import generate_final_answer_prompt, select_community, select_entities, select_relations
+from raglab.graphrag.search_functions import (
+    generate_final_answer_prompt,
+    select_community,
+    select_entities,
+    select_relations
+)
 from raglab.llms import AzureOpenAILLM
 
 
