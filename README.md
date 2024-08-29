@@ -1,6 +1,6 @@
 # RAG-LAB
 
-RAG-LAB is an open-source RAG toolkit supported by [**Target Pilot**](https://www.targetpilot.ai/en), designed to transform the latest RAG concepts into stable and practical engineering tools. The project currently supports **GraphRAG** and **HybridRAG**.
+RAG-LAB is an open-source RAG toolkit supported by [**Target Pilot**](https://www.targetpilot.ai/en), designed to transform the latest RAG concepts into stable and practical engineering tools. The project currently supports **GraphRAG** and **HybridRAG**. 
 
 ## About Target Pilot
 
@@ -10,12 +10,14 @@ RAG-LAB is an open-source RAG toolkit supported by [**Target Pilot**](https://ww
 
 The primary goal of RAG-LAB is to explore the latest RAG technologies and convert them into the most stable engineering tools. We aim to:
 
+- **Lighter**: Use **pure Python** to design tools specifically for RAG functionality without integrating unnecessary third-party packages (text segmentation, LLM integration, etc. can be done using Unstructured, Langchain, LlamaIndex, etc., or simple self implementation).
+- **Faster**: Multiple threads can be selected for acceleration.
+- **Cheaper**: Focus on **low-cost development** and achieve the **best functionality** with minimal LLM token consumption.
 - **Innovate**: Continuously integrate the latest research and advancements in RAG.
-- **Stabilize**: Ensure that the tools are reliable and robust for real-world applications.
 
 ## Features
 
-### GraphRAG
+### GraphRAG (Welcome to try!)
 
 Proposed by Microsoft, GraphRAG integrates graph-based approaches into RAG, offering several key advantages:
 
@@ -24,7 +26,7 @@ Proposed by Microsoft, GraphRAG integrates graph-based approaches into RAG, offe
 - **Flexibility**: The graph-based approach allows for more flexible data modeling, accommodating complex and dynamic data structures.
 - **Improved Query Performance**: GraphRAG can optimize query performance by efficiently navigating through the graph, reducing the time required to retrieve relevant information.
 
-### HybridRAG
+### HybridRAG (In Progress)
 
 Proposed by Intel, HybridRAG combines different RAG methodologies to enhance performance and flexibility. Its advantages include:
 
