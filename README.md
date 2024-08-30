@@ -15,9 +15,9 @@
   </a>
 </div>
 
-Install the package with `pip install raglab2`
-
 RAG-LAB is an open-source lighter, faster and cheaper RAG toolkit supported by [**Target Pilot**](https://www.targetpilot.ai/en), designed to transform the latest RAG concepts into stable and practical engineering tools. The project currently supports **GraphRAG** and **HybridRAG**. 
+
+**To install: `pip install raglab2`**
 
 ## About Target Pilot
 
@@ -27,7 +27,7 @@ RAG-LAB is an open-source lighter, faster and cheaper RAG toolkit supported by [
 
 The primary goal of RAG-LAB is to explore the latest RAG technologies and convert them into the most stable engineering tools. We aim to:
 
-- **Lighter**: Use **pure Python** to design tools specifically for RAG functionality without integrating unnecessary third-party packages (text segmentation, LLM integration, etc. can be done using Unstructured, Langchain, LlamaIndex, etc., or simple self implementation).
+- **Lighter**: Use **pure Python** to design tools specifically for RAG functionality without integrating unnecessary third-party packages (text chunker, LLM integration, etc. can be done using Unstructured, Langchain, LlamaIndex, etc., or **the simplified text chunker functions we provide**).
 - **Faster**: Multiple threads can be selected for acceleration.
 - **Cheaper**: Focus on **low-cost development** and achieve the **best functionality** with minimal LLM token consumption.
 - **Innovate**: Continuously integrate the latest research and advancements in RAG.
@@ -77,6 +77,10 @@ For your reference, you can find the code example in:
         visualize_knowledge_graph_network_x
     )
 
+    # the fast and light text spilter with regex, which is powered by JinaAI. You can explore it in https://jina.ai/segmenter/
+    # Also you can use Unstructured, Langchain, LlamaIndex to replace it.
+    from raglab.chunk import chuncking_executor
+
     # import llm from `raglab.llms` or `langchain.llms`.
     # Or You can implement the `llm.invoke` method yourself by inheriting the `LLMBase` class.
     from raglab.llms import (
@@ -94,7 +98,7 @@ For your reference, you can find the code example in:
 
 1. **Chunking the Text**
     ```python
-    chunks = chuncking_executor(filename)
+    chunks = chuncking_executor(text=entire_document, max_chunk_size=1000, remove_line_breaks=True)
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
     ```
 

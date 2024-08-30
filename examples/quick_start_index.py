@@ -15,22 +15,12 @@ from raglab.graphrag.visual import (
     visualize_knowledge_graph_echart,
     visualize_knowledge_graph_network_x
 )
+from raglab.chunk import chuncking_executor
 from raglab.llms import AzureOpenAILLM
 from raglab.embeddings import AzureOpenAIEmbedding
-from unstructured.partition.text import partition_text
-from unstructured.chunking.basic import chunk_elements
-from unstructured.cleaners.core import clean_non_ascii_chars, clean_extra_whitespace
 from loguru import logger
 import os
 import uuid
-
-
-def chuncking_executor(filename:str, chunk_size=1000, overlap=100) -> List[str]:
-    elements = partition_text(filename=filename)
-    for elem in elements:
-        elem.text = clean_extra_whitespace(clean_non_ascii_chars(elem.text))
-    chunks = chunk_elements(elements, max_characters=chunk_size, overlap=overlap)
-    return [chunk.text for chunk in chunks]
 
 
 if __name__ == "__main__":
@@ -55,8 +45,12 @@ if __name__ == "__main__":
         access_token= AZURE_OPENAI_KEY,
         endpoint=AZURE_OPENAI_ENDPOINT
     )
+    
+    entire_document = ""
+    with open(file=filename, encoding='utf-8') as f:
+        entire_document = f.read()
 
-    chunks = chuncking_executor(filename)
+    chunks = chuncking_executor(text=entire_document, max_chunk_size=1000, remove_line_breaks=True)
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
     logger.info("Generating expert descripiton...")
     expert = generate_expert(aoai_llm, chunks)

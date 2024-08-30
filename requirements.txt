@@ -17,3 +17,5 @@ pandas
 
 # logging
 loguru
+
+regex
