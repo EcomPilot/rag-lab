@@ -1,6 +1,7 @@
 # code source: https://gist.github.com/hanxiao/3f60354cf6dc5ac698bc9154163b4e6a
 # link: https://jina.ai/tokenizer/
 
+from typing import List
 import regex
 
 MAX_HEADING_LENGTH = 7
@@ -32,7 +33,7 @@ MAX_HTML_TAG_CONTENT_LENGTH = 1000
 LOOKAHEAD_RANGE = 100;  # Number of characters to look ahead for a sentence boundary
 
 
-def chuncking_executor(text:str, max_chunk_size:int=500, remove_line_breaks:bool=False):
+def chuncking_executor(text:str, max_chunk_size:int=500, remove_line_breaks:bool=False) -> List[str]:
     """
     Splits the input text into chunks of a specified maximum size.
 
