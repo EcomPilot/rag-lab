@@ -1,6 +1,23 @@
 # RAG-LAB
 
-RAG-LAB is an open-source RAG toolkit supported by [**Target Pilot**](https://www.targetpilot.ai/en), designed to transform the latest RAG concepts into stable and practical engineering tools. The project currently supports **GraphRAG** and **HybridRAG**. 
+<div align="left">
+  <a href="https://pypi.org/project/raglab2/">
+    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/raglab2">
+  </a>
+  <a href="https://pypi.org/project/raglab2/">
+    <img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/raglab2">
+  </a>
+  <a href="https://github.com/EcomPilot/rag-lab/issues">
+    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/EcomPilot/rag-lab">
+  </a>
+  <a href="https://github.com/EcomPilot/rag-lab/discussions">
+    <img alt="GitHub Discussions" src="https://img.shields.io/github/discussions/EcomPilot/rag-lab">
+  </a>
+</div>
+
+Install the package with `pip install raglab2`
+
+RAG-LAB is an open-source lighter, faster and cheaper RAG toolkit supported by [**Target Pilot**](https://www.targetpilot.ai/en), designed to transform the latest RAG concepts into stable and practical engineering tools. The project currently supports **GraphRAG** and **HybridRAG**. 
 
 ## About Target Pilot
 
