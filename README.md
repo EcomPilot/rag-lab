@@ -97,6 +97,8 @@ For your reference, you can find the code example in:
 
 
 1. **Chunking the Text**
+
+    the fast and light text spilter with regex, which is powered by JinaAI. You can explore it in https://jina.ai/segmenter/
     ```python
     chunks = chuncking_executor(text=entire_document, max_chunk_size=1000, remove_line_breaks=True)
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
