@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='raglab2',
-    version='0.1.1',
+    version='0.1.3',
     packages=find_packages(),
     license='MIT',
     install_requires=[

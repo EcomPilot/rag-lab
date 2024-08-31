@@ -32,7 +32,7 @@ if __name__ == "__main__":
     )
 
     # load graph objects and convert them to DataFrame
-    graph_filepath = "./examples/graphfiles/Gullivers-travels.json"
+    graph_filepath = "./graphfiles/Gullivers-travels.json"
     entities, relations, communities = graph_load_json(graph_filepath)
     entity_select_num = 5
     # entities_df, relations_df, communities_df = convert_to_dataframe(entities), convert_to_dataframe(relations), convert_to_dataframe(communities)

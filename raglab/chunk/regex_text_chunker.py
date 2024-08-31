@@ -3,6 +3,7 @@
 
 from typing import List
 import regex
+import re
 
 MAX_HEADING_LENGTH = 7
 MAX_HEADING_CONTENT_LENGTH = 200
@@ -165,3 +166,40 @@ def chuncking_executor(text:str, max_chunk_size:int=500, remove_line_breaks:bool
     )
     chunks = pattern.findall(text)
     return list(filter(lambda x: x != "", chunks))
+
+
+def character_chuncking_executor(text:str, max_chunk_size:int=500, overlap:int=50, remove_line_breaks:bool=False, separators:List[str]=['.', '\n', '。']):
+    """
+    Splits the input text into chunks based on specified separators, with options for chunk size and overlap.
+
+    **Parameters:**
+    - text (str): The input text to be split.
+    - max_chunk_size (int): The maximum size of each chunk. Default is 500.
+    - overlap (int): The number of characters that overlap between chunks. Default is 50.
+    - remove_line_breaks (bool): Whether to remove line breaks from the text. Default is False.
+    - separators (List[str]): A list of separators to split the text. Default is ['.', '\n', '。'].
+
+    **Returns:**
+    - List[str]: A list of text chunks.
+    """
+    if remove_line_breaks:
+        text = text.replace('\n', '')
+
+    pattern = '|'.join(map(re.escape, separators))
+    split_text = re.split(f'({pattern})', text)
+    split_text = [segment for segment in split_text if segment]
+
+    chunks, current_chunk = [], ""
+    for segment in split_text:
+        if len(current_chunk) + len(segment) <= max_chunk_size:
+            current_chunk += segment
+        else:
+            chunks.append(current_chunk)
+            # Find the last separator in the current chunk
+            last_separator_index = max([current_chunk.rfind(sep) for sep in separators])
+            # Start the new chunk from the character after the last separator
+            current_chunk = current_chunk[last_separator_index + 1:] + segment
+    if current_chunk:
+        chunks.append(current_chunk)
+    
+    return chunks

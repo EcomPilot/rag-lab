@@ -79,7 +79,10 @@ For your reference, you can find the code example in:
 
     # the fast and light text spilter with regex, which is powered by JinaAI. You can explore it in https://jina.ai/segmenter/
     # Also you can use Unstructured, Langchain, LlamaIndex to replace it.
-    from raglab.chunk import chuncking_executor
+    from raglab.chunk import (
+        chuncking_executor, # for English
+        character_chuncking_executor # for languages exclude English
+    )
 
     # import llm from `raglab.llms` or `langchain.llms`.
     # Or You can implement the `llm.invoke` method yourself by inheriting the `LLMBase` class.
@@ -100,8 +103,12 @@ For your reference, you can find the code example in:
 
     the fast and light text spilter with regex, which is powered by JinaAI. You can explore it in https://jina.ai/segmenter/
     ```python
+    # for English, you can use the function `chuncking_executor`
     chunks = chuncking_executor(text=entire_document, max_chunk_size=1000, remove_line_breaks=True)
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
+
+    # for Chinese, you can use the function `chuncking_executor`
+    chunks = character_chuncking_executor(text=entire_document, max_chunk_size=500, remove_line_breaks=True)
     ```
 
 2. **[Options] Generating Expert Description**
@@ -216,5 +223,5 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ## Contact
 
-For more information, please contact us at contact@targetpilot.com.
+For more information, please contact us at gongpx20069@vip.qq.com.
 

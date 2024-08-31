@@ -1,4 +1,3 @@
-from typing import List
 from raglab.graphrag import (
     disambiguate_entity_executor, 
     disambiguate_relationship_executor, 
@@ -15,7 +14,10 @@ from raglab.graphrag.visual import (
     visualize_knowledge_graph_echart,
     visualize_knowledge_graph_network_x
 )
-from raglab.chunk import chuncking_executor
+from raglab.chunk import (
+    chuncking_executor,
+    character_chuncking_executor
+)
 from raglab.llms import AzureOpenAILLM
 from raglab.embeddings import AzureOpenAIEmbedding
 from loguru import logger
@@ -24,8 +26,15 @@ import uuid
 
 
 if __name__ == "__main__":
-    filename = "./examples/documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
-    graph_filepath = "./examples/graphfiles/"
+    # # A Chinese Example - 西游记
+    # filename = './documents/西游记.txt'
+    # save_to_file = '西游记'
+    
+    # A English Example - Gullivers-travels-A-Voyage-to-Lilliput
+    filename = "./documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
+    save_to_file = 'Gullivers-travels'
+
+    graph_filepath = "./graphfiles/"
     
     AZURE_OPENAI_LLM_DEPLOYMENT = os.environ["AZURE_OPENAI_LLM_DEPLOYMENT"]
     AZURE_OPENAI_EMBED_DEPLOYMENT = os.environ["AZURE_OPENAI_EMBED_DEPLOYMENT"]
@@ -33,7 +42,7 @@ if __name__ == "__main__":
     AZURE_OPENAI_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
 
     strategy = "accuracy"
-    muti_thread = 2
+    muti_thread = 100
     aoai_llm = AzureOpenAILLM(
         model_id=AZURE_OPENAI_LLM_DEPLOYMENT,
         access_token= AZURE_OPENAI_KEY,
@@ -46,12 +55,16 @@ if __name__ == "__main__":
         endpoint=AZURE_OPENAI_ENDPOINT
     )
     
+    logger.info(f"Loading document... [{filename}]")
     entire_document = ""
     with open(file=filename, encoding='utf-8') as f:
         entire_document = f.read()
 
-    chunks = chuncking_executor(text=entire_document, max_chunk_size=1000, remove_line_breaks=True)
+    # chunks = chuncking_executor(text=entire_document, max_chunk_size=500, remove_line_breaks=True)
+    chunks = character_chuncking_executor(text=entire_document, max_chunk_size=500, remove_line_breaks=True)
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
+    logger.info(f"Loaded document.")
+
     logger.info("Generating expert descripiton...")
     expert = generate_expert(aoai_llm, chunks)
     logger.info(f"Generated expert descripiton: {expert}")
@@ -70,12 +83,12 @@ if __name__ == "__main__":
 
     # save graph
     ## save graph to local as json file
-    graph_save_json(entities, relations, community_reports, os.path.join(graph_filepath, "Gullivers-travels.json"))
+    graph_save_json(entities, relations, community_reports, os.path.join(graph_filepath, f"{save_to_file}.json"))
     ## or you can convert them to DataFrame, and save them as any table format, like csv, excel and so on.
     entities_df, relations_df, community_reports_df = convert_to_dataframe(entities), convert_to_dataframe(relations), convert_to_dataframe(community_reports)
-    entities_df.to_csv(os.path.join(graph_filepath, "Gullivers-travels-entities.csv"), index=False)
-    relations_df.to_csv(os.path.join(graph_filepath, "Gullivers-travels-relationships.csv"), index=False)
-    community_reports_df.to_csv(os.path.join(graph_filepath, "Gullivers-travels-communities.csv"), index=False)
+    entities_df.to_csv(os.path.join(graph_filepath, f"{save_to_file}-entities.csv"), index=False)
+    relations_df.to_csv(os.path.join(graph_filepath, f"{save_to_file}-relationships.csv"), index=False)
+    community_reports_df.to_csv(os.path.join(graph_filepath, f"{save_to_file}-communities.csv"), index=False)
 
 
     # for graph visual

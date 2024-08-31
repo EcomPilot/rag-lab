@@ -80,7 +80,8 @@ def merge_summary_relationship(llm: LLMBase, origin_relationships:List[Relations
     #### Returns
     - `List[Relationship]`: A list of merged and summarized relationships.
     '''
-    relationship_description_dict,  relationship_strength_dict, relationship_source_chunk_ids = defaultdict(list), defaultdict(list), defaultdict(list)
+    relationship_description_dict,  relationship_strength_dict, relationship_source_chunk_ids \
+          = defaultdict(list), defaultdict(list), defaultdict(list)
     result = []
 
     for relationship in origin_relationships:
