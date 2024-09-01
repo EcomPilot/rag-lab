@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='raglab2',
-    version='0.1.3',
+    version='0.1.4',
     packages=find_packages(),
     license='MIT',
     install_requires=[
@@ -15,7 +15,8 @@ setup(
         'communities',
         'pandas',
         'loguru',
-        'regex'
+        'regex',
+        'tqdm'
     ],
     author='targetpilot',
     author_email='your.email@example.com',
