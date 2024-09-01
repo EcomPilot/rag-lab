@@ -26,13 +26,13 @@ import uuid
 
 
 if __name__ == "__main__":
-    # # A Chinese Example - 西游记
-    # filename = './documents/西游记.txt'
-    # save_to_file = '西游记'
+    # A Chinese Example - 西游记
+    filename = './documents/西游记.txt'
+    save_to_file = '西游记'
     
-    # A English Example - Gullivers-travels-A-Voyage-to-Lilliput
-    filename = "./documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
-    save_to_file = 'Gullivers-travels'
+    # # A English Example - Gullivers-travels-A-Voyage-to-Lilliput
+    # filename = "./documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
+    # save_to_file = 'Gullivers-travels'
 
     graph_filepath = "./graphfiles/"
     
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     AZURE_OPENAI_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
 
     strategy = "accuracy"
-    muti_thread = 100
+    muti_thread = 12
     aoai_llm = AzureOpenAILLM(
         model_id=AZURE_OPENAI_LLM_DEPLOYMENT,
         access_token= AZURE_OPENAI_KEY,

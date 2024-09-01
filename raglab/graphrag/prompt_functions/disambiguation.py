@@ -6,6 +6,8 @@ from ..prompt.disambiguation import DISAMBIGUATION_ENTITY_PROMPT, SUMMARY_ENTITY
 from ..utils.json_paser import list_loads_from_text
 from collections import defaultdict
 import json
+from tqdm import tqdm
+from loguru import logger
 
 
 def disambigute_entity(llm: LLMBase, entities:List[Entity], expert: str='') -> List[List[int]]:
@@ -40,6 +42,7 @@ def merge_summary_entity(llm: LLMBase, entities:List[Entity], expert: str='', st
     #### Returns
     - `List[Entity]`: A list of merged and summarized entities.
     '''
+    logger.info("Merge entity description with same entity name...")
     entity_name_description_list_mapping = defaultdict(list)
     entity_name_type_list_mapping = defaultdict(set)
     entity_name_chunk_ids_mapping = defaultdict(list)
@@ -53,7 +56,7 @@ def merge_summary_entity(llm: LLMBase, entities:List[Entity], expert: str='', st
     entity_name_type_list_mapping = dict(entity_name_type_list_mapping)
 
     entities.clear()
-    for entity_name in entity_name_description_list_mapping:
+    for entity_name in tqdm(entity_name_description_list_mapping):
         discription_list = entity_name_description_list_mapping[entity_name]
         type_list = entity_name_type_list_mapping[entity_name]
         source_chunk_ids = entity_name_chunk_ids_mapping[entity_name]
@@ -64,6 +67,7 @@ def merge_summary_entity(llm: LLMBase, entities:List[Entity], expert: str='', st
             if len(type_list) > 1: entity_type = llm.invoke(SUMMARY_ENTITY_TYPE_PROMPT.format(expert=expert, entity_types=entity_type, discriptions=discription_summary, entity_name=entity_name))
         entities.append(Entity(entity_name=entity_name, entity_type=entity_type, entity_description=discription_summary, source_chunk_ids=source_chunk_ids))
 
+    logger.info("Merged entity description with same entity name")
     return entities
 
 
@@ -80,6 +84,7 @@ def merge_summary_relationship(llm: LLMBase, origin_relationships:List[Relations
     #### Returns
     - `List[Relationship]`: A list of merged and summarized relationships.
     '''
+    logger.info("Merge relationship descriptions...")
     relationship_description_dict,  relationship_strength_dict, relationship_source_chunk_ids \
           = defaultdict(list), defaultdict(list), defaultdict(list)
     result = []
@@ -91,7 +96,7 @@ def merge_summary_relationship(llm: LLMBase, origin_relationships:List[Relations
         relationship_source_chunk_ids[key].extend(relationship.source_chunk_ids)
 
     relationship_description_dict, relationship_strength_dict, relationship_source_chunk_ids = dict(relationship_description_dict), dict(relationship_strength_dict), dict(relationship_source_chunk_ids)
-    for key in relationship_description_dict:
+    for key in tqdm(relationship_description_dict):
         strength = sum(relationship_strength_dict[key]) / len(relationship_strength_dict[key])
         source_chunk_ids = relationship_source_chunk_ids[key]
         description = '.'.join(relationship_description_dict[key])
@@ -99,4 +104,5 @@ def merge_summary_relationship(llm: LLMBase, origin_relationships:List[Relations
             description = llm.invoke(SUMMARY_RELATIONSHIP_DISCRIPTIONS_PROMPT.format(source_entity=key[0], target_entity=key[1], descriptions=json.dumps(relationship_description_dict[key]), expert=expert))
         result.append(Relationship(source_entity=key[0], target_entity=key[1], relationship_description=description, relationship_strength=strength, source_chunk_ids=source_chunk_ids))
 
+    logger.info("Merged relationship descriptions.")
     return result

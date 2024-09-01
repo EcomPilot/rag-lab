@@ -70,11 +70,11 @@ Output:
     {{"type":"relationship", "source_entity": "MEGGIE TAZBAH", "target_entity": "FIRUZABAD", "relationship_description": "Meggie Tazbah was a hostage in Firuzabad", "relationship_strength": 2 }},  
     {{"type":"relationship", "source_entity": "DURKE BATAGLANI", "target_entity": "FIRUZABAD", "relationship_description": "Durke Bataglani was a hostage in Firuzabad", "relationship_strength": 2 }}
 ]
-
 ######################
 
 -Real Data-
 ######################
+Use the following text for your answer. Put all Entities and Relationships in a List, and don't forget any commas.
 text: {input_text}
 ######################
 output:
