@@ -18,4 +18,5 @@ pandas
 # logging
 loguru
 
+tqdm
 regex

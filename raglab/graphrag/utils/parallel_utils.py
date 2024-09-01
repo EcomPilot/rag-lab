@@ -1,5 +1,9 @@
 import threading
 from typing import Callable, List, Any, Tuple
+from loguru import logger
+import os
+from tqdm import tqdm
+
 
 def parallel_for(func: Callable[..., Any], args_list: List[Tuple], num_threads: int = 3) -> List[Any]:
     """
@@ -17,10 +21,14 @@ def parallel_for(func: Callable[..., Any], args_list: List[Tuple], num_threads: 
     lock = threading.Lock()
 
     def worker(start_index, end_index):
-        for i in range(start_index, end_index):
-            result = func(*args_list[i])
-            with lock:
-                results[i] = result
+        try:
+            for i in tqdm(range(start_index, end_index)):
+                result = func(*args_list[i])
+                with lock:
+                    results[i] = result
+        except Exception as ex:
+            logger.error(ex)
+            os._exit(1)
 
     # Split args_list into chunks for each thread
     chunk_size = len(args_list) // num_threads
@@ -42,6 +50,7 @@ def parallel_for(func: Callable[..., Any], args_list: List[Tuple], num_threads: 
 # Example usage
 if __name__ == "__main__":
     def add(a, b):
+        # raise Exception("test ex")
         return a + b
 
     args = [(1, 2), (3, 4), (5, 6), (7, 8), (9, 10)]
