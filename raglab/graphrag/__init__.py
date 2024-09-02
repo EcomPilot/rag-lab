@@ -87,7 +87,7 @@ def generate_entire_chunk_graph_executor(llm: LLMBase, chunks:List[str], chunk_i
     return entities, relations
 
 
-def disambiguate_entity_executor(llm: LLMBase, entities: List[Entity], relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = "accuracy") -> Tuple[List[Entity], List[Relationship]]:
+def disambiguate_entity_executor(llm: LLMBase, entities: List[Entity], relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = "accuracy", num_threads:int=1) -> Tuple[List[Entity], List[Relationship]]:
     '''
     The `disambiguate_entity_executor` function is designed to merge and disambiguate entities and relationships, ensuring they have readable IDs.
 
@@ -98,6 +98,7 @@ def disambiguate_entity_executor(llm: LLMBase, entities: List[Entity], relations
     - `expert: str` (default is an empty string): An optional expert input for merging entities and relationships.
     - `language: str` (default is "English"): The language of the entities and relationships.
     - `strategy: Strategy` (default is "accuracy"): The strategy to be used for merging and disambiguating entities and relationships.
+    - `num_threads: int` (default is 1): The number of threads to use for processing the text chunks.
 
     #### Returns
     - `Tuple[List[Entity], List[Relationship]]`: A tuple containing a list of disambiguated entities and a list of disambiguated relationships.
@@ -116,7 +117,7 @@ def disambiguate_entity_executor(llm: LLMBase, entities: List[Entity], relations
     return entities, relationships
 
 
-def disambiguate_relationship_executor(llm: LLMBase, relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = "accuracy") -> List[Relationship]:
+def disambiguate_relationship_executor(llm: LLMBase, relationships: List[Relationship], expert: str='', language:str="English", strategy:Strategy = "accuracy", num_threads:int=1) -> List[Relationship]:
     '''
     The `disambiguate_relationship_executor` function is designed to merge and disambiguate relationships, ensuring they have readable IDs.
 
@@ -126,6 +127,7 @@ def disambiguate_relationship_executor(llm: LLMBase, relationships: List[Relatio
     - `expert: str` (default is an empty string): An optional expert input for merging relationships.
     - `language: str` (default is "English"): The language of the relationships.
     - `strategy: Strategy` (default is "accuracy"): The strategy to be used for merging and disambiguating relationships.
+    - `num_threads: int` (default is 1): The number of threads to use for processing the text chunks.
 
     #### Returns
     - `List[Relationship]`: A list of disambiguated relationships with updated readable IDs.

@@ -78,6 +78,10 @@ if __name__ == "__main__":
     entities, relations = generate_entire_chunk_graph_executor(aoai_llm, chunks, chunk_ids, expert, language, strategy, muti_thread)
     entities, relations = disambiguate_entity_executor(aoai_llm, entities, relations, expert, language, strategy)
     relations = disambiguate_relationship_executor(aoai_llm, relations, expert, language, strategy)
+
+    graph_save_json(entities, relations, {}, os.path.join(graph_filepath, f"{save_to_file}.json"))
+    chunks_save_json(chunks=chunks, chunk_ids=chunk_ids, filepath=os.path.join(graph_filepath, f"{save_to_file}-chunks.json"))
+
     community_reports = generate_community_reports_executor(aoai_llm, entities, relations, expert, language, strategy, 5, muti_thread)
 
     entities = update_graph_embeddings_executor(aoai_embed, entities, num_threads=muti_thread)
@@ -98,4 +102,4 @@ if __name__ == "__main__":
 
     # for graph visual
     visualize_knowledge_graph_echart(entities, relations)
-    visualize_knowledge_graph_network_x(entities, relations)
+    # visualize_knowledge_graph_network_x(entities, relations)
