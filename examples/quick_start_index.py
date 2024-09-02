@@ -84,11 +84,15 @@ if __name__ == "__main__":
     # save graph
     ## save graph to local as json file
     graph_save_json(entities, relations, community_reports, os.path.join(graph_filepath, f"{save_to_file}.json"))
+
     ## or you can convert them to DataFrame, and save them as any table format, like csv, excel and so on.
     entities_df, relations_df, community_reports_df = convert_to_dataframe(entities), convert_to_dataframe(relations), convert_to_dataframe(community_reports)
     entities_df.to_csv(os.path.join(graph_filepath, f"{save_to_file}-entities.csv"), index=False)
     relations_df.to_csv(os.path.join(graph_filepath, f"{save_to_file}-relationships.csv"), index=False)
     community_reports_df.to_csv(os.path.join(graph_filepath, f"{save_to_file}-communities.csv"), index=False)
+
+    ## if you need to save the chunks to local file or SQL, you can add your code here.
+    
 
 
     # for graph visual

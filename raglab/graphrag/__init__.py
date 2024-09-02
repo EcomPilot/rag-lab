@@ -15,7 +15,7 @@ from .utils.graph_utils import convert_to_dataframe, covert_virtual_relationship
 from .utils.parallel_utils import parallel_for
 from .prompt_functions.expert import generate_expert
 from .prompt_functions.language import detect_text_language
-from .utils.graph_file_loader import graph_save_json, graph_load_json
+from .utils.graph_file_loader import graph_save_json, graph_load_json, chunks_load_json, chunks_save_json
 from . import search_functions, data_contracts
 
 
@@ -237,5 +237,7 @@ __all__ = [
     "graph_save_json",
     "convert_to_dataframe",
     "search_functions",
-    "data_contracts"
+    "data_contracts",
+    "chunks_load_json",
+    "chunks_save_json"
 ]
