@@ -8,6 +8,8 @@ from raglab.graphrag import (
     generate_expert,
     graph_load_json,
     graph_save_json,
+    chunks_load_json,
+    chunks_save_json,
     convert_to_dataframe,
 )
 from raglab.graphrag.visual import (
@@ -42,7 +44,7 @@ if __name__ == "__main__":
     AZURE_OPENAI_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
 
     strategy = "accuracy"
-    muti_thread = 12
+    muti_thread = 13
     aoai_llm = AzureOpenAILLM(
         model_id=AZURE_OPENAI_LLM_DEPLOYMENT,
         access_token= AZURE_OPENAI_KEY,
@@ -92,8 +94,7 @@ if __name__ == "__main__":
     community_reports_df.to_csv(os.path.join(graph_filepath, f"{save_to_file}-communities.csv"), index=False)
 
     ## if you need to save the chunks to local file or SQL, you can add your code here.
-    
-
+    chunks_save_json(chunks=chunks, chunk_ids=chunk_ids, filepath=os.path.join(graph_filepath, f"{save_to_file}-chunks.json"))
 
     # for graph visual
     visualize_knowledge_graph_echart(entities, relations)

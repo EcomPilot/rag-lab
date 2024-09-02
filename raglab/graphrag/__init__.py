@@ -175,7 +175,7 @@ def generate_community_reports_executor(llm: LLMBase, entities: List[Entity], re
         return report
     
     strategy = Strategy(strategy)
-    logger.info("Creating communities...")
+    logger.info(f"Creating communities with {len(entities)} Entity and {len(relationships)} Relationships...")
     G = convert_to_network_x_graph(entities, relationships)
     adj_matrix = nx.to_numpy_array(G)
     communities, _ = louvain_method(adj_matrix)
@@ -185,7 +185,7 @@ def generate_community_reports_executor(llm: LLMBase, entities: List[Entity], re
     communities = [com for com in communities if len(com) >= min_entities_in_cummunity]
     logger.info(f"Selected communities which large than {min_entities_in_cummunity}")
 
-    logger.info(f"Creating community report with threads {num_threads}")
+    logger.info(f"Creating {len(communities)} community report with threads {num_threads}")
     if num_threads == 1:
         community_reports = [__multi_thread_loop_generate_community_report(llm, entities, relationships, com, expert) for com in communities]
     else:
