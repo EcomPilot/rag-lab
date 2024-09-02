@@ -1,9 +1,9 @@
 from typing import List, Tuple
-from communities.algorithms import louvain_method
 import networkx as nx
 from tqdm import tqdm
 from loguru import logger
 from raglab.embeddings.base import EmbeddingBase
+from raglab.graphrag.utils.communities import detect_communities_louvain
 from .data_contracts import Community, Entity, Relationship, Strategy
 from raglab.llms.base import LLMBase
 from .prompt_functions.chunk_graph_extraction import generate_entity_relationship_examples
@@ -175,15 +175,10 @@ def generate_community_reports_executor(llm: LLMBase, entities: List[Entity], re
         return report
     
     strategy = Strategy(strategy)
-    logger.info(f"Creating communities with {len(entities)} Entity and {len(relationships)} Relationships...")
+    logger.info(f"Creating communities with {len(entities)} Entity and {len(relationships)} Relationships, Selecting communities which large than {min_entities_in_cummunity}...")
     G = convert_to_network_x_graph(entities, relationships)
-    adj_matrix = nx.to_numpy_array(G)
-    communities, _ = louvain_method(adj_matrix)
+    communities = detect_communities_louvain(G, min_entities_in_cummunity)
     logger.info("Created communities")
-
-    logger.info(f"Selecting communities which large than {min_entities_in_cummunity}...")
-    communities = [com for com in communities if len(com) >= min_entities_in_cummunity]
-    logger.info(f"Selected communities which large than {min_entities_in_cummunity}")
 
     logger.info(f"Creating {len(communities)} community report with threads {num_threads}")
     if num_threads == 1:
