@@ -1,6 +1,7 @@
 from typing import List, Tuple
 from communities.algorithms import louvain_method
 import networkx as nx
+from tqdm import tqdm
 from loguru import logger
 from raglab.embeddings.base import EmbeddingBase
 from .data_contracts import Community, Entity, Relationship, Strategy
@@ -34,13 +35,7 @@ def generate_single_chunk_graph_executor(llm: LLMBase, chunk:str, chunk_id:str="
         - `Tuple[List[Entity], List[Relationship]]`: A tuple containing a list of entities and a list of relationships.
         '''
         strategy = Strategy(strategy)
-        logger.info(f"Current chunk: {chunk}.")
-        logger.info("Generating entity relationship examples...")
         chunk_entity_relation = generate_entity_relationship_examples(llm, chunk, language, expert)
-        logger.info("Done generating entity relationship examples")
-        logger.info(f"Generating entity relationship examples: {chunk_entity_relation}")
-
-        logger.info("Generating entity relationship classes...")
         relations, entities = [], []
         for item in chunk_entity_relation:
             if "entity_name" in item:
@@ -53,7 +48,6 @@ def generate_single_chunk_graph_executor(llm: LLMBase, chunk:str, chunk_id:str="
         if len(chunk_id) > 0: 
             for rel in relations: rel.source_chunk_ids.append(chunk_id)
             for en in entities: en.source_chunk_ids.append(chunk_id)
-        logger.info(f"Generating entity relationship classes, entities: {entities}, relations: {relations}")
         return entities, relations
 
 
@@ -74,11 +68,11 @@ def generate_entire_chunk_graph_executor(llm: LLMBase, chunks:List[str], chunk_i
     - `Tuple[List[Entity], List[Relationship]]`: A tuple containing a list of entities and a list of relationships.
     '''
     strategy = Strategy(strategy)
-    logger.info(f"Creating Graphs from chunks with thread {num_threads}...")
+    logger.info(f"Creating Graphs from chunks with threads: {num_threads}, chunks number: {len(chunks)}...")
     entities, relations = [], []
     if num_threads == 1:
         # single thread
-        for i in range(0, len(chunks)):
+        for i in tqdm(range(0, len(chunks))):
             current_entities, current_relations = generate_single_chunk_graph_executor(llm, chunks[i], chunk_ids[i], expert, language, strategy)
             entities.extend(current_entities)
             relations.extend(current_relations)
@@ -89,7 +83,7 @@ def generate_entire_chunk_graph_executor(llm: LLMBase, chunks:List[str], chunk_i
         for current_entities, current_relations in paralled_chunks_graph_result_list:
             entities.extend(current_entities)
             relations.extend(current_relations)
-    logger.info("Created Graphs from chunks...")
+    logger.info("Created Graphs from chunks.")
     return entities, relations
 
 
