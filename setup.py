@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='raglab2',
-    version='0.1.5',
+    version='0.1.6',
     packages=find_packages(),
     license='MIT',
     install_requires=[
@@ -19,7 +19,7 @@ setup(
         'tqdm'
     ],
     author='targetpilot',
-    author_email='your.email@example.com',
+    author_email='ai-research@targetpilot.ai',
     description='RAG-LAB is an open-source lighter, faster and cheaper RAG toolkit supported by Target Pilot, designed to transform the latest RAG concepts into stable and practical engineering tools. The project currently supports GraphRAG and HybridRAG.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
