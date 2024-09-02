@@ -28,13 +28,13 @@ import uuid
 
 
 if __name__ == "__main__":
-    # A Chinese Example - 西游记
-    filename = './documents/西游记.txt'
-    save_to_file = '西游记'
+    # # A Chinese Example - 西游记
+    # filename = './documents/西游记.txt'
+    # save_to_file = '西游记'
     
-    # # A English Example - Gullivers-travels-A-Voyage-to-Lilliput
-    # filename = "./documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
-    # save_to_file = 'Gullivers-travels'
+    # A English Example - Gullivers-travels-A-Voyage-to-Lilliput
+    filename = "./documents/Gullivers-travels-A-Voyage-to-Lilliput.txt"
+    save_to_file = 'Gullivers-travels'
 
     graph_filepath = "./graphfiles/"
     
@@ -78,10 +78,6 @@ if __name__ == "__main__":
     entities, relations = generate_entire_chunk_graph_executor(aoai_llm, chunks, chunk_ids, expert, language, strategy, muti_thread)
     entities, relations = disambiguate_entity_executor(aoai_llm, entities, relations, expert, language, strategy)
     relations = disambiguate_relationship_executor(aoai_llm, relations, expert, language, strategy)
-
-    graph_save_json(entities, relations, {}, os.path.join(graph_filepath, f"{save_to_file}.json"))
-    chunks_save_json(chunks=chunks, chunk_ids=chunk_ids, filepath=os.path.join(graph_filepath, f"{save_to_file}-chunks.json"))
-
     community_reports = generate_community_reports_executor(aoai_llm, entities, relations, expert, language, strategy, 5, muti_thread)
 
     entities = update_graph_embeddings_executor(aoai_embed, entities, num_threads=muti_thread)
@@ -97,9 +93,9 @@ if __name__ == "__main__":
     relations_df.to_csv(os.path.join(graph_filepath, f"{save_to_file}-relationships.csv"), index=False)
     community_reports_df.to_csv(os.path.join(graph_filepath, f"{save_to_file}-communities.csv"), index=False)
 
-    ## if you need to save the chunks to local file or SQL, you can add your code here.
-    chunks_save_json(chunks=chunks, chunk_ids=chunk_ids, filepath=os.path.join(graph_filepath, f"{save_to_file}-chunks.json"))
+    # ## if you want to save the chunks to local file or SQL, you can add your code here.
+    # chunks_save_json(chunks=chunks, chunk_ids=chunk_ids, filepath=os.path.join(graph_filepath, f"{save_to_file}-chunks.json"))
 
     # for graph visual
     visualize_knowledge_graph_echart(entities, relations)
-    # visualize_knowledge_graph_network_x(entities, relations)
+    visualize_knowledge_graph_network_x(entities, relations)
