@@ -18,7 +18,7 @@ from raglab.graphrag.visual import (
 )
 from raglab.chunk import (
     chuncking_executor,
-    character_chuncking_executor
+    character_chunking_executor
 )
 from raglab.llms import AzureOpenAILLM
 from raglab.embeddings import AzureOpenAIEmbedding

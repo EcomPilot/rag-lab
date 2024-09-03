@@ -81,7 +81,7 @@ For your reference, you can find the code example in:
     # Also you can use Unstructured, Langchain, LlamaIndex to replace it.
     from raglab.chunk import (
         chuncking_executor, # for English
-        character_chuncking_executor # for languages exclude English
+        character_chunking_executor # for languages exclude English
     )
 
     # import llm from `raglab.llms` or `langchain.llms`.
@@ -108,7 +108,7 @@ For your reference, you can find the code example in:
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
 
     # for Chinese, you can use the function `chuncking_executor`
-    chunks = character_chuncking_executor(text=entire_document, max_chunk_size=500, remove_line_breaks=True)
+    chunks = character_chunking_executor(text=entire_document, max_chunk_size=500, remove_line_breaks=True)
     ```
 
 2. **[Options] Generating Expert Description**

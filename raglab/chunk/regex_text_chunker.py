@@ -168,7 +168,7 @@ def chuncking_executor(text:str, max_chunk_size:int=500, remove_line_breaks:bool
     return list(filter(lambda x: x != "", chunks))
 
 
-def character_chuncking_executor(text:str, max_chunk_size:int=500, overlap:int=50, remove_line_breaks:bool=False, separators:List[str]=['.', '\n', '。']):
+def character_chunking_executor(text: str, max_chunk_size: int = 500, overlap: int = 50, remove_line_breaks: bool = False, separators: List[str] = ['.', '\n', '。']):
     """
     Splits the input text into chunks based on specified separators, with options for chunk size and overlap.
 
@@ -191,14 +191,14 @@ def character_chuncking_executor(text:str, max_chunk_size:int=500, overlap:int=5
 
     chunks, current_chunk = [], ""
     for segment in split_text:
-        if len(current_chunk) + len(segment) <= max_chunk_size:
-            current_chunk += segment
-        else:
+        while len(current_chunk) + len(segment) > max_chunk_size:
+            space_left = max_chunk_size - len(current_chunk)
+            current_chunk += segment[:space_left]
             chunks.append(current_chunk)
-            # Find the last separator in the current chunk
-            last_separator_index = max([current_chunk.rfind(sep) for sep in separators])
-            # Start the new chunk from the character after the last separator
-            current_chunk = current_chunk[last_separator_index + 1:] + segment
+            current_chunk = current_chunk[-overlap:]  # Keep the overlap part
+            segment = segment[space_left:]
+        current_chunk += segment
+
     if current_chunk:
         chunks.append(current_chunk)
     
