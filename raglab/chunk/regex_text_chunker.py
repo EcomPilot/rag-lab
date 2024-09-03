@@ -191,13 +191,22 @@ def character_chunking_executor(text: str, max_chunk_size: int = 500, overlap: i
 
     chunks, current_chunk = [], ""
     for segment in split_text:
-        while len(current_chunk) + len(segment) > max_chunk_size:
-            space_left = max_chunk_size - len(current_chunk)
-            current_chunk += segment[:space_left]
-            chunks.append(current_chunk)
-            current_chunk = current_chunk[-overlap:]  # Keep the overlap part
-            segment = segment[space_left:]
-        current_chunk += segment
+        if len(current_chunk) + len(segment) <= max_chunk_size:
+            current_chunk += segment
+        else:
+            if current_chunk:
+                chunks.append(current_chunk)
+            current_chunk = segment
+            while len(current_chunk) > max_chunk_size:
+                # Find the last separator within the max_chunk_size limit
+                last_separator_index = max([current_chunk.rfind(sep, 0, max_chunk_size) for sep in separators])
+                if last_separator_index == -1:
+                    # If no separator is found, split at max_chunk_size
+                    chunks.append(current_chunk[:max_chunk_size])
+                    current_chunk = current_chunk[max_chunk_size - overlap:]
+                else:
+                    chunks.append(current_chunk[:last_separator_index + 1])
+                    current_chunk = current_chunk[last_separator_index + 1 - overlap:]
 
     if current_chunk:
         chunks.append(current_chunk)
