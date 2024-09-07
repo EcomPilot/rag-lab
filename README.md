@@ -13,6 +13,9 @@
   <a href="https://github.com/EcomPilot/rag-lab/discussions">
     <img alt="GitHub Discussions" src="https://img.shields.io/github/discussions/EcomPilot/rag-lab">
   </a>
+  <a href="https://github.com/EcomPilot/rag-lab/graphs/contributors">
+    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/EcomPilot/rag-lab">
+  </a>
 </div>
 
 RAG-LAB is an open-source lighter, faster and cheaper RAG toolkit supported by [**TargetPilot**](https://admin.targetpilot.ai/login), designed to transform the latest RAG concepts into stable and practical engineering tools. The project currently supports **GraphRAG** and **HybridRAG**. 
