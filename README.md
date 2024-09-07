@@ -15,13 +15,13 @@
   </a>
 </div>
 
-RAG-LAB is an open-source lighter, faster and cheaper RAG toolkit supported by [**TargetPilot**](https://www.targetpilot.ai/en), designed to transform the latest RAG concepts into stable and practical engineering tools. The project currently supports **GraphRAG** and **HybridRAG**. 
+RAG-LAB is an open-source lighter, faster and cheaper RAG toolkit supported by [**TargetPilot**](https://admin.targetpilot.ai/login), designed to transform the latest RAG concepts into stable and practical engineering tools. The project currently supports **GraphRAG** and **HybridRAG**. 
 
 **To install: `pip install raglab2`**
 
 ## About TargetPilot
 
-[TargetPilot](https://www.targetpilot.ai/en) is a company focused on empowering the e-commerce sector with artificial intelligence.
+[TargetPilot](https://admin.targetpilot.ai/login) is a company focused on empowering the e-commerce sector with artificial intelligence. TargetPilot OnlineAssistant has an industry leading RAG technology solution, feel free to click on the link.
 
 ## Goals
 
@@ -215,7 +215,7 @@ For your reference, you can find the code example in:
 
 ## Contributing
 
-We welcome contributions from the community. Please read our contributing guidelines for more details.
+We welcome contributions from the community. 
 
 ## License
 
