@@ -6,20 +6,27 @@ from raglab.graphrag.data_contracts import Entity, Relationship, Community
 from raglab.graphrag.prompt.search import SIMPLE_SEARCH_PROMPT
 
 
-def cosine_similarity(a: List[float], b: List[float]) -> float:
+def cosine_similarity(a: List[List[float]] | List[float], b: List[float]) -> List[float] | float:
     '''
     This function calculates the cosine similarity between two vectors.
 
     ### Parameters
 
-    - `a` (`List[float]`): The first vector.
+    - `a` (`List[float] | List[List[float]]`): The first vector.
     - `b` (`List[float]`): The second vector.
 
     ### Returns
 
     - `float`: The cosine similarity between the two vectors.
     '''
-    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+    a, b = np.array(a), np.array(b)
+    if len(a.shape) > 1:
+        # Calculate cosine similarities using matrix operations
+        dot_products = np.dot(a, b)
+        norms = np.linalg.norm(a, axis=1) * np.linalg.norm(b)
+        return dot_products / norms
+    else:
+        return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
 
 def select_entities(query_embed:List[float], entities: List[Entity], num_select=5) -> List[Entity]:
@@ -36,10 +43,16 @@ def select_entities(query_embed:List[float], entities: List[Entity], num_select=
 
     - `List[Entity]`: A list of the selected entities with the highest cosine similarity to the query embedding.
     '''
-    entities_cosine_similarity = [cosine_similarity(entity.embedding, query_embed) for entity in entities]
-    selected_entity_indexes = np.argsort(entities_cosine_similarity)[-num_select:]
+    query_embed_np = np.array(query_embed)
+    entities_embeddings = np.array([entity.embedding for entity in entities])
+
+    # Calculate cosine similarities using matrix operations
+    cosine_similarities = cosine_similarity(entities_embeddings, query_embed_np)
+
+    selected_entity_indexes = np.argsort(cosine_similarities)[-num_select:][::-1]
     selected_entity = [entities[i] for i in selected_entity_indexes]
     return selected_entity
+
 
 def select_relations(selected_entity: List[Entity], relations: List[Relationship]) -> List[Relationship]:
     '''
@@ -59,6 +72,7 @@ def select_relations(selected_entity: List[Entity], relations: List[Relationship
     selected_entity_set = {entity.entity_name for entity in selected_entity}
     selected_relations = [rel for rel in relations if (rel.source_entity in selected_entity_set) or (rel.target_entity in selected_entity_set)]
     return selected_relations
+
 
 def select_community(query_embed:List[float], selected_entity: List[Entity], communities: List[Community]) -> Community | None:
     '''
@@ -84,6 +98,7 @@ def select_community(query_embed:List[float], selected_entity: List[Entity], com
     else:
         selected_commnity = None
     return selected_commnity
+
 
 def generate_final_answer_prompt(query:str, selected_entity:List[Entity], selected_relations:List[Relationship], selected_commnity:Community) -> str:
     '''
