@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='raglab2',
-    version='0.1.10',
+    version='0.1.11',
     packages=find_packages(),
     license='MIT',
     install_requires=[
@@ -25,7 +25,7 @@ setup(
     url='https://github.com/EcomPilot/rag-lab',
     classifiers=[
         'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
     ],
 )
