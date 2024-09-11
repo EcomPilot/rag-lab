@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="./imgs/rag-lab.png" width="310">
+<img src="./imgs/rag-lab.png" width="316">
 </h1><br>
 
 <div align="left">
