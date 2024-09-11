@@ -1,4 +1,6 @@
-# RAG-LAB
+<h1 align="center">
+<img src="./imgs/rag-lab.png" width="350">
+</h1><br>
 
 <div align="left">
   <a href="https://pypi.org/project/raglab2/">
@@ -24,7 +26,16 @@ RAG-LAB is an open-source lighter, faster and cheaper RAG toolkit supported by [
 
 ## About TargetPilot
 
-[TargetPilot](https://admin.targetpilot.ai/login) is a company focused on empowering the e-commerce sector with artificial intelligence. TargetPilot OnlineAssistant has an industry leading RAG technology solution, feel free to click on the link.
+[TargetPilot](https://admin.targetpilot.ai/login) is a company focused on empowering the e-commerce sector with artificial intelligence. TargetPilot OnlineAssistant has an industry leading RAG technology solution, feel free to click on the [link](https://admin.targetpilot.ai/login).
+
+## Table of Contents
+
+- [Goals](#goals)
+- [Features - GraphRAG (Welcome to try!)](#features)
+- [Quick Start Guide](#quick-start-guide)
+- [Contributing to RAG-Lab](#contributing)
+- [License](#license)
+- [Contact](#Contact)
 
 ## Goals
 
@@ -218,7 +229,7 @@ For your reference, you can find the code example in:
 
 ## Contributing
 
-We welcome contributions from the community. 
+We welcome contributions from the community. All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
 
 ## License
 
