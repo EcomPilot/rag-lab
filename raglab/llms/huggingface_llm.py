@@ -4,7 +4,7 @@ import torch
 import gc
 
 class HuggingFaceLLM(LLMBase):
-    def __init__(self, model_id: str = "microsoft/Phi-3-small-128k-instruct", huggingface_access_token: str = ""):
+    def __init__(self, model_id: str = "microsoft/Phi-3-small-128k-instruct", huggingface_access_token: str = "", max_tokens=256, temperature=0.3, top_p=0.9):
         self.model_id = model_id
         self.pipeline = transformers.pipeline(
             "text-generation",
@@ -13,8 +13,11 @@ class HuggingFaceLLM(LLMBase):
             device_map="auto",
             token=huggingface_access_token
         )
+        self.max_tokens = max_tokens
+        self.temperature = temperature
+        self.top_p = top_p
 
-    def invoke(self, prompt: str, max_tokens=256, temperature=0.3, top_p=0.9) -> str:
+    def invoke(self, prompt: str) -> str:
         with torch.no_grad():
             messages = [
                 {"role": "user", "content": prompt},
@@ -33,11 +36,11 @@ class HuggingFaceLLM(LLMBase):
 
             outputs = self.pipeline(
                 template_prompt,
-                max_new_tokens=max_tokens,
+                max_new_tokens=self.max_tokens,
                 eos_token_id=terminators,
                 do_sample=True,
-                temperature=temperature,
-                top_p=top_p,
+                temperature=self.temperature,
+                top_p=self.top_p,
             )
             gc.collect()
             torch.cuda.empty_cache()

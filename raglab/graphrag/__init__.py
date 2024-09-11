@@ -12,7 +12,7 @@ from .prompt_functions.disambiguation import merge_summary_entity, merge_summary
 from .utils.dataclass_utils import dict2object, dict_matches_dataclass
 from .utils.graph_network_x_utils import convert_to_network_x_graph
 from .utils.graph_utils import convert_to_dataframe, covert_virtual_relationship_to_enetity, update_readable_id
-from .utils.parallel_utils import parallel_for
+from ..utils import parallel_for
 from .prompt_functions.expert import generate_expert
 from .prompt_functions.language import detect_text_language
 from .utils.graph_file_loader import graph_save_json, graph_load_json, chunks_load_json, chunks_save_json

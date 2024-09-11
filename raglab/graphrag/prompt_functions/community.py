@@ -4,7 +4,7 @@ from ..data_contracts.graph import Relationship, Entity
 from raglab.llms.base import LLMBase
 from ..prompt.community import COMMUNITY_REPORT_SUMMARIZATION_PROMPT
 import pandas as pd
-from ..utils.json_paser import json_loads_from_text
+from ...utils import json_loads_from_text
 from ..utils.graph_utils import convert_to_dataframe
 
 

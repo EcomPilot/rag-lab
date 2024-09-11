@@ -63,7 +63,7 @@ if __name__ == "__main__":
         entire_document = f.read()
 
     # chunks = chuncking_executor(text=entire_document, max_chunk_size=500, remove_line_breaks=True)
-    chunks = chuncking_executor(text=entire_document, max_chunk_size=500, remove_line_breaks=True)
+    chunks = chuncking_executor(text=entire_document, max_chunk_size=1000, remove_line_breaks=True)
     chunk_ids = [str(uuid.uuid4()) for _ in range(len(chunks))]
     logger.info(f"Loaded document.")
 
