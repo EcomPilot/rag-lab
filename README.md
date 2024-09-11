@@ -226,5 +226,5 @@ This project is licensed under the [Apache 2.0 License](./LICENSE).
 
 ## Contact
 
-For more information, please contact us at gongpx20069@vip.qq.com.
+For more information, please contact us at pxgong@targetpilot.ai, vincentpo@targetpilot.ai.
 
